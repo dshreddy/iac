@@ -1648,3 +1648,19 @@ h6 {
   font-size: 13px;
   color: #ddd;
 }
+
+/* .dept {
+  display: flex;
+  max-width: 100px;
+  justify-content: center;
+  padding: 10px;
+  
+} */
+
+.nav-item {
+  padding-top: 10px;
+}
+
+.sub-tab > * {
+  width: 100%!important;
+}

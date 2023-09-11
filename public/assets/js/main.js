@@ -323,7 +323,7 @@ const speakers = {
   },
 
   'sp15' : {
-    'imgsrc' : 'assets/img/speakers/1517695349884.jpeg',
+    'imgsrc' : 'assets/img/speakers/manoj_bhalerao.jpeg',
     'speakername' : 'Dr. Manoj Bhalerao',
     'institution' : 'Wabtec Corporation',
     'linkedin' : 'https://www.linkedin.com/in/manoj-bhalerao-122601a/'

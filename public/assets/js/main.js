@@ -233,104 +233,104 @@
 
 const speakers = {
   'sp2' : {
-    'imgsrc' : 'https://siwinonline.com/wp-content/uploads/2021/09/Mr.-Sudish-.png',
+    'imgsrc' : 'assets/img/speakers/Mr.-Sudish-.png',
     'speakername' : 'M S Sudish',
     'institution' : 'SIWIM',
     'linkedin' : 'https://www.linkedin.com/in/sudish-m-s-485ba617'
   },
 
   'sp3' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5103AQEr_pavz0Cgfg/profile-displayphoto-shrink_400_400/0/1579780011083?e=1699488000&v=beta&t=I6PKFzFCgT_0QuFs0u2tW9KN2XGO-7WfP0skvqfCo3g',
+    'imgsrc' : 'assets/img/speakers/1579780011083.jpeg', 
     'speakername' : 'Hussain Babu D',
     'institution' : 'Larsen & Toubro',
     'linkedin' : 'https://www.linkedin.com/in/hussain-babu-d-378998136/'
   },
   'sp4' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/D4D03AQGz6QUR_-eIjw/profile-displayphoto-shrink_800_800/0/1686393975815?e=2147483647&v=beta&t=_CD71CAfCleW5tHGWYyF9hfDZLPFBBUui5h78tRZHIo',
+    'imgsrc' : 'assets/img/speakers/1686393975815.jpeg',
     'speakername' : 'Dr. Uday Roman',
     'institution' : 'MP Jal Nigam',
     'linkedin' : 'https://www.linkedin.com/in/drudayroman'
   },
 
   'sp5' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/D5603AQE5krRcgZCYRw/profile-displayphoto-shrink_400_400/0/1685195374929?e=1699488000&v=beta&t=Y1S-9V3PqGGqVcq2eFt9NBUWolYxkgxVg9s3hZvJKf4',
+    'imgsrc' : 'assets/img/speakers/1685195374929.jpeg',
     'speakername' : 'Pradeep Jha',
     'institution' : 'JPMorgan Chase & Co.',
     'linkedin' : 'https://www.linkedin.com/in/pradeep-jha-56078814/'
   },
 
   'sp6' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQGhST4GMe6UAw/profile-displayphoto-shrink_400_400/0/1516450277872?e=1699488000&v=beta&t=gO2mY0_ieQyD-j92pmKU_aKEnDW2UvqinG9rDQsuJ98',
+    'imgsrc' : 'assets/img/speakers/1516450277872.jpeg',
     'speakername' : 'Tamal Banerjee',
     'institution' : 'Nordea',
     'linkedin' : 'https://www.linkedin.com/in/tamal-banerjee-phd-89858030/'
   },
 
   'sp7' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQG73SpAPPP4nw/profile-displayphoto-shrink_400_400/0/1516462027025?e=1699488000&v=beta&t=ukA5QkVlBW0pjHL9RSlxfPQ3z2awqlnSSZbgG_wtcFQ',
+    'imgsrc' : 'assets/img/speakers/1516462027025.jpeg',
     'speakername' : 'Mr. Shebeer Mohammed',
     'institution' : 'enCAD',
     'linkedin' : 'https://www.linkedin.com/in/shebeer-mohammed-25ba9430/'
   },
 
    'sp8' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5103AQG86gUIfjHT5A/profile-displayphoto-shrink_400_400/0/1547101776811?e=1699488000&v=beta&t=lfyfqnxaJ1l4yPqgJI-YRAB3z8MpgcKzYtbObTZaj4c',
+    'imgsrc' : 'assets/img/speakers/1547101776811.jpeg',
     'speakername' : 'Dr. Umesh Waghmare',
     'institution' : 'JNCASR',
     'linkedin' : 'https://www.linkedin.com/in/umesh-v-a2873137/'
   },
 
   'sp9' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/D4D03AQEasltH0PFrNw/profile-displayphoto-shrink_400_400/0/1685872566513?e=1699488000&v=beta&t=7V3t7EFF8aiEwHMBzaZ97JbKJonAhr69ZXY9FH0iT-A',
+    'imgsrc' : 'assets/img/speakers/1685872566513.jpeg',
     'speakername' : 'Dr. Sandeep Goyal',
     'institution' : 'IISER Mohali',
     'linkedin' : 'https://www.linkedin.com/in/sandeep-goyal-b1b143139/'
   },
 
   'sp10' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQFaNzjGq54Bcw/profile-displayphoto-shrink_400_400/0/1517423480181?e=1699488000&v=beta&t=s8UmQTdm5VDARGIEyvh1lV6FUkbzGifaQVxfMg5jxiw',
+    'imgsrc' : 'assets/img/speakers/debarshini_chakraborty.jpeg',
     'speakername' : 'Dr. Debarshini Chakraborty',
     'institution' : 'Centre for Cellular and Molecular Platforms (C-CAMP)',
     'linkedin' : 'https://www.linkedin.com/in/debarshini-chakraborty-26445169/'
   },
 
   'sp11' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQGv8pl-cSd_Mw/profile-displayphoto-shrink_400_400/0/1631525916385?e=1699488000&v=beta&t=ZMb9Z8sgPeVYZ1bS_2ZJ05T2slLP1csHd1rZ-P2E_VU',
+    'imgsrc' : 'assets/img/speakers/1631525916385.jpeg',
     'speakername' : 'Dr. Sheela Siddappa',
     'institution' : 'Kyndryl',
     'linkedin' : 'https://www.linkedin.com/in/dr-sheela-siddappa-2997619/'
   },
 
   'sp12' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C4D03AQFz17FUCR8w9Q/profile-displayphoto-shrink_400_400/0/1655810690871?e=1699488000&v=beta&t=X3pR7n9hpNkyFNC9qx8IF-HcyOql-EQYLo-MqgTx178',
+    'imgsrc' : 'assets/img/speakers/1655810690871.jpeg',
     'speakername' : 'Ms. Kavitha ShanmugaSundaram',
     'institution' : 'MulticoreWare',
     'linkedin' : 'https://www.linkedin.com/in/kavithashans/'
   },
 
     'sp13' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQHQtpvz_X8GOg/profile-displayphoto-shrink_400_400/0/1516644843224?e=1699488000&v=beta&t=wrE3BbOXyfxDuCMIAOyWpoc41gurrJxmkTqIRK3GoMs',
+    'imgsrc' : 'assets/img/speakers/1516644843224.jpeg',
     'speakername' : 'Mr. Sagar Bele',
     'institution' : 'ERNST & YOUNG LLP',
     'linkedin' : 'https://www.linkedin.com/in/sagar-bele-a41a7336/'
   },
 
    'sp14' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/D5603AQGf5MMSu45tVA/profile-displayphoto-shrink_400_400/0/1688968624710?e=1699488000&v=beta&t=Vlw7lZT-SDiL37VXvSuyHrwSqOiNAnm3WiSNYSQuXxw',
+    'imgsrc' : 'assets/img/speakers/1688968624710.jpeg',
     'speakername' : 'Ms. C Rethi Nair',
     'institution' : 'Grid Controller of India Limited',
     'linkedin' : 'https://www.linkedin.com/in/c-rethi-nair-173106259/'
   },
 
   'sp15' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/C5603AQHgFanIB-k4ug/profile-displayphoto-shrink_400_400/0/1517695349884?e=1699488000&v=beta&t=xj5FgsdzMF_GhXew_fa_EouH-ajtLApZriv3403tMUk',
+    'imgsrc' : 'assets/img/speakers/1517695349884.jpeg',
     'speakername' : 'Dr. Manoj Bhalerao',
     'institution' : 'Wabtec Corporation',
     'linkedin' : 'https://www.linkedin.com/in/manoj-bhalerao-122601a/'
   },
 
   'sp17' : {
-    'imgsrc' : 'https://media.licdn.com/dms/image/D5603AQF98shzec1Nrg/profile-displayphoto-shrink_400_400/0/1679368173505?e=1699488000&v=beta&t=1pv4FVzvdapkN1QMdxvn_o--gsFKqcjghpy0xL-dzH8',
+    'imgsrc' : 'assets/img/speakers/1679368173505.jpeg',
     'speakername' : 'Dr. Viveka Kalidasan',
     'institution' : 'The Edify Project',
     'linkedin' : 'https://www.linkedin.com/in/vivekakalidasan/'

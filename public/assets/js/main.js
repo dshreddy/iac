@@ -232,6 +232,20 @@
 })()
 
 const speakers = {
+
+  'sp26' : {
+    'imgsrc' : 'assets/img/speakers/Vijay HPE.jpeg',
+    'speakername' : 'Mr. Vijay Kannan',
+    'institution' : 'HP Enterprises',
+    'linkedin' : 'https://www.linkedin.com/in/vijay-kannan-a7443b16/'
+  },
+
+    'sp27' : {
+    'imgsrc' : 'assets/img/speakers/vinay hpe.jpeg',
+    'speakername' : 'Mr. Vinay Vishwakarma',
+    'institution' : 'HP Enterprises',
+    'linkedin' : 'https://www.linkedin.com/in/vinayvishwakarma/'
+  },
   'sp2' : {
     'imgsrc' : 'assets/img/speakers/Mr.-Sudish-.png',
     'speakername' : 'M S Sudish',
@@ -334,7 +348,71 @@ const speakers = {
     'speakername' : 'Dr. Viveka Kalidasan',
     'institution' : 'The Edify Project',
     'linkedin' : 'https://www.linkedin.com/in/vivekakalidasan/'
-  }
+  }, 
+  'sp18' : {
+    'imgsrc' : 'assets/img/speakers/1608460235332.jpeg',
+    'speakername' : 'Dr. Anil Mavila',
+    'institution' : 'inDERMA Medical Devices',
+    'linkedin' : 'https://www.linkedin.com/in/dr-anil-mavila-96a2ba1b3/'
+  },
+
+  'sp19' : {
+    'imgsrc' : 'assets/img/speakers/ANSCER_0015_Layer-5.jpg',
+    'speakername' : 'Mr. Raghu Venkatesh',
+    'institution' : 'ANSCER Robotics',
+    'linkedin' : 'https://www.linkedin.com/in/raghuvenkatesh/'
+  },
+  'sp20' : {
+    'imgsrc' : 'assets/img/speakers/1664355349648.jpeg',
+    'speakername' : 'Dr. Praveen Krishna',
+    'institution' : 'IIST Thiruvananthpuram',
+    'linkedin' : 'https://www.linkedin.com/in/praveen-krishna-7396b44/'
+  },
+  'sp21' : {
+    'imgsrc' : 'assets/img/speakers/1516663510250.jpeg',
+    'speakername' : 'Shanmuga Raja',
+    'institution' : 'Jacobs',
+    'linkedin' : 'https://www.linkedin.com/in/shanmugarajatm'
+  },
+  'sp22' : {
+    'imgsrc' : 'assets/img/speakers/1517020448995.jpeg',
+    'speakername' : 'Dr. Deepthi Pilakkat',
+    'institution' : 'IPTIF',
+    'linkedin' : 'https://www.linkedin.com/in/deepthi-pilakkat-a5459a132/'
+  },
+  'sp23' : {
+    'imgsrc' : 'assets/img/speakers/Dr.Pankaj.jpg',
+    'speakername' : 'Dr. Pankaj Achlerkar',
+    'institution' : 'General Electric (GE) Renewable Energy',
+    'linkedin' : 'https://www.linkedin.com/in/pankaj-achlerkar-195051111'
+  },
+  'sp24' : {
+    'imgsrc' : 'assets/img/speakers/Rahul_Dubey.PNG',
+    'speakername' : 'Dr. Rahul Kumar Dubey',
+    'institution' : 'Robert Bosch (RBEI/ETM)',
+    'linkedin' : 'https://www.linkedin.com/in/dr-rahul-kumar-dubey-a7061620/'
+  },
+
+  'sp25' : {
+    'imgsrc' : 'assets/img/speakers/1651159039023.jpeg',
+    'speakername' : 'Dr. M. Sabarimalai',
+    'institution' : 'IIT Palakkad',
+    'linkedin' : 'https://www.linkedin.com/in/dr-m-sabarimalai-manikandan-b8267784/'
+  },
+
+  'sp28' : {
+    'imgsrc' : 'assets/img/speakers/IMG_20220615_111231_826.jpg',
+    'speakername' : 'Dr. Padmesh A',
+    'institution' : 'IIT Palakkad',
+    'linkedin' : 'https://www.iitpkd.ac.in/people/padmesh'
+  },
+
+  // 'sp1' : {
+  //   'imgsrc' : '',
+  //   'speakername' : '',
+  //   'institution' : '',
+  //   'linkedin' : ''
+  // },
 }
 
 const speakerDiv = document.querySelector('.speaker-div');

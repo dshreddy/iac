@@ -35,7 +35,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -159,6 +159,33 @@
     }
   });
 
+  // Array of image paths
+const imagePaths = [
+    "assets/img/gallery/1.JPG",
+    "assets/img/gallery/2.JPG",
+    "assets/img/gallery/3.JPG",
+    "assets/img/gallery/4.JPG",
+    "assets/img/gallery/5.JPG",
+    "assets/img/gallery/6.JPG",
+    "assets/img/gallery/7.JPG",
+    "assets/img/gallery/8.jpg"
+];
+
+// Get the gallery wrapper element
+const galleryWrapper = document.getElementById('galleryWrapper');
+
+// Loop through the image paths and create swiper slides
+imagePaths.forEach(path => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    slide.innerHTML = `
+        <a href="${path}" class="gallery-lightbox">
+            <img src="${path}" class="img-fluid" alt="" style="border-radius: 10px; height: 180px; object-fit: cover;">
+        </a>
+    `;
+    galleryWrapper.appendChild(slide);
+});
+
   /**
    * Initiate glightbox
    */
@@ -190,39 +217,32 @@
       },
       575: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 30
       },
       768: {
         slidesPerView: 3,
-        spaceBetween: 20
+        spaceBetween: 30
       },
       992: {
         slidesPerView: 5,
-        spaceBetween: 20
+        spaceBetween: 35
       }
     }
   });
 
   /**
-   * Initiate gallery lightbox 
+   * Initiate gallery lightbox
    */
   const galleryLightbox = GLightbox({
     selector: '.gallery-lightbox'
   });
 
   /**
-   * Buy tickets select the ticket type on click
-   */
-  on('show.bs.modal', '#buy-ticket-modal', function(event) {
-    select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
-  })
-
-  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -254,7 +274,7 @@ const speakers = {
   },
 
   'sp3' : {
-    'imgsrc' : 'assets/img/speakers/1579780011083.jpeg', 
+    'imgsrc' : 'assets/img/speakers/1579780011083.jpeg',
     'speakername' : 'Hussain Babu D',
     'institution' : 'Larsen & Toubro',
     'linkedin' : 'https://www.linkedin.com/in/hussain-babu-d-378998136/'
@@ -348,7 +368,7 @@ const speakers = {
     'speakername' : 'Dr. Viveka Kalidasan',
     'institution' : 'The Edify Project',
     'linkedin' : 'https://www.linkedin.com/in/vivekakalidasan/'
-  }, 
+  },
   'sp18' : {
     'imgsrc' : 'assets/img/speakers/1608460235332.jpeg',
     'speakername' : 'Dr. Anil Mavila',
@@ -431,3 +451,20 @@ for (const [key, value] of Object.entries(speakers)) {
   </div>
   </div>`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addressItem = document.querySelector('.address-item');
+    const mapContainer = document.querySelector('.map-container');
+
+    let isMapVisible = false;
+
+    addressItem.addEventListener('click', () => {
+        if (isMapVisible) {
+            mapContainer.style.height = '0';
+            isMapVisible = false;
+        } else {
+            mapContainer.style.height = '300px';
+            isMapVisible = true;
+        }
+    });
+});

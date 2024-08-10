@@ -165,24 +165,6 @@ h6 {
   height: 70px;
 }
 
-#header #logo h1 {
-  font-size: 36px;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-#header #logo h1 span {
-  color: #ffad00;
-}
-
-#header #logo h1 a,
-#header #logo h1 a:hover {
-  color: #fff;
-}
-
 #header #logo img {
   padding: 0;
   margin: 0;
@@ -231,7 +213,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -368,7 +350,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -718,7 +700,14 @@ h6 {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  border-radius: 15px;
 }
+
+#speakers .speaker img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 #speakers .speaker .details {
   background: rgba(6, 12, 34, 0.76);
@@ -1095,10 +1084,11 @@ h6 {
 
   #gallery .swiper-slide-active {
     border: 5px solid #ffad00;
-    padding: 4px;
+    padding: 2px;
     background: #fff;
     z-index: 1;
     transform: scale(1.15);
+    border-radius: 10px;
     margin-top: 6px;
   }
 }
@@ -1498,6 +1488,54 @@ h6 {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+footer {
+    background-color: #101522;
+    color: white;
+    padding: 20px;
+    transition: height 0.5s ease; /* Smooth height transition */
+    overflow: hidden; /* Hide overflow during transition */
+  }
+
+  .map-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Smooth height transition */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+#footer-item {
+    font-size: 1.5vw;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer-item:hover {
+    color: #ffad00;
+}
+
+/*
 #footer {
   background: #101522;
   padding: 0 0 25px 0;
@@ -1636,7 +1674,7 @@ h6 {
 
 #footer .footer-top .footer-newsletter input[type=submit]:hover {
   background: #e0072f;
-}
+} */
 
 #footer .copyright {
   text-align: center;
@@ -1654,7 +1692,7 @@ h6 {
   max-width: 100px;
   justify-content: center;
   padding: 10px;
-  
+
 } */
 
 .nav-item {

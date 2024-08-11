@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logoiac.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -38,15 +38,13 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center " style="padding:60px">
-    <div class="container-fluid container-xxl d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid d-flex align-items-center">
 
       <div id="logo" style="margin-right: auto!important;" >
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
         <a href="index.html" class="scrollto">
-          <!-- <img class="logo_medium" src="assets/img/logo.png" alt="" title=""> -->
-          <img class="logo_wide" src="assets/img/logoiac.png" alt="" title="" style="width: auto; height: auto; max-height:100px">
+          <img src="assets/img/logoiac.png" alt="" title="">
+          <img class="logo-text" src="assets/img/logotext.png" alt="" title="" style="padding: 10px 0px;">
         </a>
       </div>
 
@@ -106,7 +104,6 @@
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0">Industry<br><span>Academia</span> Conclave <br><span>IAC 6.0</span></h1>
       <p class="mb-4 pb-0">20-21 September 2024, IIT Palakkad, Kerala</p>
-      <!-- <a href="https://drive.google.com/file/d/1DEB-mSQrYBw7e3MzCJjXzx1UEdTQ7dsB/preview" class="glightbox play-btn mb-4"></a>  -->
       <a href="https://www.youtube.com/watch?v=sQVEoYGYNAM" class="glightbox play-btn mb-4"></a>
       <p/>
       <!-- <p class="mb-4 pb-0">Registration is free but mandatory.</p>
@@ -138,7 +135,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Speakers Section ======= -->
-    <section id="speakers">
+    <section id="speakers" class="section-type2">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Speakers</h2>
@@ -208,32 +205,32 @@
     <!-- End Speakers Section -->
 
     <!-- Events Section -->
-     <section id="events">
-        <div id="talks">
+     <section id="events" style="padding: 0;">
+        <section id="talks">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2>Talks</h2>
                   </div>
             </div>
-        </div>
-        <div id="workshops">
+        </section>
+        <section id="workshops">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2>WorkShops</h2>
                   </div>
             </div>
-        </div>
-        <div id="presentations">
+        </section>
+        <section id="presentations">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">
                     <h2>Presentations</h2>
                   </div>
             </div>
-        </div>
+        </section>
      </section>
 
     <!-- ======= Schedule Section ======= -->
-    <section id="schedule" class="section-with-bg">
+    <section id="schedule" class="section-type1">
         <div class="container" data-aos="fade-up">
           <div class="section-header">
             <h2>Event Schedule</h2>
@@ -1158,14 +1155,23 @@
       </div>
 
       <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center" id="galleryWrapper"></div>
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
+        </div>
         <div class="swiper-pagination"></div>
-    </div>
+      </div>
 
     </section><!-- End Gallery Section -->
 
     <!-- ======= Supporters Section ======= -->
-    <section id="supporters" class="section-with-bg">
+    <section id="supporters" class="section-type1">
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -1238,43 +1244,57 @@
 
     </section><!-- End Sponsors Section -->
 
+    <section id="reach-us" class="section-bg">
+
+        <div class="container-fluid" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>Reach Us</h2>
+          </div>
+
+          <div class="row contact-info" align="center">
+
+            <div class="col-md-6">
+              <div class="contact-address">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <address>Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="contact-email">
+                <i class="bi bi-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin" width="90%" height="400" style="border:0; border-radius: 7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="reach-us">
-    <div class="map-container">
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+  <footer>
     <div class="footer-content">
         <img class="logo_wide" src="assets/img/logoiit.png" alt="" title="" style="width: auto; height: 8vw">
-        <div>
-            <span id="footer-item" class="address-item"><i class="bi bi-geo-alt"></i> Address</span>
-            <a id="footer-item" href="mailto:iac.iitpkd.ac.in">
-                <i class="bi bi-envelope"></i> Email
-            </a>
-        </div>
     </div>
     <div class="footer-bottom">
-        <div class="copyright">
+        <div>
             &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
         </div>
-        <div class="credits">
+        <div>
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </div>
-</footer>
-
-  <!-- <footer id="footer">
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer> -->
+  </footer>
+<!-- ==== Footer End ==== -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

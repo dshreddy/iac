@@ -46,7 +46,7 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 120
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
@@ -82,18 +82,39 @@
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select('#header')
-  if (selectHeader) {
+  let selectHeader = select('#header');
+  let totalHeight;
+  const headerLoader = () => {
+    const selectHero = select('#hero');
+    const selectAboutUs = select('#about');
+    const heroHeight = selectHero ? selectHero.offsetHeight : 0;
+    const aboutUsHeight = selectAboutUs ? selectAboutUs.offsetHeight : 0;
+    const headerHeight = selectHeader ? selectHeader.offsetHeight : 0;
+    totalHeight = heroHeight + aboutUsHeight - headerHeight;
+
     const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
+      if (window.scrollY > 100 && window.scrollY < totalHeight) {
+        selectHeader.classList.remove('header-light');
+        selectHeader.classList.add('header-dark');
+        selectHeader.style.backgroundColor = 'rgb(6, 12, 34)';
+      } else if (window.scrollY >= totalHeight) {
+        selectHeader.classList.remove('header-dark');
+        selectHeader.classList.add('header-light');
+        selectHeader.style.backgroundColor = 'rgb(232, 237, 255)';
       } else {
-        selectHeader.classList.remove('header-scrolled')
+        selectHeader.classList.remove('header-light');
+        selectHeader.classList.add('header-dark');
+        selectHeader.style.backgroundColor = 'transparent';
       }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
+    };
+
+    headerScrolled();
+    onscroll(document, headerScrolled);
   }
+
+  window.addEventListener('load', headerLoader);
+
+
 
   /**
    * Back to top button
@@ -158,33 +179,6 @@
       }
     }
   });
-
-  // Array of image paths
-const imagePaths = [
-    "assets/img/gallery/1.JPG",
-    "assets/img/gallery/2.JPG",
-    "assets/img/gallery/3.JPG",
-    "assets/img/gallery/4.JPG",
-    "assets/img/gallery/5.JPG",
-    "assets/img/gallery/6.JPG",
-    "assets/img/gallery/7.JPG",
-    "assets/img/gallery/8.jpg"
-];
-
-// Get the gallery wrapper element
-const galleryWrapper = document.getElementById('galleryWrapper');
-
-// Loop through the image paths and create swiper slides
-imagePaths.forEach(path => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-    slide.innerHTML = `
-        <a href="${path}" class="gallery-lightbox">
-            <img src="${path}" class="img-fluid" alt="" style="border-radius: 10px; height: 180px; object-fit: cover;">
-        </a>
-    `;
-    galleryWrapper.appendChild(slide);
-});
 
   /**
    * Initiate glightbox
@@ -451,20 +445,3 @@ for (const [key, value] of Object.entries(speakers)) {
   </div>
   </div>`;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const addressItem = document.querySelector('.address-item');
-    const mapContainer = document.querySelector('.map-container');
-
-    let isMapVisible = false;
-
-    addressItem.addEventListener('click', () => {
-        if (isMapVisible) {
-            mapContainer.style.height = '0';
-            isMapVisible = false;
-        } else {
-            mapContainer.style.height = '300px';
-            isMapVisible = true;
-        }
-    });
-});

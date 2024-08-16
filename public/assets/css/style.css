@@ -457,8 +457,8 @@ section {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.jpg) top center;
-  background-size: cover;
+  /* background: url(../img/hero-bg.jpg) top center; */
+  /* background-size: cover; */
   overflow: hidden;
   position: relative;
 }
@@ -783,6 +783,69 @@ section {
   margin-bottom: 10px;
 }
 
+/*
+# Event Section
+ */
+
+ .event-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+  .event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  .event-card h3, .event-card p , .event-card ul{
+    position: relative;
+    z-index: 1;
+  }
+
+  .event-card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  .event-card ul li {
+    margin-bottom: 5px;
+  }
+
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col-12.col-md-6 {
+    display: flex;
+  }
+
+  .schedule-card {
+    background-color: grey;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+
+
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
@@ -835,7 +898,7 @@ section {
   text-align: center;
   font-size: 18px;
   font-style: italic;
-  margin: 0 auto 30px auto;
+  /* margin: 0 auto 30px auto; */
 }
 
 @media (min-width: 991px) {

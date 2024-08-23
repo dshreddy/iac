@@ -34,9 +34,9 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
- body {
+      body {
     font-family: Arial, sans-serif;
-    margin: 10;
+    margin: 0;
     padding: 0;
 }
 
@@ -56,27 +56,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Distributes space between items */
     width: 300px; /* Fixed width */
     height: 300px; /* Fixed height */
 }
 
 .photo-box {
     width: 100%; /* Full width of the .photo-container */
-    height: 100%; /* Full height of the .photo-container */
+    height: 80%; /* 80% of the height for the image */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Hide overflow */
-    margin: 10px;
 }
 
 .photo-box img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain; /* Ensures the whole image fits within the box */
-    display: block; /* Removes*/
-    margin: 10px;
+    display: block; /* Removes extra space below the image */
+}
+
+.photo-name position-name {
+    width: 100%; /* Full width of the .photo-container */
+    text-align: center;
+    margin: 0;
+    padding: 10px; /* Adds padding around the name */
+    font-weight: bold;
+}
+
+.person-name {
+    color: #333; /* Color for the person's name */
+}
+
+.position-name {
+    font-weight: bold;
+    color: #df8d12; /* Color for the position name */
 }
 
     </style>
@@ -298,12 +313,7 @@
 <!-- here chagne the link to the photo of the each team member acc to the need  -->
 
 <!-- here the change we have to make in the photo -->
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-<!--           <div class="heading">
-            <h2>Organizing Team</h2>
-        </div> -->
-<div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
         <div class="section-header">
             <!-- Optional: Uncomment if you need a heading -->
             <div class="heading"><h2>Organizing Team</h2></div>
@@ -313,8 +323,8 @@
                 <div class="photo-box">
                     <img src="./images/prabhat_suresh.jpg" alt="Prabhat Suresh">
                 </div>
-                <div class="photo-name">Prabhat Suresh</div>
-                <div class="photo-name">Outreach Coordinator</div>
+                <div class="photo-name person">Prabhat Suresh</div>
+                <div class="photo-name position-name">Outreach Coordinator</div>
             </div>
   
             <div class="photo-container">
@@ -322,8 +332,8 @@
                     <!-- Replace with correct image source -->
                     <!-- <img src="./images/finance_coordinator.jpg" alt="Juvvala Revanth"> -->
                 </div>
-                <div class="photo-name">Juvvala Revanth</div>
-                <div class="photo-name">Finance Coordinator</div>
+                <div class="photo-name person-name ">Juvvala Revanth</div>
+                <div class="photo-name position-name">Finance Coordinator</div>
             </div>
         </div>
         <div class="row">
@@ -331,23 +341,23 @@
                 <div class="photo-box">
                     <img src="./images/arayan.jpg" alt="Aryan Mathur">
                 </div>
-                <div class="photo-name">Aryan Mathur</div>
-                <div class="photo-name">Technical Coordinator</div>
+                <div class="photo-name person-name">Aryan Mathur</div>
+                <div class="photo-name position-name">Technical Coordinator</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <!-- Replace with correct image source -->
                     <!-- <img src="https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2023-07/sdey1.jpg?itok=ubPnD6Ak" alt="Geetheswar"> -->
                 </div>
-                <div class="photo-name">Geetheswar</div>
-                <div class="photo-name">Frontend Developer</div>
+                <div class="photo-name person-name">Geetheswar</div>
+                <div class="photo-name position-name">Frontend Developer</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <img src="./images/zeeshan.jpeg" alt="Zeeshan Rangrej">
                 </div>
-                <div class="photo-name">Zeeshan Rangrej</div>
-                <div class="photo-name">Backend Developer</div>
+                <div class="photo-name person-name">Zeeshan Rangrej</div>
+                <div class="photo-name position-name">Backend Developer</div>
             </div>
         </div>
         <div class="row">
@@ -355,22 +365,22 @@
                 <div class="photo-box">
                     <img src="./images/karthikeya.jpg" alt="Karthikeya B">
                 </div>
-                <div class="photo-name">Karthikeya B</div>
-                <div class="photo-name">Logistics and Marketing Coordinator</div>
+                <div class="photo-name person-name">Karthikeya B</div>
+                <div class="photo-name position-name">Logistics and Marketing Coordinator</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <img src="./images/sarath.jpg" alt="Sarath A">
                 </div>
-                <div class="photo-name">Sarath A</div>
-                <div class="photo-name">Content and Design Coordinator</div>
+                <div class="photo-name person-name">Sarath A</div>
+                <div class="photo-name position-name">Content and Design Coordinator</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <img src="./images/devaraj.jpg" alt="Devraj Doley">
                 </div>
-                <div class="photo-name">Devraj Doley</div>
-                <div class="photo-name">Design Coordinator</div>
+                <div class="photo-name person-name">Devraj Doley</div>
+                <div class="photo-name position-name">Design Coordinator</div>
             </div>
         </div>
         <div class="row">
@@ -378,26 +388,25 @@
                 <div class="photo-box">
                     <img src="./images/muhamed_rizwan.jpg" alt="Muhamed Rizwan Mehaboob">
                 </div>
-                <div class="photo-name">Muhamed Rizwan Mehaboob</div>
-                <div class="photo-name">Event Coverage Coordinator</div>
+                <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
+                <div class="photo-name position-name">Event Coverage Coordinator</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <img src="./images/amal_krishnan.jpg" alt="Amal Krishnan K">
                 </div>
-                <div class="photo-name">Amal Krishnan K</div>
-                <div class="photo-name">Hospitality Coordinator</div>
+                <div class="photo-name person-name">Amal Krishnan K</div>
+                <div class="photo-name position-name">Hospitality Coordinator</div>
             </div>
             <div class="photo-container">
                 <div class="photo-box">
                     <img src="./images/saihemanth.jpg" alt="Sai Hemanth Reddy">
                 </div>
-                <div class="photo-name">Sai Hemanth Reddy</div>
-                <div class="photo-name">Academic Affairs Secretary</div>
+                <div class="photo-name person-name">Sai Hemanth Reddy</div>
+                <div class="photo-name position-name">Academic Affairs Secretary</div>
             </div>
         </div>
     </div>
-
 <!--           //here is the list of the Department coordinator -->
 <!-- Here i added the photos and all that no need to change -->
 

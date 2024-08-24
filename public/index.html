@@ -14,7 +14,8 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -33,100 +34,154 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-    <style>
-      body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.container {
-    max-width: 1000px; /* Set maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px;
-}
+    .container {
+      max-width: 1000px;
+      /* Set maximum width for the container */
+      margin: 0 auto;
+      /* Center the container horizontally */
+      padding: 20px;
+      display: none;
+    }
 
-.row {
-    display: flex;
-    grid-template-columns: repeat(3, 300px); /* Creates 3 columns, each 300px wide */
-    gap: 20px; /* Space between the photo boxes */
-    justify-content: center;
-}
+    .row {
+      display: flex;
+      grid-template-columns: repeat(3, 300px);
+      /* Creates 3 columns, each 300px wide */
+      gap: 20px;
+      /* Space between the photo boxes */
+      justify-content: center;
+    }
 
-.photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Distributes space between items */
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-}
+    .photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      /* Distributes space between items */
+      width: 300px;
+      /* Fixed width */
+      height: 300px;
+      /* Fixed height */
+      
+    }
 
-.photo-box {
-    width: 100%; /* Full width of the .photo-container */
-    height: 80%; /* 80% of the height for the. images */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Hide overflow */
-}
+    .photo-box {
+      width: 100%;
+      /* Full width of the .photo-container */
+      height: 80%;
+      /* 80% of the height for the. images */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      /* Hide overflow */
+    }
 
-.photo-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensures the whole. images fits within the box */
-    display: block; /* Removes extra space below the. images */
-    padding-top: 10px;
-}
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Ensures the whole. images fits within the box */
+      display: block;
+      /* Removes extra space below the. images */
+      padding-top: 10px;
+    }
 
 
 
-.toggle-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
+    .toggle-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .collapsible {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    .collapsible.show {
+      max-height: 1000px;
+      /* Adjust as needed */
+    }
+
+
+
+    .photo-name position-name {
+      width: 100%;
+      /* Full width of the .photo-container */
+      text-align: center;
+      margin: 0;
+      padding-left: 10px;
+      /* Adds padding around the name */
+      padding-right: 10px;
+      font-weight: bold;
+      padding-top: 200px;
+    }
+
+    .person-name {
+      color: #333;
+      /* Color for the person's name */
+    }
+
+    .position-name {
+      font-weight: bold;
+      color: #df8d12;
+      /* Color for the position name */
+      padding-top: 20px;
+      text-align: center;
+      justify-content: center;
+    }
+
+
+    #toggle:checked~.container {
+      display: block;
+    }
+
+
+    .toggle-button {
+      position: absolute; /* Absolute positioning */
+    top: 50%; /* Position the top of the div at 50% of the viewport height */
+    left: 50%; /* Position the left of the div at 50% of the viewport width */
+    transform: translate(-50%, -50%);
+    /* padding: 10px 20px; Adjust padding as needed */
+    background-color: #df8d12;
     color: white;
-    border: none;
+    text-align: center;
+    cursor: pointer;
+    border: none; /* Remove border */
     border-radius: 5px;
-}
-
-.collapsible {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
-.collapsible.show {
-    max-height: 1000px; /* Adjust as needed */
-}
-
-
-
-.photo-name position-name {
-    width: 100%; /* Full width of the .photo-container */
-    text-align: center;
-    margin: 0;
-    padding-left: 10px; /* Adds padding around the name */
-    padding-right: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0; /* Remove any default margin */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
     font-weight: bold;
-    padding-top: 200px;
-}
-
-.person-name {
-    color: #333; /* Color for the person's name */
-}
-
-.position-name {
-    font-weight: bold;
-    color: #df8d12; /* Color for the position name */
-    padding-top: 20px;
-    text-align: center;
+    height: 50px;
+    width: 300px;
+    padding-bottom: 60px;
     justify-content: center;
+    /* align-items: center; */
+    position: relative;
+    max-width: 500px;
 }
 
-    </style>
-  
+    .toggle-button:hover {
+      background-color: #df8d12;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -135,7 +190,7 @@
   <header id="header" class="d-flex align-items-center ">
     <div class="container-fluid d-flex align-items-center">
 
-      <div id="logo" style="margin-right: auto!important;" >
+      <div id="logo" style="margin-right: auto!important;">
         <a href="index.html" class="scrollto">
           <img src="assets/img/logoiac.png" alt="" title="">
           <img class="logo-text" src="assets/img/logotext.png" alt="" title="" style="padding: 10px 0px;">
@@ -155,7 +210,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      
+
     </div>
   </header><!-- End Header -->
 
@@ -165,7 +220,7 @@
       <h1 class="mb-4 pb-0">Industry<br><span>Academia</span> Conclave <br><span>IAC 6.0</span></h1>
       <p class="mb-4 pb-0">20-21 September 2024, IIT Palakkad, Kerala</p>
       <a href="https://www.youtube.com/watch?v=sQVEoYGYNAM" class="glightbox play-btn mb-4"></a>
-    </p>
+      </p>
     </div>
   </section><!-- End Hero Section -->
 
@@ -177,7 +232,10 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>About IAC</h2>
-            <p>IAC is a platform for exchange of ideas, innovations and best practices between the Industry and Academia. The talks by Industry leaders and Academicians, poster presentations, lab visits and panel discussion, featured at the Conclave will pave the way for impactful collaborations and long lasting connections.
+            <p>IAC is a platform for exchange of ideas, innovations and best practices between the Industry and
+              Academia. The talks by Industry leaders and Academicians, poster presentations, lab visits and panel
+              discussion, featured at the Conclave will pave the way for impactful collaborations and long lasting
+              connections.
             </p>
           </div>
           <div class="col-lg-3">
@@ -200,383 +258,389 @@
     <!-- Events Section -->
     <section id="events" style="padding-top: 60px; padding-bottom: 0;" class="section-type1">
       <div class="container">
-          <div class="section-header" data-aos="fade-up">
-              <h2>Events</h2>
-          </div>
-  
-          <!-- Lecture Series -->
-          <div class="row mb-4" data-aos="fade-left">
-              <div class="col-lg-12">
-                  <div class="event-card d-flex align-items-center">
-                      <div class="col-lg-7 col-md-7 text-right">
-                          <h1>Lecture Series</h1>
-                          <p>Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
-                            where renowned professors from diverse disciplines share their expertise and insights 
-                            on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
-                            that will inspire you, broaden your perspective, and connect you with the latest in 
-                            knowledge. <br> <br>
-                            <br>Don't miss this unique opportunity to learn from the best minds in their fields!.<br>
-                          </p>
-                      </div>
-                      <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                        <div class="event-image">
-                          <img src="assets/img/event_card/lecture.jpg" class="img-fluid" alt="">
-                          <p>Previous event image</p>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Exhibition -->
-          <div class="row mb-4" data-aos="fade-right">
-              <div class="col-lg-12">
-                  <div class="event-card d-flex align-items-center">
-                      <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                        <div class="event-image">
-                          <img src="assets/img/event_card/exhibition.jpg" class="img-fluid" alt="">
-                          <p>Previous event image</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-7 col-md-7">
-                          <h1>Exhibition</h1>
-                          <p>Unleash your creativity and showcase your innovative projects, products, 
-                            and posters at the IAC Exhibition! This is a fantastic chance for students 
-                            to present their work to professionals from various industries, receive valuable 
-                            feedback, and potentially spark collaborations.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Start-Up Booths -->
-          <div class="row mb-4" data-aos="fade-left">
-              <div class="col-lg-12">
-                  <div class="event-card d-flex align-items-center">
-                      <div class="col-lg-7 col-md-7 text-right">
-                          <h1>Start-Up Booths</h1>
-                          <p>Explore innovative startups founded by recent graduates, supported by 
-                            TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs 
-                            to share their journey from idea to execution. Engage with the founders, learn 
-                            about their challenges, and discover how their startups are shaping the future. 
-                            These booths provide a firsthand look at the cutting-edge innovations emerging 
-                            from our alumni network.
-                          </p>
-                      </div>
-                      <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                        <div class="event-image">
-                          <img src="assets/img/event_card/startup.jpg" class="img-fluid" alt="">
-                          <p>Previous event image</p>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Panel discussion -->
-          <div class="row mb-4" data-aos="fade-right">
-              <div class="col-lg-12">
-                  <div class="event-card d-flex align-items-center">
-                      <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                        <div class="event-image">
-                          <img src="assets/img/event_card/panel.jpg" class="img-fluid" alt="">
-                          <p>Previous event image</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-7 col-md-7">
-                          <h1>Panel discussion</h1>
-                          <p>Join a group of industry experts as they delve into key topics relevant 
-                            to the industrial world. This session offers valuable insights into current 
-                            trends and practical applications. 
-                            <br>This panel discussion is the perfect platform to ask questions and engage 
-                            directly with the panelists, making this an invaluable chance to gain knowledge 
-                            and advice from experienced professionals.<br>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div class="section-header" data-aos="fade-up">
+          <h2>Events</h2>
+        </div>
 
-        <div style="height: 40px;"></div>
-  </section>
-  
-  
+        <!-- Lecture Series -->
+        <div class="row mb-4" data-aos="fade-left">
+          <div class="col-lg-12">
+            <div class="event-card d-flex align-items-center">
+              <div class="col-lg-7 col-md-7 text-right">
+                <h1>Lecture Series</h1>
+                <p>Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series,
+                  where renowned professors from diverse disciplines share their expertise and insights
+                  on cutting-edge topics. This is more than just a lecture—it's an engaging experience
+                  that will inspire you, broaden your perspective, and connect you with the latest in
+                  knowledge. <br> <br>
+                  <br>Don't miss this unique opportunity to learn from the best minds in their fields!.<br>
+                </p>
+              </div>
+              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
+                <div class="event-image">
+                  <img src="assets/img/event_card/lecture.jpg" class="img-fluid" alt="">
+                  <p>Previous event image</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exhibition -->
+        <div class="row mb-4" data-aos="fade-right">
+          <div class="col-lg-12">
+            <div class="event-card d-flex align-items-center">
+              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
+                <div class="event-image">
+                  <img src="assets/img/event_card/exhibition.jpg" class="img-fluid" alt="">
+                  <p>Previous event image</p>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7">
+                <h1>Exhibition</h1>
+                <p>Unleash your creativity and showcase your innovative projects, products,
+                  and posters at the IAC Exhibition! This is a fantastic chance for students
+                  to present their work to professionals from various industries, receive valuable
+                  feedback, and potentially spark collaborations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start-Up Booths -->
+        <div class="row mb-4" data-aos="fade-left">
+          <div class="col-lg-12">
+            <div class="event-card d-flex align-items-center">
+              <div class="col-lg-7 col-md-7 text-right">
+                <h1>Start-Up Booths</h1>
+                <p>Explore innovative startups founded by recent graduates, supported by
+                  TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs
+                  to share their journey from idea to execution. Engage with the founders, learn
+                  about their challenges, and discover how their startups are shaping the future.
+                  These booths provide a firsthand look at the cutting-edge innovations emerging
+                  from our alumni network.
+                </p>
+              </div>
+              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
+                <div class="event-image">
+                  <img src="assets/img/event_card/startup.jpg" class="img-fluid" alt="">
+                  <p>Previous event image</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel discussion -->
+        <div class="row mb-4" data-aos="fade-right">
+          <div class="col-lg-12">
+            <div class="event-card d-flex align-items-center">
+              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
+                <div class="event-image">
+                  <img src="assets/img/event_card/panel.jpg" class="img-fluid" alt="">
+                  <p>Previous event image</p>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-7">
+                <h1>Panel discussion</h1>
+                <p>Join a group of industry experts as they delve into key topics relevant
+                  to the industrial world. This session offers valuable insights into current
+                  trends and practical applications.
+                  <br>This panel discussion is the perfect platform to ask questions and engage
+                  directly with the panelists, making this an invaluable chance to gain knowledge
+                  and advice from experienced professionals.<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </section>
 
 
 
-<!--     adding the team tab -->
+
+
+    <!--     adding the team tab -->
 
     <section id="team">
 
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <div class="heading">
-            <h2>Organizing Team</h2>
-        </div>
-        <div class="row">
+      <label for="toggle" class="toggle-button heading">Organizing team</label>
+      <input type="checkbox" id="toggle" style="display:none;">
+      <div class="container" data-aos="fade-up"> 
+        <!-- <div class="section-header">  -->
+          <!-- <div class="heading">
+
+        </div> -->
+          <div class="row">
+
             <div class="photo-container">
-              
+
               <div class="photo-name position-name">Faculty Advisor</div>
               <div class="photo-box">
                 <img src="../images/nelson.png" alt="Photo 1">
               </div>
-                <div class="photo-name person-name">Nelson Muthu</div>
+              <div class="photo-name person-name">Nelson Muthu</div>
             </div>
             <div class="col-md-4 photo-container">
               <div class="photo-name position-name">Faculty Advisor</div>
               <div class="photo-box">
                 <img src="../images/sukomel_dey.png" alt="Photo 1">
               </div>
-                <div class="photo-name person-name">Sukomal Dey</div>
+              <div class="photo-name person-name">Sukomal Dey</div>
             </div>
             <div class="col-md-4 photo-container">
               <div class="photo-name position-name">Industry Liaison Officer</div>
               <div class="photo-box">
                 <img src="../images/silvon.png" alt="Photo 1">
               </div>
-                <div class="photo-name person-name">Dr. Selva Pandian</div>
+              <div class="photo-name person-name">Dr. Selva Pandian</div>
             </div>
-          
-        </div>
-  
+
+          </div>
+
         </div>
       </div>
 
 
+
+
+
+
+      <!-- here chagne the link to the photo of the each team member acc to the need  -->
+
+      <!-- here the change we have to make in the photo -->
+
+      <div class="container" data-aos="fade-up">
+        <!-- <div class="section-header"> -->
+          <!-- Optional: Uncomment if you need a heading -->
+          <!-- <div class="heading"><h2>Organizing Team</h2></div> -->
+          <!-- <button class="toggle-button">Show More</button> -->
       
+        <!-- </div> -->
+        <div class="row">
+          <div class="photo-container">
+            <div class="photo-name position-name">Outreach Coordinator</div>
+            <div class="photo-box">
+
+              <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh">
+            </div>
+            <div class="photo-name person">Prabhat Suresh</div>
+
+          </div>
+
+          <div class="photo-container">
+            <div class="photo-name position-name">Finance Coordinator</div>
+            <div class="photo-box">
+              <!-- Replace with correct. images source -->
+              <img src="../images/revanth.png" alt="Juvvala Revanth">
+            </div>
+            <div class="photo-name person-name ">Juvvala Revanth</div>
+
+          </div>
+
+          <div class="photo-container">
+            <div class="photo-name position-name">Hospitality Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/amal_krishnan.png" alt="Amal Krishnan K">
+            </div>
+            <div class="photo-name person-name">Amal Krishnan K</div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-container">
+            <div class="photo-name position-name">Technical Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/aryan_mathur.png" alt="Aryan Mathur">
+            </div>
+            <div class="photo-name person-name">Aryan Mathur</div>
+
+          </div>
+          <div class="photo-container">
+            <div class="photo-name position-name">Frontend Developer</div>
+            <div class="photo-box">
+              <!-- Replace with correct. images source -->
+              <img src="../images/g.png" alt="Geetheswar">
+            </div>
+            <div class="photo-name person-name">Geetheswar</div>
+
+          </div>
+          <div class="photo-container">
+            <div class="photo-name position-name">Backend Developer</div>
+            <div class="photo-box">
+              <img src="../images/zeeshan.png" alt="Zeeshan Rangrej">
+            </div>
+            <div class="photo-name person-name">Zeeshan Rangrej</div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-container">
+            <div class="photo-name position-name">Logistics & Marketing Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/karthikeya.png" alt="Karthikeya B">
+            </div>
+            <div class="photo-name person-name">Karthikeya B</div>
+
+          </div>
+          <div class="photo-container">
+            <div class="photo-name position-name">Content and Design Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/sarath.png" alt="Sarath A">
+            </div>
+            <div class="photo-name person-name">Sarath A</div>
+
+          </div>
+          <div class="photo-container">
+            <div class="photo-name position-name">Design Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/devraj.png" alt="Devraj Doley">
+            </div>
+            <div class="photo-name person-name">Devraj Doley</div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="photo-container">
+            <div class="photo-name position-name">Event Coverage Coordinator</div>
+            <div class="photo-box">
+              <img src="../images/rizwan.png" alt="Muhamed Rizwan Mehaboob">
+            </div>
+            <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
+
+          </div>
+
+          <div class="photo-container">
+            <div class="photo-name position-name">Academic Affairs Secretary</div>
+            <div class="photo-box">
+              <img src="../images/hemath_reddy.png" alt="Sai Hemanth Reddy">
+            </div>
+            <div class="photo-name person-name">Sai Hemanth Reddy</div>
+
+          </div>
+        </div>
+      </div>
+      <!--           //here is the list of the Department coordinator -->
+      <!-- Here i added the photos and all that no need to change -->
 
 
-      
-<!-- here chagne the link to the photo of the each team member acc to the need  -->
-
-<!-- here the change we have to make in the photo -->
-
-  <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
         <div class="section-header">
-            <!-- Optional: Uncomment if you need a heading -->
-            <!-- <div class="heading"><h2>Organizing Team</h2></div> -->
-            <!-- <button class="toggle-button">Show More</button> -->
-        </div>
-        <div class="row collapsible">
-            <div class="photo-container">
-              <div class="photo-name position-name">Outreach Coordinator</div>
-                <div class="photo-box">
-
-                    <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh">
-                </div>
-                <div class="photo-name person">Prabhat Suresh</div>
-
-            </div>
-  
-            <div class="photo-container">
-              <div class="photo-name position-name">Finance Coordinator</div>
-                <div class="photo-box">
-                    <!-- Replace with correct. images source -->
-                    <img src="../images/revanth.png" alt="Juvvala Revanth">
-                </div>
-                <div class="photo-name person-name ">Juvvala Revanth</div>
-
-            </div>
-
-            <div class="photo-container">
-              <div class="photo-name position-name">Hospitality Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/amal_krishnan.png" alt="Amal Krishnan K">
-                </div>
-                <div class="photo-name person-name">Amal Krishnan K</div>
- 
-            </div>
+          <!-- Optional: Uncomment if you need a heading -->
+          <div class="heading">
+            <h2>Department Coordinators</h2>
+          </div>
         </div>
         <div class="row">
-            <div class="photo-container">
-              <div class="photo-name position-name">Technical Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/aryan_mathur.png" alt="Aryan Mathur">
-                </div>
-                <div class="photo-name person-name">Aryan Mathur</div>
 
-            </div>
-            <div class="photo-container">
-              <div class="photo-name position-name">Frontend Developer</div>
-                <div class="photo-box">
-                    <!-- Replace with correct. images source -->
-                    <img src="../images/g.png" alt="Geetheswar">
-                </div>
-                <div class="photo-name person-name">Geetheswar</div>
-
-            </div>
-            <div class="photo-container">
-              <div class="photo-name position-name">Backend Developer</div>
-                <div class="photo-box">
-                    <img src="../images/zeeshan.png" alt="Zeeshan Rangrej">
-                </div>
-                <div class="photo-name person-name">Zeeshan Rangrej</div>
-  
-            </div>
-        </div>
-        <div class="row">
-            <div class="photo-container">
-              <div class="photo-name position-name">Logistics & Marketing Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/karthikeya.png" alt="Karthikeya B">
-                </div>
-                <div class="photo-name person-name">Karthikeya B</div>
-
-            </div>
-            <div class="photo-container">
-              <div class="photo-name position-name">Content and Design Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/sarath.png" alt="Sarath A">
-                </div>
-                <div class="photo-name person-name">Sarath A</div>
-  
-            </div>
-            <div class="photo-container">
-              <div class="photo-name position-name">Design Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/devraj.png" alt="Devraj Doley">
-                </div>
-                <div class="photo-name person-name">Devraj Doley</div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="photo-container">
-              <div class="photo-name position-name">Event Coverage Coordinator</div>
-                <div class="photo-box">
-                    <img src="../images/rizwan.png" alt="Muhamed Rizwan Mehaboob">
-                </div>
-                <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
-
-            </div>
-
-            <div class="photo-container">
-              <div class="photo-name position-name">Academic Affairs Secretary</div>
-                <div class="photo-box">
-                    <img src="../images/hemath_reddy.png" alt="Sai Hemanth Reddy">
-                </div>
-                <div class="photo-name person-name">Sai Hemanth Reddy</div>
-
-            </div>
-        </div>
-    </div>
-<!--           //here is the list of the Department coordinator -->
-<!-- Here i added the photos and all that no need to change -->
-
-
-<div class="container" data-aos="fade-up">
-  <div class="section-header">
-      <!-- Optional: Uncomment if you need a heading -->
-      <div class="heading"><h2>Department Coordinators</h2></div>
-  </div>
-          <div class="row">
-
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Computer Science and Engineering</div>
-              <div class="photo-box">
-                <img src="../images/jasine.png" alt="Photo 2">
-              </div>
-              
-               
-                <div class="photo-name person-name">Jasine Babu</div>
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Computer Science and Engineering</div>
+            <div class="photo-box">
+              <img src="../images/jasine.png" alt="Photo 2">
             </div>
 
 
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Data Science and Engineering</div>
-              <div class="photo-box">
-                <img src="../images/satyajit.png" alt="Photo 2">
-              </div>
+            <div class="photo-name person-name">Jasine Babu</div>
+          </div>
 
-                <div class="photo-name person-name">Satyajit Das</div>
+
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Data Science and Engineering</div>
+            <div class="photo-box">
+              <img src="../images/satyajit.png" alt="Photo 2">
             </div>
 
+            <div class="photo-name person-name">Satyajit Das</div>
+          </div>
 
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Electrical Engineering</div>
-              <div class="photo-box">
-                <img src="../images/sreenathV.png" alt="Photo 2">
-              </div>
 
-                <div class="photo-name person-name">Sreenath V</div>
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Electrical Engineering</div>
+            <div class="photo-box">
+              <img src="../images/sreenathV.png" alt="Photo 2">
             </div>
 
+            <div class="photo-name person-name">Sreenath V</div>
+          </div>
 
-            <!-- <div class=" photo-container position-name">Department of Electrical Engineering</div>
+
+          <!-- <div class=" photo-container position-name">Department of Electrical Engineering</div>
               <div class="photo-box">
                 <img src="../images/sreenathV.png" alt="Photo 2">
               </div>
 
                 <div class="photo-name person-name">Sreenath V</div>
             </div> -->
-          </div>
+        </div>
 
-          <div class="row">
+        <div class="row">
 
-       
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Mechanical Engineering</div>
-              <div class="photo-box">
-                <img src="../images/subu.png" alt="Photo 2">
-              </div>
 
-                <div class="photo-name person-name">Kanmani Subu S.</div>
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Mechanical Engineering</div>
+            <div class="photo-box">
+              <img src="../images/subu.png" alt="Photo 2">
             </div>
 
-
-            
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Civil Engineering</div>
-              <div class="photo-box">
-                <img src="../images/civil.png" alt="Photo 2">
-              </div>
-
-                <div class="photo-name person-name">Dr. Sarmistha Singh</div>
-            </div>
-      
-
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Physics</div>
-              <div class="photo-box">
-                <img src="../images/vishwas.png" alt="Photo 2">
-              </div>
-
-                <div class="photo-name person-name">Vishwas V.</div>
-            </div>
+            <div class="photo-name person-name">Kanmani Subu S.</div>
           </div>
 
 
-          <div class="row">
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Mathematics</div>
-              <div class="photo-box">
-                <img src="../images/jaikrishnan.png" alt="Photo 2">
-              </div>
 
-                <div class="photo-name person-name">Jaikrishnan Janardhanan</div>
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Civil Engineering</div>
+            <div class="photo-box">
+              <img src="../images/civil.png" alt="Photo 2">
             </div>
 
-            <div class=" photo-container">
-              <div class="photo-name position-name">Department of Chemistry</div>
-              <div class="photo-box">
-                <img src="../images/yuvraj.png" alt="Photo 2">
-              </div>
+            <div class="photo-name person-name">Dr. Sarmistha Singh</div>
+          </div>
 
-                <div class="photo-name person-name">Yuvraj K.</div>
+
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Physics</div>
+            <div class="photo-box">
+              <img src="../images/vishwas.png" alt="Photo 2">
             </div>
 
-            
+            <div class="photo-name person-name">Vishwas V.</div>
+          </div>
         </div>
-          
+
+
+        <div class="row">
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Mathematics</div>
+            <div class="photo-box">
+              <img src="../images/jaikrishnan.png" alt="Photo 2">
+            </div>
+
+            <div class="photo-name person-name">Jaikrishnan Janardhanan</div>
+          </div>
+
+          <div class=" photo-container">
+            <div class="photo-name position-name">Department of Chemistry</div>
+            <div class="photo-box">
+              <img src="../images/yuvraj.png" alt="Photo 2">
+            </div>
+
+            <div class="photo-name person-name">Yuvraj K.</div>
+          </div>
+
+
         </div>
+
+      </div>
       </div>
 
-    </div>
+      </div>
 
     </section>
 
-    
+
     <!-- ======= Gallery Section ======= -->
     <section id="gallery">
 
@@ -589,21 +653,29 @@
 
       <div class="gallery-slider swiper">
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
         </div>
         <div class="swiper-pagination"></div>
         <div align="center">
           <h1>Previous IAC Reports</h1>
-          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> | 
-          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> | 
-          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> | 
+          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
+          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
+          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
           <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
         </div>
       </div>
@@ -616,12 +688,13 @@
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-            <h2>Sponsors</h2>
+          <h2>Sponsors</h2>
         </div>
-        
+
         <div align="center"> If you are interested in sponsoring the event,
           please contact <a href="mailto:ilo@iitpkd.ac.in">ilo@iitpkd.ac.in</a> or
-              <a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a> </div>
+          <a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a>
+        </div>
 
       </div>
 
@@ -630,57 +703,61 @@
 
     <section id="reach-us" class="section-bg">
 
-        <div class="container-fluid" data-aos="fade-up">
+      <div class="container-fluid" data-aos="fade-up">
 
-          <div class="section-header">
-            <h2>Reach Us</h2>
-          </div>
-
-          <div class="row contact-info" align="center">
-
-            <div class="col-md-6">
-              <div class="contact-address">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Address</h3>
-                <address>Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="contact-email">
-                <i class="bi bi-envelope"></i>
-                <h3>Email</h3>
-                <p><a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin" width="90%" height="400" style="border:0; border-radius: 7px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
+        <div class="section-header">
+          <h2>Reach Us</h2>
         </div>
-      </section>
+
+        <div class="row contact-info" align="center">
+
+          <div class="col-md-6">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin"
+            width="90%" height="400" style="border:0; border-radius: 7px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </div>
+    </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer>
     <div class="footer-content">
-        <img class="logo_wide" src="assets/img/logoiit.png" alt="" title="" style="width: auto; height: 8vw">
+      <img class="logo_wide" src="assets/img/logoiit.png" alt="" title="" style="width: auto; height: 8vw">
     </div>
     <div class="footer-bottom">
-        <div>
-            &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
-        </div>
-        <div>
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      <div>
+        &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
+      </div>
+      <div>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
   </footer>
-<!-- ==== Footer End ==== -->
+  <!-- ==== Footer End ==== -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

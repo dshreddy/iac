@@ -97,6 +97,30 @@
 >>>>>>> 19b7257 (updated everythin images as well as the index)
 }
 
+
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.collapsible {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.collapsible.show {
+    max-height: 1000px; /* Adjust as needed */
+}
+
+
+
 .photo-name position-name {
     width: 100%; /* Full width of the .photo-container */
     text-align: center;
@@ -353,12 +377,14 @@
 <!-- here chagne the link to the photo of the each team member acc to the need  -->
 
 <!-- here the change we have to make in the photo -->
+
   <div class="container" data-aos="fade-up">
         <div class="section-header">
             <!-- Optional: Uncomment if you need a heading -->
             <div class="heading"><h2>Organizing Team</h2></div>
+            <button class="toggle-button">Show More</button>
         </div>
-        <div class="row">
+        <div class="row collapsible">
             <div class="photo-container">
 <<<<<<< HEAD
                 <div class="photo-box">

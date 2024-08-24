@@ -138,7 +138,7 @@
 
     .position-name {
       font-weight: bold;
-      color: #df8d12;
+      color: rgb(252, 199, 54);
       /* Color for the position name */
       padding-top: 20px;
       text-align: center;
@@ -157,8 +157,9 @@
     left: 50%; /* Position the left of the div at 50% of the viewport width */
     transform: translate(-50%, -50%);
     /* padding: 10px 20px; Adjust padding as needed */
-    background-color: #df8d12;
-    color: white;
+    background-color:transparent;
+    color: rgb(252, 199, 54);
+    text-decoration: underline;
     text-align: center;
     cursor: pointer;
     border: none; /* Remove border */
@@ -177,9 +178,10 @@
     max-width: 500px;
 }
 
-    .toggle-button:hover {
-      background-color: #df8d12;
-    }
+.toggle-button{
+    /* background-color: #333; Dark background on hover */
+    color: rgb(255, 156, 0); /* White text color on hover */
+}
   </style>
 
 </head>
@@ -203,9 +205,11 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <!-- <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li> -->
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <
           <li><a class="nav-link scrollto" href="#gallery">Glimpses</a></li>
           <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
+
+          li><a class="nav-link scrollto" href="#team">Meet the Team</a></li>
           <li><a class="nav-link scrollto" href="#reach-us">Reach Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -365,9 +369,71 @@
 
     <!--     adding the team tab -->
 
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+
+      <div class="gallery-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img
+                src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div align="center">
+          <h1>Previous IAC Reports</h1>
+          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
+          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
+          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
+          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
+        </div>
+      </div>
+      </div>
+
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Supporters Section ======= -->
+    <section id="supporters" class="section-type1">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+        <div align="center"> If you are interested in sponsoring the event,
+          please contact <a href="mailto:ilo@iitpkd.ac.in">ilo@iitpkd.ac.in</a> or
+          <a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Sponsors Section -->
+
+
+
     <section id="team">
 
-      <label for="toggle" class="toggle-button heading">Organizing team</label>
+      <label for="toggle" class="toggle-button heading">Meet the Organizing team</label>
       <input type="checkbox" id="toggle" style="display:none;">
       <div class="container" data-aos="fade-up"> 
         <!-- <div class="section-header">  -->
@@ -641,65 +707,7 @@
     </section>
 
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery">
 
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery from the recent events</p>
-        </div>
-      </div>
-
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div align="center">
-          <h1>Previous IAC Reports</h1>
-          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
-          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
-          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
-          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
-        </div>
-      </div>
-      </div>
-
-    </section><!-- End Gallery Section -->
-
-    <!-- ======= Supporters Section ======= -->
-    <section id="supporters" class="section-type1">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Sponsors</h2>
-        </div>
-
-        <div align="center"> If you are interested in sponsoring the event,
-          please contact <a href="mailto:ilo@iitpkd.ac.in">ilo@iitpkd.ac.in</a> or
-          <a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a>
-        </div>
-
-      </div>
-
-    </section>
-    <!-- End Sponsors Section -->
 
     <section id="reach-us" class="section-bg">
 
@@ -711,21 +719,22 @@
 
         <div class="row contact-info" align="center">
 
-          <div class="col-md-6">
-            <div class="contact-address">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <address>Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
+          <div style="display: flex; justify-content: space-between; padding: 20px;">
+            <div class="col-md-6" style="flex: 1; padding: 10px;">
+                <div class="contact-address" style=" padding: 15px; border-radius: 8px;">
+                    <i class="bi bi-geo-alt" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
+                    <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Address</h3>
+                    <address style="margin: 0; font-size: 16px; color: #555;">Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
+                </div>
             </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a></p>
+    
+            <div class="col-md-6" style="flex: 1; padding: 10px;">
+                <div class="contact-email" style=" padding: 15px; border-radius: 8px;">
+                    <i class="bi bi-envelope" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
+                    <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Email</h3>
+                    <p style="margin: 0; font-size: 16px; color: #555;"><a href="mailto:iac@iitpkd.ac.in" style="color: #007bff; text-decoration: none;">iac@iitpkd.ac.in</a></p>
+                </div>
             </div>
-          </div>
         </div>
 
         <div style="display: flex; justify-content: center; align-items: center; width: 100%;">

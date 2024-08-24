@@ -34,33 +34,64 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        .photo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .photo-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        .photo-name {
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .heading {
-            text-align: center;
-            margin: 20px 0;
-        }
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    max-width: 1200px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+}
 
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* Creates 3 columns, each 300px wide */
+    gap: 20px; /* Space between the photo boxes */
+}
 
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between items */
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+}
 
-      
-      .photo-container img {
-  width: 100%; /* Adjusts to the width of the container */
-  height: auto; /* Maintains the aspect ratio */
-  max-width: 300px; /* Sets a maximum width for consistency */
-  max-height: 300px; /* Sets a maximum height for consistency */
-  object-fit: cover; /* Ensures the image covers the container while preserving aspect ratio */
+.photo-box {
+    width: 100%; /* Full width of the .photo-container */
+    height: 80%; /* 80% of the height for the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the whole image fits within the box */
+    display: block; /* Removes extra space below the image */
+}
+
+.photo-name position-name {
+    width: 100%; /* Full width of the .photo-container */
+    text-align: center;
+    margin: 0;
+    padding: 10px; /* Adds padding around the name */
+    font-weight: bold;
+}
+
+.person-name {
+    color: #333; /* Color for the person's name */
+}
+
+.position-name {
+    font-weight: bold;
+    color: #df8d12; /* Color for the position name */
 }
 
     </style>
@@ -282,93 +313,100 @@
 <!-- here chagne the link to the photo of the each team member acc to the need  -->
 
 <!-- here the change we have to make in the photo -->
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
         <div class="section-header">
-<!--           <div class="heading">
-            <h2>Organizing Team</h2>
-        </div> -->
+            <!-- Optional: Uncomment if you need a heading -->
+            <div class="heading"><h2>Organizing Team</h2></div>
+        </div>
         <div class="row">
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Outreach Coordinator</div>
-
-<!--               //change the link of the photo  -->
-                <img src="../image/prabhat_suresh.jpg" alt="Photo 1">
-                <div class="photo-name">Prabhat suresh</div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/prabhat_suresh.jpg" alt="Prabhat Suresh">
+                </div>
+                <div class="photo-name person">Prabhat Suresh</div>
+                <div class="photo-name position-name">Outreach Coordinator</div>
             </div>
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Hospitality Coordinator</div>
-                <img src="../image/amal_krishnan.jpg" alt="Photo 2">
-                <div class="photo-name">Amal Krishnan K</div>
-            </div>
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Finance Coordinator</div>
-<!--                 <img src="../image/" alt="Photo 2"> -->
-                <div class="photo-name">Juvvala Revanth</div>
-            </div>
-        </div>
-          <div class ="row">
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Technical Coordinator</div>
-                <img src="../image/arayan.jpg" alt="Photo 2">
-                <div class="photo-name">Aryan Mathur</div>
-            </div>
-
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Frontend Developer</div>
-<!--                 <img src="https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2023-07/sdey1.jpg?itok=ubPnD6Ak" alt="Photo 2"> -->
-                <div class="photo-name">Geetheswar </div>
-            </div>
-
-                      <div class="col-md-4 photo-container">
-              <div class="photo-name">Backend Developer</div>
-                <img src="../image/zeeshan.jpeg" alt="Photo 2">
-                <div class="photo-name">Zeeshan Rangrej</div>
-            </div>
-          </div>
-
-          <div class="row">
-            
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Logistics and Marketing Coordinator</div>
-                <img src="../image/karthikeya.jpg" alt="Photo 2">
-                <div class="photo-name">Kathikeya B</div>
-            </div>
-
-
-                      <div class="col-md-4 photo-container">
-              <div class="photo-name">Content and Design Coordinator</div>
-                <img src="../image/sarath.jpg" alt="Photo 2">
-                <div class="photo-name">Sarath A</div>
-            </div>
-
-
-                      <div class="col-md-4 photo-container">
-              <div class="photo-name">Design Coordinator</div>
-                <img src="../image/devaraj.jpg" alt="Photo 2">
-                <div class="photo-name">Devraj Doley</div>
+  
+            <div class="photo-container">
+                <div class="photo-box">
+                    <!-- Replace with correct image source -->
+                    <!-- <img src="./images/finance_coordinator.jpg" alt="Juvvala Revanth"> -->
+                </div>
+                <div class="photo-name person-name ">Juvvala Revanth</div>
+                <div class="photo-name position-name">Finance Coordinator</div>
             </div>
         </div>
-
-
-
-          <div class="row">
-            
-            <div class="col-md-4 photo-container">
-              <div class="photo-name">Event Coverage Coordinator</div>
-                <img src="../image/muhamed_rizwan.jpg" alt="Photo 2">
-                <div class="photo-name">MUHAMED RIZWAN MEHABOOB</div>
+        <div class="row">
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/arayan.jpg" alt="Aryan Mathur">
+                </div>
+                <div class="photo-name person-name">Aryan Mathur</div>
+                <div class="photo-name position-name">Technical Coordinator</div>
             </div>
-
-
-                      <div class="col-md-4 photo-container">
-              <div class="photo-name">Academic affairs secretary</div>
-                <img src="../image/saihemanth.jpg" alt="Photo 2">
-                  <div class="photo-name">Sai Hemanth Reddy</div>
-                      </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <!-- Replace with correct image source -->
+                    <!-- <img src="https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2023-07/sdey1.jpg?itok=ubPnD6Ak" alt="Geetheswar"> -->
+                </div>
+                <div class="photo-name person-name">Geetheswar</div>
+                <div class="photo-name position-name">Frontend Developer</div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/zeeshan.jpeg" alt="Zeeshan Rangrej">
+                </div>
+                <div class="photo-name person-name">Zeeshan Rangrej</div>
+                <div class="photo-name position-name">Backend Developer</div>
+            </div>
         </div>
-
-
-
+        <div class="row">
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/karthikeya.jpg" alt="Karthikeya B">
+                </div>
+                <div class="photo-name person-name">Karthikeya B</div>
+                <div class="photo-name position-name">Logistics and Marketing Coordinator</div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/sarath.jpg" alt="Sarath A">
+                </div>
+                <div class="photo-name person-name">Sarath A</div>
+                <div class="photo-name position-name">Content and Design Coordinator</div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/devaraj.jpg" alt="Devraj Doley">
+                </div>
+                <div class="photo-name person-name">Devraj Doley</div>
+                <div class="photo-name position-name">Design Coordinator</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/muhamed_rizwan.jpg" alt="Muhamed Rizwan Mehaboob">
+                </div>
+                <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
+                <div class="photo-name position-name">Event Coverage Coordinator</div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/amal_krishnan.jpg" alt="Amal Krishnan K">
+                </div>
+                <div class="photo-name person-name">Amal Krishnan K</div>
+                <div class="photo-name position-name">Hospitality Coordinator</div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="./images/saihemanth.jpg" alt="Sai Hemanth Reddy">
+                </div>
+                <div class="photo-name person-name">Sai Hemanth Reddy</div>
+                <div class="photo-name position-name">Academic Affairs Secretary</div>
+            </div>
+        </div>
+    </div>
 <!--           //here is the list of the Department coordinator -->
 <!-- Here i added the photos and all that no need to change -->
 

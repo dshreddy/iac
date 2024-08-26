@@ -74,26 +74,33 @@
     }
 
     .photo-box {
-      width: 100%;
-      /* Full width of the .photo-container */
-      height: 80%;
-      /* 80% of the height for the. images */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      /* Hide overflow */
-    }
+  width: 100%;
+  /* Full width of the .photo-container */
+  height: 0;
+  padding-bottom: 80%;
+  /* Maintain the aspect ratio (80% of width for height) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  /* Make the container a circle */
+  position: relative;
+}
 
-    .photo-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      /* Ensures the whole. images fits within the box */
-      display: block;
-      /* Removes extra space below the. images */
-      padding-top: 10px;
-    }
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the entire circle */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  /* Make the image inside circular */
+}
+
 
 
 
@@ -454,6 +461,9 @@
       <!-- <label for="toggle" class="toggle-button heading">Meet the Organizing team</label>
       <input type="checkbox" id="toggle" style="display:none;"> -->
       <div class="container" data-aos="fade-up"> 
+        <div class="section-header">
+          <h2>Meet the Organising Team!</h2>
+        </div>
         <!-- <div class="section-header">  -->
           <!-- <div class="heading">
 
@@ -615,7 +625,7 @@
         <div class="section-header">
           <!-- Optional: Uncomment if you need a heading -->
           <div class="heading">
-            <h2>Department Coordinators</h2>
+            <h3>Department Coordinators</h3>
           </div>
         </div>
         <div class="row">

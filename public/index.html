@@ -105,19 +105,31 @@
 }
 
 .team-photo {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto;
+    width: 90%; /* Set a fixed width to control size */
   }
+
+  .row {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out items evenly */
+    margin-bottom: 20px; /* Space between rows */
+  }
+
   .photo-container {
-    text-align: center;
-    margin-bottom: 20px;
+    flex: 1; /* Allow each item to grow equally */
+    text-align: center; /* Center align text */
+    margin: 0 10px; /* Add margin between items */
   }
+
   .photo-box {
     position: relative;
     overflow: hidden;
+    margin-bottom: 10px; /* Space below the image */
   }
+
   .overlay {
     display: none; /* Hide overlay by default */
     position: absolute;
@@ -131,6 +143,7 @@
     justify-content: center;
     text-align: center;
   }
+
   .photo-box:hover .overlay {
     display: flex; /* Show overlay on hover */
   }
@@ -607,13 +620,13 @@
 
 
 
-    <section id="team">
+   <section id="team">
   <div class="container" data-aos="fade-up">
     <div class="section-header">
       <h2>Meet the Organising Team!</h2>
     </div>
     <div class="row">
-      <div class="col-md-4 photo-container">
+      <div class="photo-container">
         <div class="photo-name position-name">Faculty Advisor</div>
         <div class="photo-box">
           <img src="../images/nelson.png" alt="Nelson Muthu" class="team-photo">
@@ -623,7 +636,7 @@
         </div>
         <div class="photo-name person-name">Nelson Muthu</div>
       </div>
-      <div class="col-md-4 photo-container">
+      <div class="photo-container">
         <div class="photo-name position-name">Faculty Advisor</div>
         <div class="photo-box">
           <img src="../images/sukomel_dey.png" alt="Sukomal Dey" class="team-photo">
@@ -633,7 +646,7 @@
         </div>
         <div class="photo-name person-name">Sukomal Dey</div>
       </div>
-      <div class="col-md-4 photo-container">
+      <div class="photo-container">
         <div class="photo-name position-name">Industry Liaison Officer</div>
         <div class="photo-box">
           <img src="../images/silvon.png" alt="Dr. Selva Pandian" class="team-photo">
@@ -644,18 +657,14 @@
         <div class="photo-name person-name">Dr. Selva Pandian</div>
       </div>
     </div>
-  </div>
-
-  <div class="container" data-aos="fade-up">
     <div class="row">
       <div class="photo-container">
         <div class="photo-name position-name">Outreach Coordinator</div>
         <div class="photo-box">
           <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh" class="team-photo">
         </div>
-        <div class="photo-name person">Prabhat Suresh</div>
+        <div class="photo-name person-name">Prabhat Suresh</div>
       </div>
-
       <div class="photo-container">
         <div class="photo-name position-name">Finance Coordinator</div>
         <div class="photo-box">
@@ -663,7 +672,6 @@
         </div>
         <div class="photo-name person-name">Juvvala Revanth</div>
       </div>
-
       <div class="photo-container">
         <div class="photo-name position-name">Hospitality Coordinator</div>
         <div class="photo-box">
@@ -726,7 +734,6 @@
         </div>
         <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
       </div>
-
       <div class="photo-container">
         <div class="photo-name position-name">Academic Affairs Secretary</div>
         <div class="photo-box">
@@ -747,7 +754,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Computer Science and Engineering</div>
         <div class="photo-box">
-          <img src="../images/jasine.png" alt="Photo 2" class="team-photo">
+          <img src="../images/jasine.png" alt="Jasine Babu" class="team-photo">
         </div>
         <div class="photo-name person-name">Jasine Babu</div>
       </div>
@@ -755,7 +762,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Data Science and Engineering</div>
         <div class="photo-box">
-          <img src="../images/satyajit.png" alt="Photo 2" class="team-photo">
+          <img src="../images/satyajit.png" alt="Satyajit Das" class="team-photo">
         </div>
         <div class="photo-name person-name">Satyajit Das</div>
       </div>
@@ -763,7 +770,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Electrical Engineering</div>
         <div class="photo-box">
-          <img src="../images/sreenathV.png" alt="Photo 2" class="team-photo">
+          <img src="../images/sreenathV.png" alt="Sreenath V" class="team-photo">
         </div>
         <div class="photo-name person-name">Sreenath V</div>
       </div>
@@ -773,7 +780,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Mechanical Engineering</div>
         <div class="photo-box">
-          <img src="../images/subu.png" alt="Photo 2" class="team-photo">
+          <img src="../images/subu.png" alt="Kanmani Subu S." class="team-photo">
         </div>
         <div class="photo-name person-name">Kanmani Subu S.</div>
       </div>
@@ -781,7 +788,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Civil Engineering</div>
         <div class="photo-box">
-          <img src="../images/civil.png" alt="Photo 2" class="team-photo">
+          <img src="../images/civil.png" alt="Dr. Sarmistha Singh" class="team-photo">
         </div>
         <div class="photo-name person-name">Dr. Sarmistha Singh</div>
       </div>
@@ -789,7 +796,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Physics</div>
         <div class="photo-box">
-          <img src="../images/vishwas.png" alt="Photo 2" class="team-photo">
+          <img src="../images/vishwas.png" alt="Vishwas V." class="team-photo">
         </div>
         <div class="photo-name person-name">Vishwas V.</div>
       </div>
@@ -822,7 +829,6 @@
     </div>
   </div>
 </section>
-
 
 
 

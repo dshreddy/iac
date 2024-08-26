@@ -48,19 +48,18 @@
             position: relative;
         }
 
-        .timeline-list {
-            list-style: none;
-            padding: 0;
-            position: relative;
-        }
-
         .timeline-list li {
-            position: relative;
-            margin: 40px 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
+    position: relative;
+    margin: 40px 0;
+    opacity: 0.4; /* Set default opacity to 40% */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-list li.active {
+    opacity: 1; /* Full opacity for active items */
+    transform: translateY(0);
+}
 
         .timeline_content {
             background: white;
@@ -75,18 +74,7 @@
             color: #007bff;
         }
 
-        .pointer {
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 2px;
-    background: #007bff;
-    z-index: 1;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
+        
 
         .timeline-list li.active {
             opacity: 1;
@@ -961,23 +949,15 @@
   <script>
 document.addEventListener("DOMContentLoaded", function() {
     const timelineItems = document.querySelectorAll('.timeline-list li');
-    const pointer = document.createElement('div');
-    pointer.classList.add('pointer');
-    document.body.appendChild(pointer);
+    
     
     const handleScroll = () => {
         const windowHeight = window.innerHeight;
         const pointerPos = window.scrollY + (windowHeight / 2);
         
-        // Set the pointer position
-        pointer.style.top = `${pointerPos}px`;
 
-        // Make the pointer visible once scrolling starts
-        if (window.scrollY > 0) {
-            pointer.style.opacity = '1'; // Show pointer
-        } else {
-            pointer.style.opacity = '0'; // Hide pointer when at top
-        }
+
+
 
         // Add active class to timeline items
         timelineItems.forEach((item) => {

@@ -74,33 +74,26 @@
     }
 
     .photo-box {
-  width: 100%;
-  /* Full width of the .photo-container */
-  height: 0;
-  padding-bottom: 80%;
-  /* Maintain the aspect ratio (80% of width for height) */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 50%;
-  /* Make the container a circle */
-  position: relative;
-}
+      width: 100%;
+      /* Full width of the .photo-container */
+      height: 80%;
+      /* 80% of the height for the. images */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      /* Hide overflow */
+    }
 
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Ensures the image covers the entire circle */
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  /* Make the image inside circular */
-}
-
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Ensures the whole. images fits within the box */
+      display: block;
+      /* Removes extra space below the. images */
+      padding-top: 10px;
+    }
 
 
 
@@ -305,12 +298,7 @@
                   <br>Don't miss this unique opportunity to learn from the best minds in their fields!.<br>
                 </p>
               </div>
-              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                <div class="event-image">
-                  <img src="assets/img/event_card/lecture.jpg" class="img-fluid" alt="">
-                  <p>Instances from IAC 5.0</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

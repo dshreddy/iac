@@ -101,29 +101,52 @@
     }
 
     .photo-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      /* Distributes space between items */
-      width: 300px;
-      /* Fixed width */
-      height: 300px;
-      /* Fixed height */
-      
-    }
+  position: relative;
+  margin-bottom: 20px; /* Space between photos */
+}
 
-    .photo-box {
-      width: 100%;
-      /* Full width of the .photo-container */
-      height: 80%;
-      /* 80% of the height for the. images */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      /* Hide overflow */
-    }
+.photo-box {
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.photo-box:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hide overlay by default */
+  transition: opacity 0.3s ease; /* Smooth fade in/out */
+  border-radius: 10px; /* Match image corners */
+}
+
+.photo-box:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.email {
+  color: white; /* Email text color */
+  font-size: 16px; /* Email text size */
+  text-align: center; /* Center the email text */
+  padding: 10px; /* Padding around email */
+}
 
     .photo-box img {
       width: 100%;
@@ -383,8 +406,8 @@
         <div class="row">
             <div class="col-xl-8 mx-auto text-center">
                 <div class="section-title">
-                    <h4>IAC Experience</h4>
-                    <p>Engage with the best minds, explore cutting-edge innovations, and dive into insightful discussions</p>
+                    <h4>Events</h4>
+                    <p>Enrich the IAC Experience and engage with the best minds, explore cutting-edge innovations, and dive into insightful discussions</p>
                 </div>
             </div>
         </div>
@@ -431,13 +454,13 @@
 
 
     <!-- Events Section -->
-    <section id="events" style="padding-top: 60px; padding-bottom: 0;" class="section-type1">
+ <!--   <section id="events" style="padding-top: 60px; padding-bottom: 0;" class="section-type1">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <h2>Events</h2>
         </div>
 
-        <!-- Lecture Series -->
+        <!-- Lecture Series 
         <div class="row mb-4" data-aos="fade-left">
           <div class="col-lg-12">
             <div class="event-card d-flex align-items-center">
@@ -456,7 +479,7 @@
           </div>
         </div>
 
-        <!-- Exhibition -->
+        <!-- Exhibition 
         <div class="row mb-4" data-aos="fade-right">
           <div class="col-lg-12">
             <div class="event-card d-flex align-items-center">
@@ -478,7 +501,7 @@
           </div>
         </div>
 
-        <!-- Start-Up Booths -->
+        <!-- Start-Up Booths 
         <div class="row mb-4" data-aos="fade-left">
           <div class="col-lg-12">
             <div class="event-card d-flex align-items-center">
@@ -502,7 +525,7 @@
           </div>
         </div>
 
-        <!-- Panel discussion -->
+        <!-- Panel discussion 
         <div class="row mb-4" data-aos="fade-right">
           <div class="col-lg-12">
             <div class="event-card d-flex align-items-center">
@@ -528,7 +551,7 @@
 
 
     </section>
-
+--!>
 
 
 
@@ -610,33 +633,37 @@
 
         </div> -->
           <div class="row">
-
-            <div class="photo-container">
-
-              <div class="photo-name position-name">Faculty Advisor</div>
-              <div class="photo-box">
-                <img src="../images/nelson.png" alt="Photo 1">
-              </div>
-              <div class="photo-name person-name">Nelson Muthu</div>
-            </div>
-            <div class="col-md-4 photo-container">
-              <div class="photo-name position-name">Faculty Advisor</div>
-              <div class="photo-box">
-                <img src="../images/sukomel_dey.png" alt="Photo 1">
-              </div>
-              <div class="photo-name person-name">Sukomal Dey</div>
-            </div>
-            <div class="col-md-4 photo-container">
-              <div class="photo-name position-name">Industry Liaison Officer</div>
-              <div class="photo-box">
-                <img src="../images/silvon.png" alt="Photo 1">
-              </div>
-              <div class="photo-name person-name">Dr. Selva Pandian</div>
-            </div>
-
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Faculty Advisor</div>
+        <div class="photo-box">
+          <img src="../images/nelson.png" alt="Nelson Muthu">
+          <div class="overlay">
+            <div class="email">nelson@example.com</div>
           </div>
-
         </div>
+        <div class="photo-name person-name">Nelson Muthu</div>
+      </div>
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Faculty Advisor</div>
+        <div class="photo-box">
+          <img src="../images/sukomel_dey.png" alt="Sukomal Dey">
+          <div class="overlay">
+            <div class="email">sukomal@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Sukomal Dey</div>
+      </div>
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Industry Liaison Officer</div>
+        <div class="photo-box">
+          <img src="../images/silvon.png" alt="Dr. Selva Pandian">
+          <div class="overlay">
+            <div class="email">selva@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Dr. Selva Pandian</div>
+      </div>
+    </div>
       </div>
 
 

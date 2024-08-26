@@ -67,6 +67,14 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+    .dropdown ul {
+    opacity: 0.8; /* Adjust the value to your preference (0.0 to 1.0) */
+    transition: opacity 0.3s; /* Optional: adds a smooth transition */
+}
+
+.dropdown:hover ul {
+    opacity: 1; /* Optional: full opacity on hover */
+} 
 
         .timeline_content span {
             display: block;
@@ -282,7 +290,24 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#events">Events</a></li>
+           <!-- Events menu with DropDown for WorkShops, etc -->
+          <li class="dropdown"><a class="nav-link scrollto" href="#events"><span>Events</span> <i class="bi bi-chevron-down"></i></a>
+<!--             <ul>
+                <li><a class="nav-link scrollto" href="#talks">Talks</a></li>
+                <li><a class="nav-link scrollto" href="#sessions">Keynote Sessions</a></li>
+                <li><a class="nav-link scrollto" href="#discussion">Panel discussion</a></li>
+                <li><a class="nav-link scrollto" href="#ceremony-schedule">Ceremony Schedule</a></li>
+                <li><a class="nav-link scrollto" href="#presentations">Presentations</a></li>
+            </ul> -->
+
+            <ul>
+              <li><a class="nav-link scrollto" href="#keynote">Key Note Session</a></li>
+              <li><a class="nav-link scrollto" href="#events">Lecture series</a></li>
+              <li><a class="nav-link scrollto" href="#events">Exhibition</a></li>
+              <li><a class="nav-link scrollto" href="#events">Startup Booths</a></li>
+              <li><a class="nav-link scrollto" href="#events">Panel discussion</a></li>
+            </ul>
+          </li>
           <!-- <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li> -->
           
           <li><a class="nav-link scrollto" href="#gallery">Glimpses</a></li>
@@ -406,7 +431,7 @@
         <div class="row">
             <div class="col-xl-8 mx-auto text-center">
                 <div class="section-title">
-                    <h4>Events</h4>
+                    <h1>Events</h1>
                     <p>Enrich the IAC Experience and engage with the best minds, explore cutting-edge innovations, and dive into insightful discussions</p>
                 </div>
             </div>
@@ -563,10 +588,17 @@
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery from the recent events</p>
+          <h2>Flashbacks</h2>
+          <p>Check our reports and gallery from the recent events</p>
         </div>
       </div>
+      <div align="center">
+          <h1>Previous IAC Reports</h1>
+          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
+          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
+          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
+          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
+        </div>
 
       <div class="gallery-slider swiper">
         <div class="swiper-wrapper align-items-center">
@@ -588,13 +620,7 @@
                 src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
         </div>
         <div class="swiper-pagination"></div>
-        <div align="center">
-          <h1>Previous IAC Reports</h1>
-          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
-          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
-          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
-          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
-        </div>
+        
       </div>
       </div>
 
@@ -807,7 +833,7 @@
       <div class="photo-container">
         <div class="photo-name position-name">Department of Chemistry</div>
         <div class="photo-box">
-          <img src="../images/yuvaj.png" alt="Photo 2" class="team-photo">
+          <img src="../images/yuvraj.png" alt="Photo 2" class="team-photo">
         </div>
         <div class="photo-name person-name">Yuvraj K.</div>
       </div>

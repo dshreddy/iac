@@ -100,26 +100,30 @@
       justify-content: center;
     }
 
-    .photo-container {
+    #team {
+  padding: 60px 0;
+}
+
+.photo-container {
   position: relative;
-  margin-bottom: 20px; /* Space between photos */
+  margin-bottom: 30px;
 }
 
 .photo-box {
   overflow: hidden;
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  position: relative;
+  border-radius: 10px;
 }
 
 .photo-box img {
   width: 100%;
   height: auto;
-  display: block;
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .photo-box:hover img {
-  transform: scale(1.1); /* Zoom in on hover */
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -128,24 +132,27 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Hide overlay by default */
-  transition: opacity 0.3s ease; /* Smooth fade in/out */
-  border-radius: 10px; /* Match image corners */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
 }
 
 .photo-box:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1;
 }
 
-.email {
-  color: white; /* Email text color */
-  font-size: 16px; /* Email text size */
-  text-align: center; /* Center the email text */
-  padding: 10px; /* Padding around email */
+.photo-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.position-name {
+  font-weight: bold;
 }
 
     .photo-box img {
@@ -621,18 +628,11 @@
 
 
     <section id="team">
-
-      <!-- <label for="toggle" class="toggle-button heading">Meet the Organizing team</label>
-      <input type="checkbox" id="toggle" style="display:none;"> -->
-      <div class="container" data-aos="fade-up"> 
-        <div class="section-header">
-          <h2>Meet the Organising Team!</h2>
-        </div>
-        <!-- <div class="section-header">  -->
-          <!-- <div class="heading">
-
-        </div> -->
-          <div class="row">
+  <div class="container" data-aos="fade-up"> 
+    <div class="section-header">
+      <h2>Meet the Organising Team!</h2>
+    </div>
+    <div class="row">
       <div class="col-md-4 photo-container">
         <div class="photo-name position-name">Faculty Advisor</div>
         <div class="photo-box">
@@ -664,81 +664,76 @@
         <div class="photo-name person-name">Dr. Selva Pandian</div>
       </div>
     </div>
+
+    <!-- Additional team members -->
+    <div class="row">
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Outreach Coordinator</div>
+        <div class="photo-box">
+          <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh">
+          <div class="overlay">
+            <div class="email">prabhat@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Prabhat Suresh</div>
       </div>
-
-
-
-
-
-
-      <!-- here chagne the link to the photo of the each team member acc to the need  -->
-
-      <!-- here the change we have to make in the photo -->
-
-      <div class="container" data-aos="fade-up">
-        <!-- <div class="section-header"> -->
-          <!-- Optional: Uncomment if you need a heading -->
-          <!-- <div class="heading"><h2>Organizing Team</h2></div> -->
-          <!-- <button class="toggle-button">Show More</button> -->
-      
-        <!-- </div> -->
-        <div class="row">
-          <div class="photo-container">
-            <div class="photo-name position-name">Outreach Coordinator</div>
-            <div class="photo-box">
-
-              <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh">
-            </div>
-            <div class="photo-name person">Prabhat Suresh</div>
-
-          </div>
-
-          <div class="photo-container">
-            <div class="photo-name position-name">Finance Coordinator</div>
-            <div class="photo-box">
-              <!-- Replace with correct. images source -->
-              <img src="../images/revanth.png" alt="Juvvala Revanth">
-            </div>
-            <div class="photo-name person-name ">Juvvala Revanth</div>
-
-          </div>
-
-          <div class="photo-container">
-            <div class="photo-name position-name">Hospitality Coordinator</div>
-            <div class="photo-box">
-              <img src="../images/amal_krishnan.png" alt="Amal Krishnan K">
-            </div>
-            <div class="photo-name person-name">Amal Krishnan K</div>
-
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Finance Coordinator</div>
+        <div class="photo-box">
+          <img src="../images/revanth.png" alt="Juvvala Revanth">
+          <div class="overlay">
+            <div class="email">revanth@example.com</div>
           </div>
         </div>
-        <div class="row">
-          <div class="photo-container">
-            <div class="photo-name position-name">Technical Coordinator</div>
-            <div class="photo-box">
-              <img src="../images/aryan_mathur.png" alt="Aryan Mathur">
-            </div>
-            <div class="photo-name person-name">Aryan Mathur</div>
-
-          </div>
-          <div class="photo-container">
-            <div class="photo-name position-name">Frontend Developer</div>
-            <div class="photo-box">
-              <!-- Replace with correct. images source -->
-              <img src="../images/g.png" alt="Geetheswar">
-            </div>
-            <div class="photo-name person-name">Geetheswar</div>
-
-          </div>
-          <div class="photo-container">
-            <div class="photo-name position-name">Backend Developer</div>
-            <div class="photo-box">
-              <img src="../images/zeeshan.png" alt="Zeeshan Rangrej">
-            </div>
-            <div class="photo-name person-name">Zeeshan Rangrej</div>
-
+        <div class="photo-name person-name">Juvvala Revanth</div>
+      </div>
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Hospitality Coordinator</div>
+        <div class="photo-box">
+          <img src="../images/amal_krishnan.png" alt="Amal Krishnan K">
+          <div class="overlay">
+            <div class="email">amal@example.com</div>
           </div>
         </div>
+        <div class="photo-name person-name">Amal Krishnan K</div>
+      </div>
+    </div>
+
+    <!-- Repeat this structure for additional team members -->
+    <!-- Add rows for Technical Coordinator, Frontend Developer, etc. -->
+
+    <div class="row">
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Technical Coordinator</div>
+        <div class="photo-box">
+          <img src="../images/aryan_mathur.png" alt="Aryan Mathur">
+          <div class="overlay">
+            <div class="email">aryan@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Aryan Mathur</div>
+      </div>
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Frontend Developer</div>
+        <div class="photo-box">
+          <img src="../images/g.png" alt="Geetheswar">
+          <div class="overlay">
+            <div class="email">geetheswar@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Geetheswar</div>
+      </div>
+      <div class="col-md-4 photo-container">
+        <div class="photo-name position-name">Backend Developer</div>
+        <div class="photo-box">
+          <img src="../images/zeeshan.png" alt="Zeeshan Rangrej">
+          <div class="overlay">
+            <div class="email">zeeshan@example.com</div>
+          </div>
+        </div>
+        <div class="photo-name person-name">Zeeshan Rangrej</div>
+      </div>
+    </div>
         <div class="row">
           <div class="photo-container">
             <div class="photo-name position-name">Logistics & Marketing Coordinator</div>

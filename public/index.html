@@ -93,52 +93,6 @@
         </p>
 
     </section>
-
-    <section id="events">
-        <div class="section-header right" data-aos="fade-up">
-            <h1>Events</h1>
-        </div>
-        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Lecture Series</h2>
-            <p style="padding-left: 20px;">
-                Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
-                where renowned professors from diverse disciplines share their expertise and insights 
-                on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
-                that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
-            </p>
-        </div>
-        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Exhibition</h2>
-            <p style="padding-left: 20px;">
-                Unleash your creativity and showcase your innovative projects, products, and posters 
-                at the IAC Exhibition! This is a fantastic chance for students to present their work 
-                to professionals from various industries, receive valuable feedback, and potentially 
-                spark collaborations.
-            </p>
-        </div>
-
-        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Start-Up Booths</h2>
-            <p style="padding-left: 20px;">
-                Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. 
-                These dynamic booths offer a platform for young entrepreneurs to share their journey from 
-                idea to execution. Engage with the founders, learn about their challenges, and discover how 
-                their startups are shaping the future. These booths provide a firsthand look at the cutting-edge 
-                innovations emerging from our alumni network.
-            </p>
-        </div>
-
-        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Panel discussion</h2>
-            <p style="padding-left: 20px;">
-                Join a group of industry experts as they delve into key topics relevant to the industrial world. 
-                This session offers valuable insights into current trends and practical applications.
-                This panel discussion is the perfect platform to ask questions and engage directly with the panelists, 
-                making this an invaluable chance to gain knowledge and advice from experienced professionals.
-            </p>
-        </div>
-    </section>
-
     <section id="speakers">
         <div class="section-header left" data-aos="fade-up">
             <h1>KeyNote Speakers</h1>
@@ -199,6 +153,53 @@
         
     </section>
 
+
+    <section id="events">
+        <div class="section-header right" data-aos="fade-up">
+            <h1>Events</h1>
+        </div>
+        <div class="event-item left wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Lecture Series</h2>
+            <p style="padding-left: 20px;">
+                Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
+                where renowned professors from diverse disciplines share their expertise and insights 
+                on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
+                that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
+            </p>
+        </div>
+        <div class="event-item right wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Exhibition</h2>
+            <p style="padding-left: 20px;">
+                Unleash your creativity and showcase your innovative projects, products, and posters 
+                at the IAC Exhibition! This is a fantastic chance for students to present their work 
+                to professionals from various industries, receive valuable feedback, and potentially 
+                spark collaborations.
+            </p>
+        </div>
+
+        <div class="event-item left wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Start-Up Booths</h2>
+            <p style="padding-left: 20px;">
+                Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. 
+                These dynamic booths offer a platform for young entrepreneurs to share their journey from 
+                idea to execution. Engage with the founders, learn about their challenges, and discover how 
+                their startups are shaping the future. These booths provide a firsthand look at the cutting-edge 
+                innovations emerging from our alumni network.
+            </p>
+        </div>
+
+        <div class="event-item right wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Panel discussion</h2>
+            <p style="padding-left: 20px;">
+                Join a group of industry experts as they delve into key topics relevant to the industrial world. 
+                This session offers valuable insights into current trends and practical applications.
+                This panel discussion is the perfect platform to ask questions and engage directly with the panelists, 
+                making this an invaluable chance to gain knowledge and advice from experienced professionals.
+            </p>
+        </div>
+    </section>
+
+    
     <section id="gallery">
 
         <div class="section-header left" data-aos="fade-up">
@@ -321,5 +322,19 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
+    <script>
+        // Add 'active' class to the event currently on screen
+        window.addEventListener('scroll', function() {
+            let events = document.querySelectorAll('#events .event-item');
+            events.forEach(function(event) {
+                let rect = event.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    event.classList.add('active');
+                } else {
+                    event.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

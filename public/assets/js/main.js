@@ -1,189 +1,182 @@
-/**
-* Template Name: TheEvent
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
-  "use strict";
-
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
+const organisingTeam = [
+    {
+        name: "Nelson Muthu",
+        post: "Faculty Advisor",
+        imgSrc: "assets/img/team/nelson.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Sukomal Dey",
+        post: "Faculty Advisor",
+        imgSrc: "assets/img/team/sukomel_dey.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Dr. Selva Pandian",
+        post: "Industry Liaison Officer",
+        imgSrc: "assets/img/team/silvon.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Prabhat Suresh",
+        post: "Outreach Coordinator",
+        imgSrc: "assets/img/team/prabhat_suresh.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Juvvala Revanth",
+        post: "Finance Coordinator",
+        imgSrc: "assets/img/team/revanth.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Amal Krishnan K",
+        post: "Hospitality Coordinator",
+        imgSrc: "assets/img/team/amal_krishnan.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Aryan Mathur",
+        post: "Technical Coordinator",
+        imgSrc: "assets/img/team/aryan_mathur.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Zeeshan Rangrej",
+        post: "Backend Developer",
+        imgSrc: "assets/img/team/zeeshan.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Karthikeya B",
+        post: "Logistics & Marketing Coordinator",
+        imgSrc: "assets/img/team/karthikeya.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Sarath A",
+        post: "Content and Design Coordinator",
+        imgSrc: "assets/img/team/sarath.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Devraj Doley",
+        post: "Design Coordinator",
+        imgSrc: "assets/img/team/devraj.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Muhamed Rizwan Mehaboob",
+        post: "Event Coverage Coordinator",
+        imgSrc: "assets/img/team/rizwan.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Sai Hemanth Reddy",
+        post: "Academic Affairs Secretary",
+        imgSrc: "assets/img/team/hemath_reddy.png",
+        linkedin: "https://www.linkedin.com/in/"
     }
-  }
+]
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
+const departmentCoordinators = [
+    {
+        name: "Jasine Babu",
+        post: "Computer Science and Engineering",
+        imgSrc: "assets/img/team/jasine.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Satyajit Das",
+        post: "Data Science and Engineering",
+        imgSrc: "assets/img/team/satyajit.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Sreenath V",
+        post: "Electrical Engineering",
+        imgSrc: "assets/img/team/sreenathV.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Kanmani Subu S.",
+        post: "Mechanical Engineering",
+        imgSrc: "assets/img/team/subu.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Dr. Sarmistha Singh",
+        post: "Civil Engineering",
+        imgSrc: "assets/img/team/civil.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Vishwas V.",
+        post: "Physics",
+        imgSrc: "assets/img/team/vishwas.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Jaikrishnan Janardhanan",
+        post: "Mathematics",
+        imgSrc: "assets/img/team/jaikrishnan.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Yuvraj K.",
+        post: "Chemistry",
+        imgSrc: "assets/img/team/yuvraj.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+]
 
-  /**
-   * Easy on scroll event listener
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * Navbar links active state on scroll
-   */
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-    let position = window.scrollY + 120
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
-
-    if (!header.classList.contains('header-scrolled')) {
-      offset -= 20
-    }
-
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: 'smooth'
-    })
-  }
-
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled
-   */
-  let selectHeader = select('#header');
-  let totalHeight;
-  const headerLoader = () => {
-    const selectHero = select('#hero');
-    const selectAboutUs = select('#about');
-    const heroHeight = selectHero ? selectHero.offsetHeight : 0;
-    const aboutUsHeight = selectAboutUs ? selectAboutUs.offsetHeight : 0;
-    const headerHeight = selectHeader ? selectHeader.offsetHeight : 0;
-    totalHeight = heroHeight + aboutUsHeight - headerHeight;
-
-    const headerScrolled = () => {
-      if (window.scrollY > 100 && window.scrollY < totalHeight) {
-        selectHeader.classList.remove('header-light');
-        selectHeader.classList.add('header-dark');
-        selectHeader.style.backgroundColor = 'rgb(6, 12, 34)';
-      } else if (window.scrollY >= totalHeight) {
-        selectHeader.classList.remove('header-dark');
-        selectHeader.classList.add('header-light');
-        selectHeader.style.backgroundColor = 'rgb(232, 237, 255)';
-      } else {
-        selectHeader.classList.remove('header-light');
-        selectHeader.classList.add('header-dark');
-        selectHeader.style.backgroundColor = 'transparent';
-      }
-    };
-
-    headerScrolled();
-    onscroll(document, headerScrolled);
-  }
-
-  window.addEventListener('load', headerLoader);
+// organisingTeam
 
 
+function loadImages() {
+    const organisingTeamContainer = document.getElementById('organizing-team');
+    organisingTeam.forEach(data => {
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mb-4');
+        colDiv.innerHTML = `
+            <div class="image-container">
+                <img src="${data.imgSrc}" class="img-fluid" alt="${data.name}">
+                <div class="overlay">
+                    <div class="text">
+                        <h5>${data.name}</h5>
+                        <p>${data.post}</p>
+                        <!-- <a href="${data.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        `;
+        organisingTeamContainer.appendChild(colDiv);
+    });
 
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
+    const departmentCoordinatorsContainer = document.getElementById('department-cordinators');
+    departmentCoordinators.forEach(data => {
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mb-4');
+        colDiv.innerHTML = `
+            <div class="image-container">
+                <img src="${data.imgSrc}" class="img-fluid" alt="${data.name}">
+                <div class="overlay">
+                    <div class="text">
+                        <h5>${data.name}</h5>
+                        <p>${data.post}</p>
+                        <!-- <a href="${data.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        `;
+        departmentCoordinatorsContainer.appendChild(colDiv);
+    });
+}
 
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+// Load images when the webpage loads
+window.onload = loadImages;
 
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
-
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Scroll with ofset on page load with hash links in the url
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
+const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
@@ -231,10 +224,7 @@
     selector: '.gallery-lightbox'
   });
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
+window.addEventListener('load', () => {
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -242,5 +232,3 @@
       mirror: false
     })
   });
-
-})()

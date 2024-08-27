@@ -1,983 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- AOS JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-  <title>IIT Palakkad IAC 6.0</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/logoiac.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: IAC
-  * Updated: August 25 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .experience {
-            position: relative;
-        }
-
-        .timeline-list li {
-    position: relative;
-    margin: 40px 0;
-    opacity: 0.4; /* Set default opacity to 40% */
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.timeline-list li.active {
-    opacity: 1; /* Full opacity for active items */
-    transform: translateY(0);
-}
-    
-
-        .timeline_content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    .dropdown ul {
-    opacity: 0.8; /* Adjust the value to your preference (0.0 to 1.0) */
-    transition: opacity 0.3s; /* Optional: adds a smooth transition */
-}
-
-.dropdown:hover ul {
-    opacity: 1; /* Optional: full opacity on hover */
-} 
-
-        .timeline_content span {
-            display: block;
-            font-weight: 600;
-            color: #007bff;
-        }
-
-        
-
-        .timeline-list li.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    .container {
-      max-width: 1000px;
-      /* Set maximum width for the container */
-      margin: 0 auto;
-      /* Center the container horizontally */
-      padding: 20px;
-      /* display: none; */
-    }
-    
-
-    .row {
-      display: flex;
-      grid-template-columns: repeat(3, 300px);
-      /* Creates 3 columns, each 300px wide */
-      gap: 20px;
-      /* Space between the photo boxes */
-      justify-content: center;
-    }
-
-    #team {
-  padding: 60px 0;
-}
-
-.team-photo {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto;
-    width: 90%; /* Set a fixed width to control size */
-  }
-
-  .row {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space out items evenly */
-    margin-bottom: 20px; /* Space between rows */
-  }
-
-  .photo-container {
-    flex: 1; /* Allow each item to grow equally */
-    text-align: center; /* Center align text */
-    margin: 0 10px; /* Add margin between items */
-  }
-
-  .photo-box {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px; /* Space below the image */
-  }
-
-  .overlay {
-    display: none; /* Hide overlay by default */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-    color: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .photo-box:hover .overlay {
-    display: flex; /* Show overlay on hover */
-  }
-
-    .photo-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      /* Ensures the whole. images fits within the box */
-      display: block;
-      /* Removes extra space below the. images */
-      padding-top: 10px;
-    }
-
-
-
-    .toggle-button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .collapsible {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out;
-    }
-
-    .collapsible.show {
-      max-height: 1000px;
-      /* Adjust as needed */
-    }
-
-
-
-    .photo-name position-name {
-      width: 100%;
-      /* Full width of the .photo-container */
-      text-align: center;
-      margin: 0;
-      padding-left: 10px;
-      /* Adds padding around the name */
-      padding-right: 10px;
-      font-weight: bold;
-      padding-top: 200px;
-    }
-
-    .person-name {
-      color: #333;
-      /* Color for the person's name */
-    }
-
-    .position-name {
-      font-weight: bold;
-      color: rgb(252, 199, 54);
-      /* Color for the position name */
-      padding-top: 20px;
-      text-align: center;
-      justify-content: center;
-    }
-
-
-    #toggle:checked~.container {
-      display: block;
-    }
-
-
-    .toggle-button {
-      position: absolute; /* Absolute positioning */
-    top: 50%; /* Position the top of the div at 50% of the viewport height */
-    left: 50%; /* Position the left of the div at 50% of the viewport width */
-    transform: translate(-50%, -50%);
-    /* padding: 10px 20px; Adjust padding as needed */
-    background-color:transparent;
-    color: rgb(252, 199, 54);
-    text-decoration: underline;
-    text-align: center;
-    cursor: pointer;
-    border: none; /* Remove border */
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 30px;
-    margin: 0; /* Remove any default margin */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    font-weight: bold;
-    height: 50px;
-    width: 300px;
-    padding-bottom: 60px;
-    justify-content: center;
-    /* align-items: center; */
-    position: relative;
-    max-width: 500px;
-}
-
-.toggle-button{
-    /* background-color: #333; Dark background on hover */
-    color: rgb(255, 156, 0); /* White text color on hover */
-}
-    #hero {
-            background-image: url("assets/img/Priority1_Saraswati Block-1.jpg" class="img-fluid"); /* Replace with your image path */
-            background-size: cover; /* Cover the entire section */
-            background-position: center; /* Center the image */
-            height: 100vh; /* Full height of the viewport */
-            display: flex; /* Use flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-
-        }
-
-        .hero-container {
-            text-align: center; /* Center text */
-            z-index: 1; /* Ensure content is above the background */
-        }
-  </style>
-
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <title>IIT Palakkad IAC 6.0</title>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center ">
-    <div class="container-fluid d-flex align-items-center">
-
-      <div id="logo" style="margin-right: auto!important;">
-        <a href="index.html" class="scrollto">
-          <img src="assets/img/logoiac.png" alt="" title="">
-          <img class="logo-text" src="assets/img/logotext.png" alt="" title="" style="padding: 10px 0px;">
-        </a>
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-           <!-- Events menu with DropDown for WorkShops, etc -->
-          <li class="dropdown"><a class="nav-link scrollto" href="#events"><span>Events</span> <i class="bi bi-chevron-down"></i></a>
-<!--             <ul>
-                <li><a class="nav-link scrollto" href="#talks">Talks</a></li>
-                <li><a class="nav-link scrollto" href="#sessions">Keynote Sessions</a></li>
-                <li><a class="nav-link scrollto" href="#discussion">Panel discussion</a></li>
-                <li><a class="nav-link scrollto" href="#ceremony-schedule">Ceremony Schedule</a></li>
-                <li><a class="nav-link scrollto" href="#presentations">Presentations</a></li>
-            </ul> -->
-
+    <header id="header" class="d-flex align-items-center ">
+        <div class="container-fluid d-flex align-items-center">
+    
+          <div id="logo" style="margin-right: auto!important;">
+            <a href="index.html" class="scrollto">
+              <img src="assets/img/logo.png" alt="" title="">
+            </a>
+            <img class="logo-text" src="assets/img/logotext.png" alt="" title="" style="padding: 10px 0px;">
+          </div>
+    
+          <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-              <li><a class="nav-link scrollto" href="#keynote">Key Note Session</a></li>
-              <li><a class="nav-link scrollto" href="#events">Lecture series</a></li>
-              <li><a class="nav-link scrollto" href="#events">Exhibition</a></li>
-              <li><a class="nav-link scrollto" href="#events">Startup Booths</a></li>
-              <li><a class="nav-link scrollto" href="#events">Panel discussion</a></li>
-            </ul>
-          </li>
-          <!-- <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li> -->
-          
-          <li><a class="nav-link scrollto" href="#gallery">Flashbacks</a></li>
-          <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
-
-          <li><a class="nav-link scrollto" href="#team">Meet the Team</a></li>
-          <li><a class="nav-link scrollto" href="#reach-us">Reach Us</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" style="background-image: url('assets/img/Priority1_Saraswati Block-1.jpg'); background-size: cover;">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">Industry<br><span>Academia</span> Conclave <br><span>IAC 6.0</span></h1>
-      <p class="mb-4 pb-0">20-21 September 2024, IIT Palakkad, Kerala</p>
-      <a href="https://www.youtube.com/watch?v=sQVEoYGYNAM" class="glightbox play-btn mb-4"></a>
-      </p>
-    </div>
-  </section><!-- End Hero Section -->
-
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about">
-      <div class="container position-relative" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>About IAC</h2>
-            
-    <p>
-      The Industrial Academia Conclave (IAC) at IIT Palakkad is a flagship event that bridges the gap between academic research and industrial application. As a vibrant platform where innovation meets expertise, our mission is to bridge the gap between industry and academia, fostering meaningful connections and progress.<br>
-
-      At IAC, we believe in the power of collaboration to shape the future. Our events, including panel discussions, lecture series and talks by Industry leaders, and exhibitions, are designed to inspire, educate, and connect. From exploring cutting-edge technologies to addressing real-world challenges, our programs facilitate a rich exchange of ideas and perspectives.<br>
-
-      IAC is where potential is realized, innovation knows no limits, and connections ignite fresh ideas. This is more than just a platform—it's a catalyst for change, where collective expertise drives impactful outcomes. Whether you're an industry professional, academic, or innovator, IAC offers the ideal environment to connect, learn, and grow.
-    </p>
-          </div>
-          <div class="col-lg-6">
-            <h3>Where</h3>
-            <p>Sahyadri-Nila Campus, IIT Palakkad</p>
-          </div>
-          <div class="col-lg-6">
-            <h3>When</h3>
-            <p>Friday, Saturday<br>20-21 September</p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-
-    <!-- ======= Speakers Section ======= -->
-    <!-- Update will release soon -->
-   
-  <section id="keynote" style="padding-top: 60px; padding-bottom: 0;" class="section-type1">
-  <div class="container position-relative" data-aos="fade-up">
-    <div class="section-header" data-aos="fade-up">
-      <h2>Keynote Speakers</h2>
-    </div>
-
-    <!-- First Keynote Speaker -->
-    <div class="row mb-4" data-aos="fade-left">
-      <div class="col-lg-12">
-        <div class="event-card d-flex align-items-center" style="width: 100%;">
-          <div class="col-lg-4 col-md-4 text-center d-none d-md-block">
-            <div class="event-image">
-              <img src="assets/img/Sreedevi.jpg" class="img-fluid" alt="Dr. Sreedevi Upadhyayula">
-              <p>Dr. Sreedevi Upadhyayula</p>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-8">
-            <h1>Dr. Sreedevi Upadhyayula</h1>
-            <p>
-              Dr. Sreedevi Upadhyayula is a seasoned chemical engineer with a rich blend of industry and academic experience. After earning her M.Tech in Chemical Engineering from IIT Kharagpur in 1993, she worked as a Senior Design Engineer in both the public and private sectors. In 1998, she returned to academia as a CSIR Senior Research Fellow at the National Chemical Laboratory (NCL), Pune, and completed her PhD in 2001.
-
-              She then pursued postdoctoral research at the University of Notre Dame, USA, before starting her academic career as an Assistant Professor at IIT Kharagpur in 2004. Currently, she is the CLASS of 66 Chair Professor at IIT Delhi. Her research focuses on sustainable heterogeneous catalysis, zeotype materials in petrochemical and refinery catalytic processes, biomass conversion to biofuels, catalyst design, parametric study, kinetics and modeling of heterogeneous reactions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Second Keynote Speaker -->
-    <div class="row mb-4" data-aos="fade-right">
-      <div class="col-lg-12">
-        <div class="event-card d-flex align-items-center" style="width: 100%;">
-          <div class="col-lg-4 col-md-4 text-center d-none d-md-block">
-            <div class="event-image">
-              <img src="assets/img/Satya.jpg" class="img-fluid" alt="Dr. Satya Chakravarthy">
-              <p>Dr. Satya Chakravarthy</p>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-8">
-            <h1>Dr. Satya Chakravarthy</h1>
-            <p>
-              Dr. Satya Chakravarthy is a Professor of Aerospace Engineering at IIT Madras, where he has been a faculty member since 1997. He earned his B.Tech from IIT Madras and M.S. and Ph.D. from Georgia Tech, USA. His research focuses on propulsion and combustion in gas turbines, rocket engines, and electric aircraft.
-
-              He leads the National Centre for Combustion Research & Development (NCCRD) at IIT Madras, the largest center of its kind globally, and the DRDO Centre of Propulsion Technology. He has received several prestigious awards, including the HAL Prize, the Young Engineer Award by the Indian National Academy of Engineering, and the DRDO Academic Excellence Award.
-
-              Beyond academia, Dr. Chakravarthy is the Founder and Technical Lead of The ePlane Company, which is developing hybrid aerial vehicles. He is also a director at Agnikul Cosmos and Aerostrovilos, focusing on space and power generation technologies, respectively. Additionally, he mentors Team Avishkar Hyperloop at IIT Madras and advises several tech startups, including NewTrace and GalaxEye.
-
-              Dr. Chakravarthy is an accomplished speaker with TEDx talks and numerous online lectures, sharing his expertise in combustion and aerospace engineering with a global audience.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-        
-        
-
-    </section>
-    <!-- End Speakers Section -->
-    <section class="experience pt-100 pb-100" id="experience">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 mx-auto text-center">
-                <div class="section-header" data-aos="fade-up">
-      <h2>Events</h2>
-
-                    <p>Enrich the IAC Experience and engage with the best minds, explore cutting-edge innovations, and dive into insightful discussions</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <ul class="timeline-list">
-                    <!-- Lecture Series -->
-                    <li>
-                        <div class="timeline_content">
-                            <span>Lecture Series</span>
-                            <h4>Broaden Your Intellectual Horizons</h4>
-                            <p>Ready to broaden your intellectual horizons? Become a part of the IAC Lecture Series, where renowned professors from diverse disciplines share their expertise and insights on cutting-edge topics. This is more than just a lecture—it's an engaging experience that will inspire you, broaden your perspective, and connect you with the latest in knowledge. Don't miss this unique opportunity to learn from the best minds in their fields!</p>
-                        </div>
-                    </li>
-                    <!-- Exhibition -->
-                    <li>
-                        <div class="timeline_content">
-                            <span>Exhibition</span>
-                            <h4>Showcase Your Innovations</h4>
-                            <p>Unleash your creativity and showcase your innovative projects, products, and posters at the IAC Exhibition! This is a fantastic chance for students to present their work to professionals from various industries, receive valuable feedback, and potentially spark collaborations.</p>
-                        </div>
-                    </li>
-                    <!-- Start-Up Booths -->
-                    <li>
-                        <div class="timeline_content">
-                            <span>Start-Up Booths</span>
-                            <h4>Explore Innovative Startups</h4>
-                            <p>Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs to share their journey from idea to execution. Engage with the founders, learn about their challenges, and discover how their startups are shaping the future. These booths provide a firsthand look at the cutting-edge innovations emerging from our alumni network.</p>
-                        </div>
-                    </li>
-                    <!-- Panel Discussion -->
-                    <li>
-                        <div class="timeline_content">
-                            <span>Panel Discussion</span>
-                            <h4>Gain Insights from Industry Experts</h4>
-                            <p>Join a group of industry experts as they delve into key topics relevant to the industrial world. This session offers valuable insights into current trends and practical applications. This panel discussion is the perfect platform to ask questions and engage directly with the panelists, making this an invaluable chance to gain knowledge and advice from experienced professionals.</p>
-                        </div>
-                    </li>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li class="dropdown"><a class="nav-link scrollto" href="#events"><span>Events</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a class="nav-link scrollto" href="#speakers">KeyNote Speakers</a></li>
+                  <li><a class="nav-link scrollto" href="#talks">Lecture series</a></li>
+                  <li><a class="nav-link scrollto" href="#presentations">Exhibition</a></li>
+                  <li><a class="nav-link scrollto" href="#startup-schedule">Startup Booths</a></li>
+                  <li><a class="nav-link scrollto" href="#discussion">Panel discussion</a></li>
                 </ul>
-            </div>
+              </li>
+    
+              <li><a class="nav-link scrollto" href="#gallery">Glimpses</a></li>
+              <li><a class="nav-link scrollto" href="#supporters">Sponsors</a></li>
+    
+              <li><a class="nav-link scrollto" href="#team">Meet the Team</a></li>
+              <li><a class="nav-link scrollto" href="#reach-us">Reach Us</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+    
         </div>
-    </div>
-</section>
+      </header>
 
-
-    <!-- Events Section -->
- <!--   <section id="events" style="padding-top: 60px; padding-bottom: 0;" class="section-type1">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Events</h2>
+    <section id="hero">
+        <div class="hero-container">
+            <h1 class="mb-4 pb-0">Industry<br><span>Academia</span> Conclave <br><span>IAC 6.0</span></h1>
+            <p class="mb-4 pb-0">20-21 September 2024, IIT Palakkad, Kerala</p>
         </div>
+    </section>
 
-        <!-- Lecture Series 
-        <div class="row mb-4" data-aos="fade-left">
-          <div class="col-lg-12">
-            <div class="event-card d-flex align-items-center">
-              <div class="col-lg-7 col-md-7 text-right">
-                <h1>Lecture Series</h1>
-                <p>Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series,
-                  where renowned professors from diverse disciplines share their expertise and insights
-                  on cutting-edge topics. This is more than just a lecture—it's an engaging experience
-                  that will inspire you, broaden your perspective, and connect you with the latest in
-                  knowledge. <br> <br>
-                  <br>Don't miss this unique opportunity to learn from the best minds in their fields!.<br>
-                </p>
-              </div>
-              
-            </div>
-          </div>
+    <section id="about">
+        <div class="left" style="z-index: 2; color: var(--bg-color);" data-aos="fade-up">
+            <h1>About IAC</h1>
         </div>
+        <p class="right wi-50" data-aos="fade-up">
+            The Industrial Academia Conclave (IAC) at IIT Palakkad is a flagship event that bridges 
+            the gap between academic research and industrial application. As a vibrant platform where 
+            innovation meets expertise, our mission is to bridge the gap between industry and academia, 
+            fostering meaningful connections and progress.
+        </p>
 
-        <!-- Exhibition 
-        <div class="row mb-4" data-aos="fade-right">
-          <div class="col-lg-12">
-            <div class="event-card d-flex align-items-center">
-              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                <div class="event-image">
-                  <img src="assets/img/event_card/exhibition.jpg" class="img-fluid" alt="">
-                  <p>Instances from IAC 5.0Previous event image</p>
-                </div>
-              </div>
-              <div class="col-lg-7 col-md-7">
-                <h1>Exhibition</h1>
-                <p>Unleash your creativity and showcase your innovative projects, products,
-                  and posters at the IAC Exhibition! This is a fantastic chance for students
-                  to present their work to professionals from various industries, receive valuable
-                  feedback, and potentially spark collaborations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="left wi-50" style="color: var(--sg-color)" data-aos="fade-up">
+            At IAC, we believe in the power of collaboration to shape the future. Our events, including 
+            panel discussions, lecture series and talks by Industry leaders, and exhibitions, are designed 
+            to inspire, educate, and connect. From exploring cutting-edge technologies to addressing real-world 
+            challenges, our programs facilitate a rich exchange of ideas and perspectives.
+        </p>
 
-        <!-- Start-Up Booths 
-        <div class="row mb-4" data-aos="fade-left">
-          <div class="col-lg-12">
-            <div class="event-card d-flex align-items-center">
-              <div class="col-lg-7 col-md-7 text-right">
-                <h1>Start-Up Booths</h1>
-                <p>Explore innovative startups founded by recent graduates, supported by
-                  TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs
-                  to share their journey from idea to execution. Engage with the founders, learn
-                  about their challenges, and discover how their startups are shaping the future.
-                  These booths provide a firsthand look at the cutting-edge innovations emerging
-                  from our alumni network.
-                </p>
-              </div>
-              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                <div class="event-image">
-                  <img src="assets/img/event_card/startup.jpg" class="img-fluid" alt="">
-                  <p>Instances from IAC 5.0</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="right wi-50" data-aos="fade-up">
+            IAC is where potential is realized, innovation knows no limits, and connections ignite fresh ideas. 
+            This is more than just a platform—it's a catalyst for change, where collective expertise drives impactful 
+            outcomes. Whether you're an industry professional, academic, or innovator, IAC offers the ideal environment 
+            to connect, learn, and grow.
+        </p>
 
-        <!-- Panel discussion 
-        <div class="row mb-4" data-aos="fade-right">
-          <div class="col-lg-12">
-            <div class="event-card d-flex align-items-center">
-              <div class="col-lg-5 col-md-5 text-center d-none d-md-block">
-                <div class="event-image">
-                  <img src="assets/img/event_card/panel.jpg" class="img-fluid" alt="">
-                  <p>Instances from IAC 5.0</p>
-                </div>
-              </div>
-              <div class="col-lg-7 col-md-7">
-                <h1>Panel discussion</h1>
-                <p>Join a group of industry experts as they delve into key topics relevant
-                  to the industrial world. This session offers valuable insights into current
-                  trends and practical applications.
-                  <br>This panel discussion is the perfect platform to ask questions and engage
-                  directly with the panelists, making this an invaluable chance to gain knowledge
-                  and advice from experienced professionals.<br>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <p class="left wi-50" style="color: var(--sg-color)" data-aos="fade-up">
+            <strong style="color: var(--bg-color);">Where:</strong><br>
+            Sahyadri-Nila Campus, IIT Palakkad<br><br>
+            <strong style="color: var(--bg-color);">When:</strong><br>
+            Friday, Saturday<br>
+            20-21 September
+        </p>
 
     </section>
---!>
 
-
-
-
-    <!--     adding the team tab -->
-
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Flashbacks</h2>
-          <p>Check our reports and gallery from the recent events</p>
+    <section id="events">
+        <div class="section-header right" data-aos="fade-up">
+            <h1>Events</h1>
         </div>
-      </div>
-      <div align="center">
-          <h1>Previous IAC Reports</h1>
-          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
-          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
-          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
-          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
+        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Lecture Series</h2>
+            <p style="padding-left: 20px;">
+                Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
+                where renowned professors from diverse disciplines share their expertise and insights 
+                on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
+                that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
+            </p>
+        </div>
+        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Exhibition</h2>
+            <p style="padding-left: 20px;">
+                Unleash your creativity and showcase your innovative projects, products, and posters 
+                at the IAC Exhibition! This is a fantastic chance for students to present their work 
+                to professionals from various industries, receive valuable feedback, and potentially 
+                spark collaborations.
+            </p>
         </div>
 
-      <div class="gallery-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><a href="assets/img/gallery/high/1.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/1.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/2.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/2.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/3.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/3.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/4.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/4.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/5.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/5.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/6.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/6.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/7.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/7.jpg" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><a href="assets/img/gallery/high/8.jpg" class="gallery-lightbox"><img
-                src="assets/img/gallery/8.jpg" class="img-fluid" alt=""></a></div>
+        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Start-Up Booths</h2>
+            <p style="padding-left: 20px;">
+                Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. 
+                These dynamic booths offer a platform for young entrepreneurs to share their journey from 
+                idea to execution. Engage with the founders, learn about their challenges, and discover how 
+                their startups are shaping the future. These booths provide a firsthand look at the cutting-edge 
+                innovations emerging from our alumni network.
+            </p>
         </div>
-        <div class="swiper-pagination"></div>
+
+        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
+            <h2>Panel discussion</h2>
+            <p style="padding-left: 20px;">
+                Join a group of industry experts as they delve into key topics relevant to the industrial world. 
+                This session offers valuable insights into current trends and practical applications.
+                This panel discussion is the perfect platform to ask questions and engage directly with the panelists, 
+                making this an invaluable chance to gain knowledge and advice from experienced professionals.
+            </p>
+        </div>
+    </section>
+
+    <section id="speakers">
+        <div class="section-header left" data-aos="fade-up">
+            <h1>KeyNote Speakers</h1>
+        </div>
+
+        <div class="container-fluid my-5" style="width: 93%;">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3">
+                    <div class="image-container">
+                        <img src="assets/img/team/nelson_11.png" class="img-fluid" alt="Person Image">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2>Dr. Sreedevi Upadhyayula</h2>
+                    <p>
+                        Dr. Sreedevi Upadhyayula is a seasoned chemical engineer with a rich blend of industry and academic 
+                        experience. After earning her M.Tech in Chemical Engineering from IIT Kharagpur in 1993, she worked 
+                        as a Senior Design Engineer in both the public and private sectors. In 1998, she returned to academia 
+                        as a CSIR Senior Research Fellow at the National Chemical Laboratory (NCL), Pune, and completed her 
+                        PhD in 2001.<br><br>
+
+                        She then pursued postdoctoral research at the University of Notre Dame, USA, before starting her academic 
+                        career as an Assistant Professor at IIT Kharagpur in 2004. Currently, she is the CLASS of 66 Chair Professor 
+                        at IIT Delhi. Her research focuses on sustainable heterogeneous catalysis, zeotype materials in petrochemical 
+                        and refinery catalytic processes, biomass conversion to biofuels, catalyst design, parametric study, kinetics 
+                        and modeling of heterogeneous reactions.
+                      </p>
+                </div>
+            </div>
         
-      </div>
-      </div>
+            <div class="row align-items-center">
+                <div class="col-md-3 order-md-2">
+                    <div class="image-container">
+                        <img src="assets/img/team/nelson_11.png" class="img-fluid" alt="Person Image">
+                    </div>
+                </div>
+                <div class="col-md-9 order-md-1">
+                    <h2>Dr. Satya Chakravarthy</h2>
+                    <p>
+                        Dr. Satya Chakravarthy is a Professor of Aerospace Engineering at IIT Madras, where he has been a faculty member 
+                        since 1997. He earned his B.Tech from IIT Madras and M.S. and Ph.D. from Georgia Tech, USA. His research focuses 
+                        on propulsion and combustion in gas turbines, rocket engines, and electric aircraft. He leads the National Centre 
+                        for Combustion Research & Development (NCCRD) at IIT Madras, the largest center of its kind globally, and the DRDO 
+                        Centre of Propulsion Technology. He has received several prestigious awards, including the HAL Prize, the Young Engineer 
+                        Award by the Indian National Academy of Engineering, and the DRDO Academic Excellence Award.<br><br>
 
-    </section><!-- End Gallery Section -->
-
-    <!-- ======= Supporters Section ======= -->
-    <section id="supporters" class="section-type1">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Sponsors</h2>
+                        Beyond academia, Dr. Chakravarthy is the Founder and Technical Lead of The ePlane Company, which is developing hybrid 
+                        aerial vehicles. He is also a director at Agnikul Cosmos and Aerostrovilos, focusing on space and power generation technologies, 
+                        respectively. Additionally, he mentors Team Avishkar Hyperloop at IIT Madras and advises several tech startups, including NewTrace 
+                        and GalaxEye. Dr. Chakravarthy is an accomplished speaker with TEDx talks and numerous online lectures, sharing his expertise in 
+                        combustion and aerospace engineering with a global audience.
+                      </p>
+                </div>
+            </div>
         </div>
+        
 
-        <div align="center"> If you are interested in sponsoring the event,
-          please contact <a href="mailto:ilo@iitpkd.ac.in">ilo@iitpkd.ac.in</a> or
-          <a href="mailto:iac@iitpkd.ac.in">iac@iitpkd.ac.in</a>
-        </div>
-
-      </div>
-
+        
     </section>
-    <!-- End Sponsors Section -->
 
+    <section id="glimpses">
+    </section>
 
+    <section id="reach-us" style="padding: 0 60px;">
+    </section>
 
-  <section id="team">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <h2>Meet the Organising Team!</h2>
-    </div>
-    
-    <!-- First Row: 3 Members -->
-    <div class="row">
-      <div class="photo-container">
-        <div class="photo-name position-name">Faculty Advisor</div>
-        <div class="photo-box">
-          <img src="../images/nelson.png" alt="Nelson Muthu" class="team-photo">
-          <div class="overlay">
-            <div class="email">nelsonm@iitpkd.ac.in</div>
-          </div>
+    <section id="team">
+        <div class="left" data-aos="fade-up">
+            <h1>Meet The Team</h1>
+            
         </div>
-        <div class="photo-name person-name">Nelson Muthu</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Faculty Advisor</div>
-        <div class="photo-box">
-          <img src="../images/sukomel_dey.png" alt="Sukomal Dey" class="team-photo">
-          <div class="overlay">
-            <div class="email">sdey@iitpd.ac.in</div>
-          </div>
-        </div>
-        <div class="photo-name person-name">Sukomal Dey</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Industry Liaison Officer</div>
-        <div class="photo-box">
-          <img src="../images/silvon.png" alt="Dr. Selva Pandian" class="team-photo">
-          <div class="overlay">
-            <div class="email">ilo@iitpkd.ac.in</div>
-          </div>
-        </div>
-        <div class="photo-name person-name">Dr. Selva Pandian</div>
-      </div>
-    </div>
-    
-    <!-- Second Row: 3 Members -->
-    <div class="row">
-      <div class="photo-container">
-        <div class="photo-name position-name">Hospitality Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/amal_krishnan.png" alt="Amal Krishnan K" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Amal Krishnan K</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Technical Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/aryan_mathur.png" alt="Aryan Mathur" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Aryan Mathur</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Academic Affairs Secretary</div>
-        <div class="photo-box">
-          <img src="../images/hemath_reddy.png" alt="Sai Hemanth Reddy" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Sai Hemanth Reddy</div>
-      </div>
-    </div>
-    
-    <!-- Third Row: 4 Members -->
-    <div class="row">
-      <div class="photo-container">
-        <div class="photo-name position-name">Outreach Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/prabhat_suresh.png" alt="Prabhat Suresh" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Prabhat Suresh</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Finance Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/revanth.png" alt="Juvvala Revanth" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Juvvala Revanth</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Logistics & Marketing Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/karthikeya.png" alt="Karthikeya B" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Karthikeya B</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Frontend Developer</div>
-        <div class="photo-box">
-          <img src="../images/g.png" alt="Geetheswar" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Geetheswar</div>
-      </div>
-      
-    </div>
-    
-    <!-- Fourth Row: 2 Members -->
-    <div class="row">
-<div class="photo-container">
-        <div class="photo-name position-name">Content Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/sarath.png" alt="Sarath A" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Sarath A</div>
-      </div>
 
-    
-      <div class="photo-container">
-        <div class="photo-name position-name">Design Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/devraj.png" alt="Devraj Doley" class="team-photo">
+        <div style="display: flex; align-items: center; width: 93%; align-self: center;" data-aos="fade-up">
+            <hr class="thick-line">
+            <h2 style="padding-left: 20px;">Organizing Team</h2>
         </div>
-        <div class="photo-name person-name">Devraj Doley</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Event Coverage Coordinator</div>
-        <div class="photo-box">
-          <img src="../images/rizwan.png" alt="Muhamed Rizwan Mehaboob" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Muhamed Rizwan Mehaboob</div>
-      </div>
-    
-      <div class="photo-container">
-        <div class="photo-name position-name">Backend Developer</div>
-        <div class="photo-box">
-          <img src="../images/zeeshan.png" alt="Zeeshan Rangrej" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Zeeshan Rangrej</div>
-      </div>
-    </div>
-    
-      
-    
-    
-      
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
-        <h3>Department Coordinators</h3>
-      </div>
-    </div>
+        <div class="container-fluid" style="width: 93%;" data-aos="fade-up">
+            <div class="row  justify-content-center" id="organizing-team">
+            </div>
+        </div>        
 
-    <!-- Department Coordinators: 3 Members -->
-    <div class="row">
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Computer Science and Engineering</div>
-        <div class="photo-box">
-          <img src="../images/jasine.png" alt="Jasine Babu" class="team-photo">
+        <div style="display: flex; align-items: center; width: 93%; align-self: center;" data-aos="fade-up">
+            <h2 style="padding-right: 20px;">Department Cordinators</h2>
+            <hr class="thick-line">
         </div>
-        <div class="photo-name person-name">Jasine Babu</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Data Science and Engineering</div>
-        <div class="photo-box">
-          <img src="../images/satyajit.png" alt="Satyajit Das" class="team-photo">
+        <div class="container-fluid" style="width: 93%;" data-aos="fade-up">
+            <div class="row  justify-content-center" id="department-cordinators">
+            </div>
         </div>
-        <div class="photo-name person-name">Satyajit Das</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Electrical Engineering</div>
-        <div class="photo-box">
-          <img src="../images/sreenathV.png" alt="Sreenath V" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Sreenath V</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Mechanical Engineering</div>
-        <div class="photo-box">
-          <img src="../images/subu.png" alt="Kanmani Subu S." class="team-photo">
-        </div>
-        <div class="photo-name person-name">Kanmani Subu S.</div>
-      </div>
-    </div>
+    </section>
 
-    <!-- Second Row of Department Coordinators: 2 Members -->
-    <div class="row">
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Civil Engineering</div>
-        <div class="photo-box">
-          <img src="../images/civil.png" alt="Dr. Sarmistha Singh" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Dr. Sarmistha Singh</div>
-      </div>
-      
+    <section id="reach-us">
+
+        <div class="container-fluid" data-aos="fade-up">
   
-     <div class="photo-container">
-        <div class="photo-name position-name">Department of Physics</div>
-        <div class="photo-box">
-          <img src="../images/vishwas.png" alt="Dr. Abhay K. Prasad" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Vishvaas V.</div>
-      </div>
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Mathematics</div>
-        <div class="photo-box">
-          <img src="../images/jaikrishnan.png" alt="Dr. Abhay K. Prasad" class="team-photo">
-        </div>
-        <div class="photo-name person-name">Jaikrishnan Janardhanan</div>
-      </div>
+          <div class="section-header">
+            <h2>Reach Us</h2>
+          </div>
+  
+          <div class="row contact-info" align="center">
+  
+            <div style="display: flex; justify-content: space-between; padding: 20px;">
+              <div class="col-md-6" style="flex: 1; padding: 10px;">
+                  <div class="contact-address" style=" padding: 15px; border-radius: 8px;">
+                      <i class="bi bi-geo-alt" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
+                      <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Address</h3>
+                      <address style="margin: 0; font-size: 16px; color: #555;">Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
+                  </div>
+              </div>
       
-      
-      <div class="photo-container">
-        <div class="photo-name position-name">Department of Chemistry</div>
-        <div class="photo-box">
-          <img src="../images/yuvraj.png" alt="Yuvraj K" class="team-photo">
+              <div class="col-md-6" style="flex: 1; padding: 10px;">
+                  <div class="contact-email" style=" padding: 15px; border-radius: 8px;">
+                      <i class="bi bi-envelope" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
+                      <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Email</h3>
+                      <p style="margin: 0; font-size: 16px; color: #555;"><a href="mailto:iac@iitpkd.ac.in" style="color: #007bff; text-decoration: none;">iac@iitpkd.ac.in</a></p>
+                  </div>
+              </div>
+          </div>
+  
+          <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin"
+              width="90%" height="400" style="border:0; border-radius: 7px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+  
         </div>
-        <div class="photo-name person-name">Yuvraj K.</div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Third Row of Department Coordinators: 4 Members -->
-
-      
-     
-    
-  </div>
-</section>
-
-
-
-
-
-
-
-    <section id="reach-us" class="section-bg">
-
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Reach Us</h2>
+    <footer>
+        <div class="footer-content">
+          <img class="logo_wide" src="assets/img/logoiit.png" alt="" title="" style="width: auto; height: 8vw">
         </div>
-
-        <div class="row contact-info" align="center">
-
-          <div style="display: flex; justify-content: space-between; padding: 20px;">
-            <div class="col-md-6" style="flex: 1; padding: 10px;">
-                <div class="contact-address" style=" padding: 15px; border-radius: 8px;">
-                    <i class="bi bi-geo-alt" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Address</h3>
-                    <address style="margin: 0; font-size: 16px; color: #555;">Nila Campus, IIT Palakkad, Kanjikode, Palakkad</address>
-                </div>
-            </div>
-    
-            <div class="col-md-6" style="flex: 1; padding: 10px;">
-                <div class="contact-email" style=" padding: 15px; border-radius: 8px;">
-                    <i class="bi bi-envelope" style="font-size: 24px; color: #333; display: block; margin-bottom: 10px;"></i>
-                    <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">Email</h3>
-                    <p style="margin: 0; font-size: 16px; color: #555;"><a href="mailto:iac@iitpkd.ac.in" style="color: #007bff; text-decoration: none;">iac@iitpkd.ac.in</a></p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+          <div>
+            &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
+          </div>
+          <div>
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
         </div>
+      </footer>
 
-        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.069531940834!2d76.7244598!3d10.8059866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86eb5b2e20413%3A0x6ac0bc1d9e6a7141!2sIIT%20Palakkad!5e0!3m2!1sen!2sin!4v1692870509473!5m2!1sen!2sin"
-            width="90%" height="400" style="border:0; border-radius: 7px;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="footer-content">
-      <img class="logo_wide" src="assets/img/logoiit.png" alt="" title="" style="width: auto; height: 8vw">
-    </div>
-    <div class="footer-bottom">
-      <div>
-        &copy; Copyright <strong>IAC 6.0</strong>. All Rights Reserved
-      </div>
-      <div>
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>
-  <!-- ==== Footer End ==== -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const timelineItems = document.querySelectorAll('.timeline-list li');
-    
-    
-    const handleScroll = () => {
-        const windowHeight = window.innerHeight;
-        const pointerPos = window.scrollY + (windowHeight / 2);
-        
-
-
-
-
-        // Add active class to timeline items
-        timelineItems.forEach((item) => {
-            const rect = item.getBoundingClientRect();
-            const itemTop = rect.top + window.scrollY;
-
-            if (itemTop < pointerPos && itemTop + rect.height > pointerPos) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-});
-</script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/header.js"></script>
 </body>
-  
-
-
-<!-- here is the commit i amde -->
-
 </html>

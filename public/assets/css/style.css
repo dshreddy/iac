@@ -16,16 +16,6 @@ html {
      line-height: 1.6;
  }
 
-
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -25,7 +25,7 @@ img {
   
 img {
     max-width: 80%;
@@ -33,22 +23,13 @@ img {
     display: block;
  }
 
+
  p {
      font-size: 1.5625rem; /* 25px */
  }
 
  a {
 
-    
-        
-          
-    
-
-        
-        Expand All
-    
-    @@ -43,11 +43,11 @@ section {
-  
     text-decoration: none;
     color: var(--accent);
 }
@@ -60,8 +41,7 @@ section {
     flex-direction: column;
 }
 
- section h1,
- #hero h1 {
+ section h1, #hero h1 {
      font-size: 5rem; /* 80px */
  }
 
@@ -71,18 +51,7 @@ section {
 
  @media (max-width: 700px) {
 
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
-    section h1,
-    #hero h1 {
+    section h1, #hero h1 {
         font-size: 12vw;
     }
     section h2 {

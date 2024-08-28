@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     /* width: 100vw; */
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -44,17 +44,17 @@ section {
 
 #about h1,
 #events h1 {
-    font-size: 95px;
+    font-size: 45px;
 }
 
 @media (max-width: 700px) {
     #about h1,
     #events h1 {
-        font-size: 12vw;
+        font-size: 6vw;
     }
 
     section p {
-        font-size: 18px;
+        font-size: 5px;
     }
 }
 

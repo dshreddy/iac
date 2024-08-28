@@ -14,6 +14,26 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <title>IIT Palakkad IAC 6.0</title>
+    <style>
+        /* Speaker Card Styles */
+.speaker-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.speaker-card.in-focus {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.speaker-card:not(.in-focus) {
+    opacity: 0.5;
+}
+    </style>
 </head>
 <body>
 
@@ -95,65 +115,67 @@
 
     </section>
      <section id="speakers" style="background-color: var(--bg-color2);">
-        <div class="section-header" data-aos="fade-up">
-            <h2>KeyNote Speakers</h2>
-        </div>
+    <div class="section-header" data-aos="fade-up">
+        <h2>KeyNote Speakers</h2>
+    </div>
 
-        <!-- First Keynote Speaker -->
     <div class="container-fluid my-5" style="width: 93%;">
-    <div class="row align-items-center mb-4">
-        <div class="col-md-3">
-            <div class="image-container">
-                <img src="assets/img/sreedevi.jpg" class="img-fluid" alt="">
+        <!-- First Keynote Speaker -->
+        <div class="speaker-card" data-aos="fade-up">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3">
+                    <div class="image-container">
+                        <img src="assets/img/sreedevi.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2 style="font-size: 1.5rem;">Dr. Sreedevi Upadhyayula</h2>
+                    <p style="font-size: 1rem;">
+                        Dr. Sreedevi Upadhyayula is a seasoned chemical engineer with a rich blend of industry and academic 
+                        experience. After earning her M.Tech in Chemical Engineering from IIT Kharagpur in 1993, she worked 
+                        as a Senior Design Engineer in both the public and private sectors. In 1998, she returned to academia 
+                        as a CSIR Senior Research Fellow at the National Chemical Laboratory (NCL), Pune, and completed her 
+                        PhD in 2001.<br><br>
+
+                        She then pursued postdoctoral research at the University of Notre Dame, USA, before starting her academic 
+                        career as an Assistant Professor at IIT Kharagpur in 2004. Currently, she is the CLASS of 66 Chair Professor 
+                        at IIT Delhi. Her research focuses on sustainable heterogeneous catalysis, zeotype materials in petrochemical 
+                        and refinery catalytic processes, biomass conversion to biofuels, catalyst design, parametric study, kinetics 
+                        and modeling of heterogeneous reactions.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="col-md-9">
-            <h2>Dr. Sreedevi Upadhyayula</h2>
-            <p>
-                Dr. Sreedevi Upadhyayula is a seasoned chemical engineer with a rich blend of industry and academic 
-                experience. After earning her M.Tech in Chemical Engineering from IIT Kharagpur in 1993, she worked 
-                as a Senior Design Engineer in both the public and private sectors. In 1998, she returned to academia 
-                as a CSIR Senior Research Fellow at the National Chemical Laboratory (NCL), Pune, and completed her 
-                PhD in 2001.<br><br>
 
-                She then pursued postdoctoral research at the University of Notre Dame, USA, before starting her academic 
-                career as an Assistant Professor at IIT Kharagpur in 2004. Currently, she is the CLASS of 66 Chair Professor 
-                at IIT Delhi. Her research focuses on sustainable heterogeneous catalysis, zeotype materials in petrochemical 
-                and refinery catalytic processes, biomass conversion to biofuels, catalyst design, parametric study, kinetics 
-                and modeling of heterogeneous reactions.
-              </p>
-        </div>
-    </div>
+        <!-- Second Keynote Speaker -->
+        <div class="speaker-card" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-md-3 order-md-2">
+                    <div class="image-container">
+                        <img src="assets/img/satya.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9 order-md-1">
+                    <h2 style="font-size: 1.5rem;">Dr. Satya Chakravarthy</h2>
+                    <p style="font-size: 1rem;">
+                        Dr. Satya Chakravarthy is a Professor of Aerospace Engineering at IIT Madras, where he has been a faculty member 
+                        since 1997. He earned his B.Tech from IIT Madras and M.S. and Ph.D. from Georgia Tech, USA. His research focuses 
+                        on propulsion and combustion in gas turbines, rocket engines, and electric aircraft. He leads the National Centre 
+                        for Combustion Research & Development (NCCRD) at IIT Madras, the largest center of its kind globally, and the DRDO 
+                        Centre of Propulsion Technology. He has received several prestigious awards, including the HAL Prize, the Young Engineer 
+                        Award by the Indian National Academy of Engineering, and the DRDO Academic Excellence Award.<br><br>
 
-    <div class="row align-items-center">
-        <div class="col-md-3 order-md-2">
-            <div class="image-container">
-                <img src="assets/img/satya.jpg" class="img-fluid" alt="">
+                        Beyond academia, Dr. Chakravarthy is the Founder and Technical Lead of The ePlane Company, which is developing hybrid 
+                        aerial vehicles. He is also a director at Agnikul Cosmos and Aerostrovilos, focusing on space and power generation technologies, 
+                        respectively. Additionally, he mentors Team Avishkar Hyperloop at IIT Madras and advises several tech startups, including NewTrace 
+                        and GalaxEye. Dr. Chakravarthy is an accomplished speaker with TEDx talks and numerous online lectures, sharing his expertise in 
+                        combustion and aerospace engineering with a global audience.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="col-md-9 order-md-1">
-            <h2>Dr. Satya Chakravarthy</h2>
-            <p>
-                Dr. Satya Chakravarthy is a Professor of Aerospace Engineering at IIT Madras, where he has been a faculty member 
-                since 1997. He earned his B.Tech from IIT Madras and M.S. and Ph.D. from Georgia Tech, USA. His research focuses 
-                on propulsion and combustion in gas turbines, rocket engines, and electric aircraft. He leads the National Centre 
-                for Combustion Research & Development (NCCRD) at IIT Madras, the largest center of its kind globally, and the DRDO 
-                Centre of Propulsion Technology. He has received several prestigious awards, including the HAL Prize, the Young Engineer 
-                Award by the Indian National Academy of Engineering, and the DRDO Academic Excellence Award.<br><br>
-
-                Beyond academia, Dr. Chakravarthy is the Founder and Technical Lead of The ePlane Company, which is developing hybrid 
-                aerial vehicles. He is also a director at Agnikul Cosmos and Aerostrovilos, focusing on space and power generation technologies, 
-                respectively. Additionally, he mentors Team Avishkar Hyperloop at IIT Madras and advises several tech startups, including NewTrace 
-                and GalaxEye. Dr. Chakravarthy is an accomplished speaker with TEDx talks and numerous online lectures, sharing his expertise in 
-                combustion and aerospace engineering with a global audience.
-              </p>
-        </div>
     </div>
-    </div>
-        
-
-        
-    </section>
+</section>
 
     <section id="events">
         <div class="right" data-aos="fade-up">
@@ -372,5 +394,22 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script>
+        const speakerCards = document.querySelectorAll('.speaker-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-focus');
+                } else {
+                    entry.target.classList.remove('in-focus');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        speakerCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>

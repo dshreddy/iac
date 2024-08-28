@@ -15,24 +15,176 @@
 
     <title>IIT Palakkad IAC 6.0</title>
     <style>
-        /* Speaker Card Styles */
-.speaker-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+      #speakers {
+        background-color: var(--bg-color2);
+        padding: 40px 0;
+        justify-content: center;
+        
+    }
+    .event-card {
+      background-color: rgba(255, 223, 186, 0.8); /* Light golden color */
+      border-radius: 10px; /* Rounded corners */
+      padding: 15px; /* Inner padding */
+      transition: transform 0.1s ease, opacity 0.5s ease; /* Transition for animations */
+      opacity: 0; /* Initially hidden */
+  }
+  
+  .visible {
+      opacity: 1; /* Fully visible when scrolled into view */
+  }
+  
+    
+    
+    
+    .paragraph {
+        color: white; /* Keep the text color white */
+        opacity: 0.5; /* Default opacity */
+        transition: opacity 0.1s; /* Smooth transition for opacity change */
+    }
+    
+  .paragraph.active {
+      opacity: 1; /* Full opacity for active paragraph */
+  }
+  #events {
+    position: relative;
+    padding: 50px 0;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; /* Ensure arrows are above slides */
 }
 
-.speaker-card.in-focus {
-    opacity: 1;
-    transform: scale(1.05);
+.left-arrow {
+  left: 10px; /* Position the left arrow */
 }
 
-.speaker-card:not(.in-focus) {
-    opacity: 0.5;
+.right-arrow {
+  right: 10px; /* Position the right arrow */
 }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.events-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack the header and grid */
+    align-items: center; /* Center the items */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 20px; /* Space between the grid items */
+    width: 100%; /* Full width for the grid */
+}
+
+.card {
+  background-color: white; /* Start with white background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, background-color 0.8s ease-in-out; /* Smooth transition for all */
+}
+
+.card.visible {
+  background-color: rgba(255, 223, 186, 0.8); /* Light golden color on scroll */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.card-content {
+    width: 100%; /* Full width for content */
+    padding: 20px; /* Padding inside each card content */
+}
+
+.card-content.left {
+    text-align: left;
+}
+
+.card-content.right {
+    text-align: right;
+}
+
+.empty-cell {
+    background: transparent; /* Empty cells are transparent */
+    border: none; /* No border for empty cells */
+}
+
+.card.active {
+    background: #e0f7fa; /* Highlight color for active card */
+}
+
+.pointer {
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: red; /* Pointer color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.1s;
+}
+
+
+  
+  
+  
+    
+    .speaker-card {
+        padding: 15px;
+        transition: opacity 0.1s, transform 0.1s;
+        opacity: 0.5;
+        position: relative;
+        margin: 20px 0; /* Space between cards */
+        border-radius: 8px; /* Optional: Rounded corners */
+    }
+    
+    .speaker-card.active {
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Glowing effect */
+        transform: scale(1.03);
+    }
+    
+    .dotted-line {
+        border-top: 2px dotted #ccc;
+        margin: 15px 0;
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+        height: auto; /* Adjusts height based on width */
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: Rounded corners */
+        transition: transform 0.1s; /* Transition effect for hover */
+    }
+    
+    .image-container:hover img {
+        transform: scale(1.05); /* Scale effect on hover */
+    }
+    
+    
     </style>
 </head>
 <body>
@@ -81,40 +233,39 @@
     </section>
 
     <section id="about">
-        <div class="left" style="z-index: 2; color: var(--bg-color);" data-aos="fade-up">
-            <h1>About IAC</h1>
-        </div>
-        <p class="right wi-50" data-aos="fade-up">
-            The Industrial Academia Conclave (IAC) at IIT Palakkad is a flagship event that bridges 
-            the gap between academic research and industrial application. As a vibrant platform where 
-            innovation meets expertise, our mission is to bridge the gap between industry and academia, 
-            fostering meaningful connections and progress.
-        </p>
-
-        <p class="left wi-50" style="color: var(--sg-color)" data-aos="fade-up">
-            At IAC, we believe in the power of collaboration to shape the future. Our events, including 
-            panel discussions, lecture series and talks by Industry leaders, and exhibitions, are designed 
-            to inspire, educate, and connect. From exploring cutting-edge technologies to addressing real-world 
-            challenges, our programs facilitate a rich exchange of ideas and perspectives.
-        </p>
-
-        <p class="right wi-50" data-aos="fade-up">
-            IAC is where potential is realized, innovation knows no limits, and connections ignite fresh ideas. 
-            This is more than just a platform—it's a catalyst for change, where collective expertise drives impactful 
-            outcomes. Whether you're an industry professional, academic, or innovator, IAC offers the ideal environment 
-            to connect, learn, and grow.
-        </p>
-
-        <p class="left wi-50" style="color: var(--sg-color)" data-aos="fade-up">
-            <strong style="color: var(--bg-color);">Where:</strong><br>
-            Sahyadri-Nila Campus, IIT Palakkad<br><br>
-            <strong style="color: var(--bg-color);">When:</strong><br>
-            Friday, Saturday<br>
-            20-21 September
-        </p>
-
-    </section>
-     <section id="speakers" style="background-color: var(--bg-color2);">
+      <div class="left" style="z-index: 2; color: var(--bg-color);" data-aos="fade-up">
+          <h1>About IAC</h1>
+      </div>
+      <p class="right wi-50 paragraph" data-aos="fade-up">
+          The Industrial Academia Conclave (IAC) at IIT Palakkad is a flagship event that bridges 
+          the gap between academic research and industrial application. As a vibrant platform where 
+          innovation meets expertise, our mission is to bridge the gap between industry and academia, 
+          fostering meaningful connections and progress.
+      </p>
+  
+      <p class="left wi-50 paragraph" data-aos="fade-up">
+          At IAC, we believe in the power of collaboration to shape the future. Our events, including 
+          panel discussions, lecture series and talks by Industry leaders, and exhibitions, are designed 
+          to inspire, educate, and connect. From exploring cutting-edge technologies to addressing real-world 
+          challenges, our programs facilitate a rich exchange of ideas and perspectives.
+      </p>
+  
+      <p class="right wi-50 paragraph" data-aos="fade-up">
+          IAC is where potential is realized, innovation knows no limits, and connections ignite fresh ideas. 
+          This is more than just a platform—it's a catalyst for change, where collective expertise drives impactful 
+          outcomes. Whether you're an industry professional, academic, or innovator, IAC offers the ideal environment 
+          to connect, learn, and grow.
+      </p>
+  
+      <p class="left wi-50 paragraph" data-aos="fade-up">
+          <strong style="color: var(--bg-color);">Where:</strong><br>
+          Sahyadri-Nila Campus, IIT Palakkad<br><br>
+          <strong style="color: var(--bg-color);">When:</strong><br>
+          Friday, Saturday<br>
+          20-21 September
+      </p>
+  </section>
+  <section id="speakers" style="background-color: var(--bg-color2);">
     <div class="section-header" data-aos="fade-up">
         <h2>KeyNote Speakers</h2>
     </div>
@@ -176,61 +327,102 @@
         </div>
     </div>
 </section>
+<section id="events">
+  <div class="section-header" data-aos="fade-up">
+      <h2>Events</h2>
+  </div>
+  <div class="events-container">
+      <div class="vertical-line"></div>
 
-    <section id="events">
-        <div class="right" data-aos="fade-up">
-            <h1>Events</h1>
-        </div>
-        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Lecture Series</h2>
-            <p style="padding-left: 20px;">
-                Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
-                where renowned professors from diverse disciplines share their expertise and insights 
-                on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
-                that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
-            </p>
-        </div>
-        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Exhibition</h2>
-            <p style="padding-left: 20px;">
-                Unleash your creativity and showcase your innovative projects, products, and posters 
-                at the IAC Exhibition! This is a fantastic chance for students to present their work 
-                to professionals from various industries, receive valuable feedback, and potentially 
-                spark collaborations.
-            </p>
-        </div>
+      <div class="grid-container">
+          <div class="card" data-aos="fade-up">
+              <div class="card-content left">
+                  <h2>Lecture Series</h2>
+                  <p>
+                      Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, 
+                      where renowned professors from diverse disciplines share their expertise and insights 
+                      on cutting-edge topics. This is more than just a lecture—it's an engaging experience 
+                      that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
+                  </p>
+              </div>
+          </div>
 
-        <div class="left wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Start-Up Booths</h2>
-            <p style="padding-left: 20px;">
-                Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. 
-                These dynamic booths offer a platform for young entrepreneurs to share their journey from 
-                idea to execution. Engage with the founders, learn about their challenges, and discover how 
-                their startups are shaping the future. These booths provide a firsthand look at the cutting-edge 
-                innovations emerging from our alumni network.
-            </p>
-        </div>
+          <div class="card" data-aos="fade-up">
+            <div class="card-content left">
+                <p>
+                  Don't miss this unique opportunity to learn from the best minds in their fields!
+                </p>
+            </div>
+          </div>
 
-        <div class="right wi-50" style="text-align: left;" data-aos="fade-up">
-            <h2>Panel discussion</h2>
-            <p style="padding-left: 20px;">
-                Join a group of industry experts as they delve into key topics relevant to the industrial world. 
-                This session offers valuable insights into current trends and practical applications.
-                This panel discussion is the perfect platform to ask questions and engage directly with the panelists, 
-                making this an invaluable chance to gain knowledge and advice from experienced professionals.
-            </p>
-        </div>
-    </section>
+          <div class="empty-cell"></div>
 
-   
+          <div class="card" data-aos="fade-up">
+              <div class="card-content left">
+                  <h2>Start-Up Booths</h2>
+                  <p>
+                      Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. 
+                      These dynamic booths offer a platform for young entrepreneurs to share their journey from 
+                      idea to execution. Engage with the founders, learn about their challenges, and discover how 
+                      their startups are shaping the future. These booths provide a firsthand look at the cutting-edge 
+                      innovations emerging from our alumni network.
+                  </p>
+              </div>
+          </div>
 
-    <section id="gallery">
+          <div class="card" data-aos="fade-up">
+              <div class="card-content right">
+                  <h2>Exhibition</h2>
+                  <p>
+                    Unleash your creativity and showcase your innovative projects, products, and posters at the IAC Exhibition! This is a fantastic chance for students to present their work to professionals from various industries, receive valuable feedback, and potentially spark collaborations.
+
+                  </p>
+              </div>
+          </div>
+
+          <div class="card" data-aos="fade-up">
+            <div class="card-content left">
+                <p>
+                  <br>•⁠  ⁠Explore the latest advancements in various fields and disciplines
+                  <br>•⁠  ⁠Visualize the impact of academic work on real-world problems
+                  <br>•⁠  ⁠Take advantage of networking opportunities and career advancement
+                  <br>•⁠  ⁠Engage with student exhibitors and learn about their creative processes
+                </p>
+            </div>
+          </div>
+
+          <div class="empty-cell"></div>
+          <div class="empty-cell"></div>
+
+          <div class="card" data-aos="fade-up">
+              <div class="card-content left">
+                  <h2>Panel Discussion</h2>
+                  <p>
+                      Join a group of industry experts as they delve into key topics relevant to the industrial world. 
+                      This session offers valuable insights into current trends and practical applications.
+                      This panel discussion is the perfect platform to ask questions and engage directly with the panelists, 
+                      making this an invaluable chance to gain knowledge and advice from experienced professionals.
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+ <section id="gallery">
 
         <div class="container" data-aos="fade-up">
           <div class="section-header">
-            <h2>Gallery</h2>
+            <h2>Flashbacks</h2>
             <p>Check our gallery from the recent events</p>
           </div>
+        </div>
+        <div align="center">
+          <h1>Previous IAC Reports</h1>
+          <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
+          <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
+          <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
+          <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
         </div>
 
         <div id="slider" >
@@ -282,15 +474,8 @@
                 </div>
               </div>
         </div>
-
         
-          <div align="center">
-            <h1>Previous IAC Reports</h1>
-            <a href="https://drive.google.com/file/d/1LYdao1W5X8KYCzM1hUMkZCEThtiNYg_q/view">IAC 2.0</a> |
-            <a href="https://drive.google.com/file/d/1KmuwssRx8omlOaQTAKPogoDfA3dquZx_/view">IAC 3.0</a> |
-            <a href="https://drive.google.com/file/d/12ryvcerPU0E0pTcDVSVvmxOd5WlzOSs3/view">IAC 4.0</a> |
-            <a href="https://drive.google.com/file/d/1I8zQ8Ncr427aMWyFdZvJlzKRDXCCBRNn/view">IAC 5.0</a>
-          </div>
+          
         </div>
         </div>
   
@@ -394,6 +579,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script src="assets/js/focus.js"></script>
     <script>
         const speakerCards = document.querySelectorAll('.speaker-card');
 
@@ -410,6 +596,146 @@
         speakerCards.forEach(card => {
             observer.observe(card);
         });
+    </script>
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      const speakerCards = document.querySelectorAll('.speaker-card');
+  
+      const handleScroll = () => {
+          const windowHeight = window.innerHeight;
+          const pointerPos = window.scrollY + (windowHeight / 2);
+  
+          // Remove active class from all speaker cards
+          speakerCards.forEach((card) => {
+              card.classList.remove('active');
+          });
+  
+          // Add active class to the card in focus
+          speakerCards.forEach((card) => {
+              const rect = card.getBoundingClientRect();
+              const cardTop = rect.top + window.scrollY;
+  
+              if (cardTop < pointerPos && cardTop + rect.height > pointerPos) {
+                  card.classList.add('active');
+              }
+          });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  });
+  
+  
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const paragraphs = document.querySelectorAll('.paragraph');
+  
+      const handleScroll = () => {
+          let foundActive = false; // To ensure only one paragraph gets full opacity
+  
+          paragraphs.forEach(paragraph => {
+              const rect = paragraph.getBoundingClientRect();
+              // Check if the paragraph is in the viewport
+              if (rect.top >= 0 && rect.top <= window.innerHeight && !foundActive) {
+                  paragraph.classList.add('active'); // Add active class
+                  foundActive = true; // Set flag to true to avoid multiple active classes
+              } else {
+                  paragraph.classList.remove('active'); // Remove active class
+              }
+          });
+      };
+  
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScroll);
+      // Initial call to set the active paragraph on page load
+      handleScroll();
+  });
+  
+  
+  
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card');
+      const order = [1, 2, 4, 3, 5, 6, 8, 7]; // Specified order for card animation
+  
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  const cardIndex = Array.from(cards).indexOf(entry.target) + 1;
+                  const orderIndex = order.indexOf(cardIndex);
+                  if (orderIndex !== -1) {
+                      setTimeout(() => {
+                          entry.target.classList.add('visible');
+                      }, orderIndex * 200); // Delay based on order for smooth sequential animation
+                  }
+              }
+          });
+      }, { threshold: 0.5 }); // Trigger when 50% visible
+  
+      cards.forEach(card => {
+          observer.observe(card);
+      });
+  });
+  
+  
+  
+  </script>
+  <script>const sliderList = document.getElementById("slider");
+    const initialNumberSlides = sliderList.children.length;
+    let nSlides = 3;
+    let centralSlide = 1;
+    let slideNumber = 100 / nSlides;
+    resetSlides(slideNumber);
+    
+    function resetSlides(number) {
+        const slides = document.querySelectorAll(".slide");
+        slides.forEach((slide) => (slide.style.width = `${number}%`));
+        slideNumber = number;
+    }
+    
+    function calculateCentralSlide(numVisibleItems) {
+        return Math.ceil(numVisibleItems / 2);
+    }
+    
+    function addActiveElement(centralItem, totalVisibleItems) {
+        const sliderItems = document.querySelectorAll(".slide-content");
+        sliderItems.forEach((item) => item.classList.remove("active"));
+    
+        const central = sliderItems[Math.floor(centralItem)];
+        central.classList.add("active");
+    
+        if (totalVisibleItems % 2 === 0) {
+            const central2 = sliderItems[Math.floor(centralItem) + 1];
+            central2.classList.add("active");
+    
+            if (totalVisibleItems == 2) {
+                const central3 = sliderItems[Math.floor(centralItem) - 1];
+                central3.classList.add("active");
+            }
+        }
+    }
+    
+    addActiveElement(centralSlide, nSlides);
+    
+    function moveSlide(direction) {
+        const firstItem = sliderList.firstElementChild;
+        const slideMargin = slideNumber * direction;
+        
+        // Update the margin based on the direction
+        firstItem.style.marginLeft = `calc(-${slideNumber * direction}%)`;
+    
+        setTimeout(() => {
+            firstItem.style.marginLeft = "";
+            sliderList.appendChild(firstItem);
+            addActiveElement(centralSlide + direction, nSlides);
+        }, 300);
+    }
+    
+    function autoScroll() {
+        moveSlide(1); // Move to the next slide automatically
+    }
+    
+    setInterval(autoScroll, 2500);
     </script>
 </body>
 </html>

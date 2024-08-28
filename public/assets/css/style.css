@@ -214,40 +214,67 @@ section .center {
 
 .image-container {
     position: relative;
-    display: inline-block;
-    max-width: 350px;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-  
-.image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    overflow: hidden; /* Ensure no overflow when scaling */
+    transition: transform 0.3s ease; /* Transition for smooth scaling */
 }
-  
+
+.image-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+
+
+
+
+
+/* Styling for the text inside the overlay */
+.overlay .text {
+    color: white; /* Change text color to white */
+    position: relative; /* Position text in the center */
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center; /* Center-align text */
+    transition: color 0.1s ease; /* Smooth transition for color */
+}
+
 .overlay {
-    position: absolute;
-    bottom: 0;
+    position: absolute; /* Position overlay over the image */
+    top: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    pointer-events: none;
-    color: white;
-    overflow: hidden;
-    border-radius: 10px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and zoom */
 }
-  
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+    transform: scale(1.1); /* Slightly zoom the overlay */
+}
+
 .text {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    background-color: transparent;
+    color: white; /* Set text color to white */
+    position: absolute; /* Center text */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    text-align: center; /* Center align text */
 }
+
+.post {
+    font-size: 0.6em; /* Reduce the font size of the post line */
+    margin: 0; /* Remove margin */
+}
+
+/* Optional: Adjusting styles for the name */
+h5 {
+    margin: 0; /* Remove default margin */
+}
+
 
 .text p {
     font-size: 20px;

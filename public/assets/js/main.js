@@ -144,8 +144,7 @@ function loadImages() {
                 <div class="overlay">
                     <div class="text">
                         <h5>${data.name}</h5>
-                        <p>${data.post}</p>
-                        <!-- <a href="${data.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a> -->
+                        <p class="post">${data.post}</p> <!-- Add class to the second line -->
                     </div>
                 </div>
             </div>
@@ -163,8 +162,7 @@ function loadImages() {
                 <div class="overlay">
                     <div class="text">
                         <h5>${data.name}</h5>
-                        <p>${data.post}</p>
-                        <!-- <a href="${data.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a> -->
+                        <p class="post">${data.post}</p> <!-- Add class to the second line -->
                     </div>
                 </div>
             </div>
@@ -172,6 +170,7 @@ function loadImages() {
         departmentCoordinatorsContainer.appendChild(colDiv);
     });
 }
+
 
 // Load images when the webpage loads
 window.onload = loadImages;

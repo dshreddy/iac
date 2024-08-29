@@ -12,8 +12,12 @@
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	
     <title>IIT Palakkad IAC 6.0</title>
+    
     <style>
       #speakers {
         background-color: var(--bg-color2);
@@ -183,11 +187,48 @@
     .image-container:hover img {
         transform: scale(1.05); /* Scale effect on hover */
     }
+    /* Preloader Styles */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff; /* You can change the background color */
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #preloader img {
+      width: 700px; /* Adjust the size of the GIF */
+      height: auto;
+  }
+  
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db; /* Change the color to fit your site */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
     
     
     </style>
 </head>
 <body>
+  <div id="preloader">
+    <img src="assets/preloader.gif" alt="Loading...">
+</div>
+
 
     <header id="header" class="d-flex align-items-center ">
         <div class="container-fluid d-flex align-items-center">
@@ -737,5 +778,37 @@
     
     setInterval(autoScroll, 2500);
     </script>
+   
+<script>
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+
+    // Minimum display time for the preloader (in milliseconds)
+    const minimumPreloaderTime = 1500;
+
+    // Record the time when the preloader starts
+    const preloaderStartTime = new Date().getTime();
+
+    // Function to hide the preloader
+    function hidePreloader() {
+        const currentTime = new Date().getTime();
+        const elapsedTime = currentTime - preloaderStartTime;
+
+        if (elapsedTime < minimumPreloaderTime) {
+            setTimeout(hidePreloader, minimumPreloaderTime - elapsedTime);
+        } else {
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s ease';
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500); // Duration matches the transition time
+        }
+    }
+
+    hidePreloader(); // Call the function to start the process
+});
+
+</script>
+
 </body>
 </html>

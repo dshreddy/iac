@@ -248,12 +248,12 @@ section .center {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
     opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and zoom */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* Transition for opacity and zoom */
 }
 
 .image-container:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-    transform: scale(1.1); /* Slightly zoom the overlay */
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out;
 }
 
 .text {

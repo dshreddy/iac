@@ -48,6 +48,18 @@ const organisingTeam = [
         linkedin: "https://www.linkedin.com/in/"
     },
     {
+        name: "Vishesh Srivastava",
+        post: "Frontend Developer",
+        imgSrc: "assets/img/team/vishesh.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
+        name: "Geetheswar",
+        post: "Frontend Developer",
+        imgSrc: "assets/img/team/g.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
         name: "Karthikeya B",
         post: "Logistics & Marketing Coordinator",
         imgSrc: "assets/img/team/karthikeya.png",

@@ -145,6 +145,7 @@ const departmentCoordinators = [
 const speakers = [
     {
         name: "Dr. Sanjay Kamble",
+        title:"",
         post: "CSIR- National Chemical Laboratory, Pune",
         imgSrc: "https://i1.rgstatic.net/ii/profile.image/272799713460258-1442051929002_Q512/Sanjay-Kamble-5.jpg",
         details: `Dr. Sanjay P. Kamble is a researcher in the field of Chemical Engineering Science, 
@@ -155,6 +156,7 @@ const speakers = [
     },
     {
         name: "Dr. Siddhartha Gadgil",
+        title:"",
         post: "Indian Institute of Science Bangalore",
         imgSrc: "https://gtl.csa.iisc.ac.in/gamearts/wp-content/uploads/2024/06/SiddharthaGadgil-300x300.jpg",
         details: `Dr. Siddhartha Gadgil is a Professor of Mathematics at the Indian Institute of Science, Bangalore. 
@@ -165,6 +167,7 @@ const speakers = [
     },
     {
         name: "Dr. Sourish Das",
+        title:"",
         post: "Chennai Mathematical Institute",
         imgSrc: "https://www.cmi.ac.in/~sourish/images/sourish.jpg",
         details: `In this talk, I will demonstrate how we can leverage generative AI tools, such as ChatGPT, 
@@ -173,71 +176,83 @@ const speakers = [
                     These techniques are also valuable for professionals in the corporate sector, particularly for those 
                     involved in coding, data analysis, and report writing. Finally, I will discuss the implications of 
                     Generative AI on our roles in society and what our place might be in this rapidly evolving landscape.`
-    },
-    {
-        name: "Adithya Kumar O V",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
-        details: ``
-    },
+    }
+    
+];
+const Talks=[
 
-    {
-        name: "Dr. Brojeshwar Bhowmick",
-        post: "Clothing Dynamics on 3D People",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEKbUUU94kgBg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669200720439?e=2147483647&v=beta&t=Q9n39IC5kNH2uQv_C4ug2XIISfFddzW6BjnCAv6-1kE",
-        details: `This talk explores the intricate interplay between clothing dynamics and the movement of 3D human models. It delves into the fundamental principles of simulating realistic garment behavior, focusing on how fabric properties, body movements, and environmental factors influence the appearance and performance of clothing on virtual characters. `
-    },
-    {
-        name: "Mr Ashish Kuvelkar",
-        post: "High Performance Computing - A Tool for Scientific Advancement",
-        imgSrc: "https://maritimeresearchcenter.com/wp-content/uploads/2023/04/Dr-Ashish-Kuvelkar-scaled.jpg",
-        details: `The talk will introduce the basics of High Performance Computing, how it serves the purpose of addressing the computational needs of scientific community, what are the methodologies used for making effective utilization of HPC, the HPC landscape in India and options available for the researchers for availing HPC services of National Supercomputing Mission.`
-    },
-    {
-        name: "Dr. Kaushik Choudhury",
-        post: "From Concept to Creation: The Journey of a Product",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715444720858?e=1731542400&v=beta&t=w8IocvJVp-keqlu0BVYSTl-V58EzjxR8IptuG_MHZXA",
-        details: `We are living in an era of innovation. We are the  generation that has transitioned from audio cassettes to CDs to DVDs to SD cards and then cloud music – all spanned over a time of a little
+{
+    name: "Dr. Brojeshwar Bhowmick",
+    title:"Principal Scientist and Head of the Visual Computing and Embodied AI research , TCS Research",
+    post: "Clothing Dynamics on 3D People",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEKbUUU94kgBg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669200720439?e=2147483647&v=beta&t=Q9n39IC5kNH2uQv_C4ug2XIISfFddzW6BjnCAv6-1kE",
+    details: `This talk explores the intricate interplay between clothing dynamics and the movement of 3D human models. It delves into the fundamental principles of simulating realistic garment behavior, focusing on how fabric properties, body movements, and environmental factors influence the appearance and performance of clothing on virtual characters. `
+},
+{
+    name: "Mr Ashish Kuvelkar",
+    title:"Sr Director C-DAC and Convener NSM - HRD"
+,        post: "High Performance Computing - A Tool for Scientific Advancement",
+    imgSrc: "https://maritimeresearchcenter.com/wp-content/uploads/2023/04/Dr-Ashish-Kuvelkar-scaled.jpg",
+    details: `The talk will introduce the basics of High Performance Computing, how it serves the purpose of addressing the computational needs of scientific community, what are the methodologies used for making effective utilization of HPC, the HPC landscape in India and options available for the researchers for availing HPC services of National Supercomputing Mission.`
+},
+{
+    name: "Dr. Kaushik Choudhury",
+    title:"Translation Scientist , C-CAMP",
+    post: "From Concept to Creation: The Journey of a Product",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715444720858?e=1731542400&v=beta&t=w8IocvJVp-keqlu0BVYSTl-V58EzjxR8IptuG_MHZXA",
+    details: `We are living in an era of innovation. We are the  generation that has transitioned from audio cassettes to CDs to DVDs to SD cards and then cloud music – all spanned over a time of a little
 more than two decades. Of all times this is the time when starting one’s own venture is being looked up as an alternate viable career option. Interestingly students pursuing research-oriented or research-driven courses are the best suited individuals for developing products, yet we do not see many of them doing that. This talk will be focusing on how research could be looked upon as a precursor to product development and entrepreneurship. It will also have some
 aspects about successful products to give an insight as to how creative thinking makes a product last longer than its expected lifetime.`
-    },
-    {
-        name: "Dr. Kavita Kadu",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQG3pORQBdoryA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708876648557?e=1731542400&v=beta&t=lpBIwqDuJaQWTqAm-Z20GI4bLeyMUKXanjUgFOr_hbk",
-        details: ``
-    },
-    {
-        name: "Dr. Ramaswamy Vishnudas",
-        post: "Advancements and Collaborative Research in External Gear Pump Technology",
-        imgSrc: "https://media.licdn.com/dms/image/v2/C4D03AQHLLtS0e3oAGg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656151032120?e=1731542400&v=beta&t=zWWgv1ez7lvgZMvemT3ZsexxD3xlhjJ9ZuKdpkuR2BM",
-        details: `This talk delves into the latest R&D trends in External Gear Pumps, which are vital for mobile and industrial fluid power systems. We will explore innovations such as noise reduction, low-speed & efficiency optimization, advancements in testing and development that are driving the next generation of gear pump technology. Additionally, the presentation will highlight our collaborative efforts with universities, particularly our Advanced Engineering department in Bangalore, which fosters industry-academic partnerships and student engagement through internships and joint research projects. We aim to share successful collaboration stories, discuss our approach to nurturing future talent, and gather feedback on enhancing these collaboration with universities.`
-    },
-    {
-        name: "Mr. Vish Rajalingam",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEMaIGt2t9Rbw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698767338137?e=1731542400&v=beta&t=WkbMzzH8LmmZKy8BqSQmx1yFVaWYeHvRa51Frm6g-XM",
-        details: ``
-    },
-    {
-        name: "Mr. Avinash Gadekar",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
-        details: ``
-    },
-    {
-        name: "Dr. Milinda Mahajan",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/C5103AQGF2SfCRrMWtA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516699331467?e=1731542400&v=beta&t=npeAnoRmLYmcCE8CXRR1ZHStn48aF0b-gdRBi3SRsG8",
-        details: ``
-    },
-    {
-        name: "Mr. Arjun Menon",
-        post: "Senior Software Engineer , Composewell Technologies",
-        imgSrc: "https://media.licdn.com/dms/image/v2/C5603AQGLcvCvgTkxIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1607450044920?e=1731542400&v=beta&t=5Itw_G48m59HoYWhhGoV4NecI9xZ7lgqPpuccpS7QuU",
-        details: ``
-    }
-];
+},
+{
+    name: "Dr. Kavita Kadu",
+    title:"Innovation Specialist",
+    post: "APchemi",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQG3pORQBdoryA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708876648557?e=1731542400&v=beta&t=lpBIwqDuJaQWTqAm-Z20GI4bLeyMUKXanjUgFOr_hbk",
+    details: ``
+},
+{
+    name: "Dr. Ramaswamy Vishnudas",
+    title:"Bosch Rexroth (India) Private Limited",
+    post: "Advancements and Collaborative Research in External Gear Pump Technology",
+    imgSrc: "https://media.licdn.com/dms/image/v2/C4D03AQHLLtS0e3oAGg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656151032120?e=1731542400&v=beta&t=zWWgv1ez7lvgZMvemT3ZsexxD3xlhjJ9ZuKdpkuR2BM",
+    details: `This talk delves into the latest R&D trends in External Gear Pumps, which are vital for mobile and industrial fluid power systems. We will explore innovations such as noise reduction, low-speed & efficiency optimization, advancements in testing and development that are driving the next generation of gear pump technology. Additionally, the presentation will highlight our collaborative efforts with universities, particularly our Advanced Engineering department in Bangalore, which fosters industry-academic partnerships and student engagement through internships and joint research projects. We aim to share successful collaboration stories, discuss our approach to nurturing future talent, and gather feedback on enhancing these collaboration with universities.`
+},
+{
+    name: "Mr. Vish Rajalingam",
+    title:"VP & GM - Mobility & Transportation Business Unit",
+    post: "Multicoreware",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEMaIGt2t9Rbw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698767338137?e=1731542400&v=beta&t=WkbMzzH8LmmZKy8BqSQmx1yFVaWYeHvRa51Frm6g-XM",
+    details: ``
+},
+{
+    name: "Mr. Avinash Gadekar",
+    title:"Associate Director",
+    post: "AECOM India Global Services Pvt. Ltd.",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQElLwL8kkcDGg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1666146181586?e=1731542400&v=beta&t=zdZ6A7KpUVhkxvBAUJ43fhGc57_Raj1hrnQwjtB31lA",
+    details: ``
+},
+{
+    name: "Dr. Milinda Mahajan",
+    title:"Director Design & Research and CEO",
+    post: "Ashoka Structural Consultants",
+    imgSrc: "https://media.licdn.com/dms/image/v2/C5103AQGF2SfCRrMWtA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516699331467?e=1731542400&v=beta&t=npeAnoRmLYmcCE8CXRR1ZHStn48aF0b-gdRBi3SRsG8",
+    details: ``
+},
+{
+    name: "Mr. Arjun Menon",
+    post: "InCore Semiconductors Pvt. Ltd.",
+    title:"Co-Founder & Chief Engineer ",
+
+    imgSrc: "https://media.licdn.com/dms/image/v2/C5603AQGLcvCvgTkxIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1607450044920?e=1731542400&v=beta&t=5Itw_G48m59HoYWhhGoV4NecI9xZ7lgqPpuccpS7QuU",
+    details: ``
+},{
+    name: "Adithya Kumar O V",
+    title:"Senior Software Engineer",
+    post: "Composewell Technologies",
+    imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
+    details: ``
+}]
 
 
 
@@ -290,6 +305,7 @@ function loadImages() {
             <div class="overlay__container">
                 <div class="text__container">
                 <h1>${data.name}</h1>
+                <h3>${data.title}</h3>
                 <p>${data.post}</p>
                 </div>
             </div>
@@ -306,6 +322,34 @@ function loadImages() {
         </div>
     `;
         eventSpeakersContainer.innerHTML += speaker;
+    });
+    const eventTalksContainer = document.getElementById('event-talks');
+    Talks.forEach(data => {
+        const talk = `
+            <div class="speaker__card">
+        <div class="front">
+            <div class="main__card">
+            <img src="${data.imgSrc}" alt="" />
+            <div class="overlay__container">
+                <div class="text__container">
+                <h1>${data.name}</h1>
+                <h3>${data.title}</h3>
+                <p>${data.post}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="back main__card">
+            <img src="${data.imgSrc}" alt="" />
+            <div class="overlay__container details">
+            <div class="text__container">
+                <p>${data.details}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    `;
+        eventTalksContainer.innerHTML += talk;
     });
 }
 
@@ -363,9 +407,10 @@ const glightbox = GLightbox({
 
 window.addEventListener('load', () => {
     AOS.init({
-      duration: 800,
+      duration: 1200,
       easing: 'ease-in-out',
       once: true,
       mirror: false
     })
   });
+

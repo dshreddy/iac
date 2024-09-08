@@ -355,11 +355,20 @@ h5 {
   /* 
   # Speakers
   */
-
-  .cards {
+  .cardslec {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+    column-gap: 20px; /* Space between columns */
+    row-gap: 420px; /* Space between rows (adjust as needed) */
+    width: 90%; 
+    align-self: center;
+    
+  }
+  .cardstalk {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     column-gap: 20px; /* Space between columns */
     row-gap: 420px; /* Space between rows (adjust as needed) */
     width: 90%; 
@@ -416,9 +425,16 @@ h5 {
 
 .speaker__card .front .overlay__container .text__container h1 {
   font-size: 24px; /* Adjust the font size */
-  font-weight: normal; /* Adjust font weight */
+  font-weight: bolder; /* Adjust font weight */
   color: #ffffff; /* Change text color (e.g., an accent color) */
   text-transform: uppercase; /* Make text uppercase if desired */
+  letter-spacing: 1.5px; /* Adjust spacing between letters */
+  margin: 0; /* Remove margin */
+}
+.speaker__card .front .overlay__container .text__container h3 {
+  font-size: 16px; /* Adjust the font size */
+  font-weight: normal; /* Adjust font weight */
+  color: #ffffff; /* Change text color (e.g., an accent color) */
   letter-spacing: 1.5px; /* Adjust spacing between letters */
   margin: 0; /* Remove margin */
 }

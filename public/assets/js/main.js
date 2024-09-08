@@ -180,6 +180,83 @@ const speakers = [
         imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
         details: ``
     },
+    {
+        name: "Dr. Sanjay Kamble",
+        post: "CSIR- National Chemical Laboratory, Pune",
+        imgSrc: "https://i1.rgstatic.net/ii/profile.image/272799713460258-1442051929002_Q512/Sanjay-Kamble-5.jpg",
+        details: `Dr. Sanjay P. Kamble is a researcher in the field of Chemical Engineering Science, 
+                    working within the Chemical Engineering and Process Development Division. His research focuses on 
+                    key areas such as Process Development and Scale-up, Process Intensification, and Photocatalysis for Energy 
+                    and Environmental Applications. He is also involved in the defluoridation of water and the development of materials 
+                    for the remediation of pollutants.`
+    },
+    {
+        name: "Dr. Brojeshwar Bhowmick",
+        post: "",
+        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEKbUUU94kgBg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669200720439?e=2147483647&v=beta&t=Q9n39IC5kNH2uQv_C4ug2XIISfFddzW6BjnCAv6-1kE",
+        details: `Dr. Siddhartha Gadgil is a Professor of Mathematics at the Indian Institute of Science, Bangalore. 
+                    After completing his Ph.D. at the California Institute of Technology, he joined IISc in 2006 and 
+                    has been a Professor since 2012. His research spans Low-dimensional Topology, Geometric Group Theory, 
+                    and automated theorem proving. Currently, he is focused on projects involving Lean Prover 4, including 
+                    AI tools for proof discovery and theorem proving.`
+    },
+    {
+        name: "Mr Ashish Kuvelkar",
+        post: "",
+        imgSrc: "https://maritimeresearchcenter.com/wp-content/uploads/2023/04/Dr-Ashish-Kuvelkar-scaled.jpg",
+        details: `Dr. Siddhartha Gadgil is a Professor of Mathematics at the Indian Institute of Science, Bangalore. 
+                    After completing his Ph.D. at the California Institute of Technology, he joined IISc in 2006 and 
+                    has been a Professor since 2012. His research spans Low-dimensional Topology, Geometric Group Theory, 
+                    and automated theorem proving. Currently, he is focused on projects involving Lean Prover 4, including 
+                    AI tools for proof discovery and theorem proving.`
+    },
+    {
+        name: "Dr. Kaushik Choudhury",
+        post: "Chennai Mathematical Institute",
+        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715444720858?e=1731542400&v=beta&t=w8IocvJVp-keqlu0BVYSTl-V58EzjxR8IptuG_MHZXA",
+        details: `In this talk, I will demonstrate how we can leverage generative AI tools, such as ChatGPT, 
+                    to enhance our approach to mathematics. We will explore how to automate some of the mundane 
+                    tasks in academic life using ChatGPT, thereby significantly boosting productivity for academicians. 
+                    These techniques are also valuable for professionals in the corporate sector, particularly for those 
+                    involved in coding, data analysis, and report writing. Finally, I will discuss the implications of 
+                    Generative AI on our roles in society and what our place might be in this rapidly evolving landscape.`
+    },
+    {
+        name: "Dr. Kavita Kadu",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/D4D03AQG3pORQBdoryA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708876648557?e=1731542400&v=beta&t=lpBIwqDuJaQWTqAm-Z20GI4bLeyMUKXanjUgFOr_hbk",
+        details: ``
+    },
+    {
+        name: "Dr. Ramaswamy Vishnudas",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/C4D03AQHLLtS0e3oAGg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1656151032120?e=1731542400&v=beta&t=zWWgv1ez7lvgZMvemT3ZsexxD3xlhjJ9ZuKdpkuR2BM",
+        details: ``
+    },
+    {
+        name: "Mr. Vish Rajalingam",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQEMaIGt2t9Rbw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698767338137?e=1731542400&v=beta&t=WkbMzzH8LmmZKy8BqSQmx1yFVaWYeHvRa51Frm6g-XM",
+        details: ``
+    },
+    {
+        name: "Mr. Avinash Gadekar",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
+        details: ``
+    },
+    {
+        name: "Dr. Milinda Mahajan",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/C5103AQGF2SfCRrMWtA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516699331467?e=1731542400&v=beta&t=npeAnoRmLYmcCE8CXRR1ZHStn48aF0b-gdRBi3SRsG8",
+        details: ``
+    },
+    {
+        name: "Mr. Arjun Menon",
+        post: "Senior Software Engineer , Composewell Technologies",
+        imgSrc: "https://media.licdn.com/dms/image/v2/C5603AQGLcvCvgTkxIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1607450044920?e=1731542400&v=beta&t=5Itw_G48m59HoYWhhGoV4NecI9xZ7lgqPpuccpS7QuU",
+        details: ``
+    }
 ];
 
 

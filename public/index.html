@@ -220,8 +220,232 @@
   100% { transform: rotate(360deg); }
 }
 
-    
-    
+
+
+
+
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+body{
+  overflow-x: hidden;
+}
+.cardtalk {
+  display: grid;
+  place-items: center;
+  /* width: 80vw; */
+  max-width: 18rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  margin: 25px;
+}
+
+.cardtalk > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.15rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: hsl(46, 100%, 50%);
+}
+
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title) {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .cardtalk:hover,
+  .cardtalk:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .cardtalk:hover .card__content,
+  .cardtalk:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .cardtalk:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .cardtalk:hover .card__background,
+  .cardtalk:focus-within .card__background {
+    transform: scale(1.2);
+  }
+
+  .cardtalk:hover .card__content--container > :not(.card__title),
+  .cardtalk:hover .card__button,
+  .cardtalk:focus-within .card__content--container > :not(.card__title),
+  .cardtalk:focus-within {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .cardtalk:hover .card__title::after,
+  .cardtalk:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+@media (max-width: 768px) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title) {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .cardtalk:hover,
+  .cardtalk:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .cardtalk:hover .card__content,
+  .cardtalk:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .cardtalk:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .cardtalk:hover .card__background,
+  .cardtalk:focus-within .card__background {
+    transform: scale(1.2);
+  }
+
+  .cardtalk:hover .card__content--container > :not(.card__title),
+  .cardtalk:hover .card__button,
+  .cardtalk:focus-within .card__content--container > :not(.card__title),
+  .cardtalk:focus-within  {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .cardtalk:hover .card__title::after,
+  .cardtalk:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+.talkmain{
+  display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ width: 100vw;
+}
+.talkmain h2 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  line-height: 1.1;
+}
+.talkmain p {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: white;
+}
+.talkmain body,
+h2,
+p {
+  margin: 0;
+}
+.fosm{
+  font-size: 8px;
+}
     </style>
 </head>
 <body>
@@ -367,6 +591,237 @@
             </div>
         </div>
     </div>
+</section>
+<section>
+<!-- <section id="spk" style="padding-bottom: 420px;"></section> -->
+<div class="section-header" data-aos="fade-up">
+  <h2>Lecture series and talks</h2>
+</div>
+  <div id= "talks" class="section-header talkmain" data-aos="fade-up">
+      <!-- <h2>Lecture Series </h2> -->
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://i1.rgstatic.net/ii/profile.image/272799713460258-1442051929002_Q512/Sanjay-Kamble-5.jpg"
+          alt="Dr Sanjay Kamble"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">DR. SANJAY KAMBLE</h2>
+            <p class="card__description">
+                Dr. Sanjay P. Kamble is a researcher in the field of Chemical Engineering Science, working within the Chemical Engineering and Process Development Division. His research focuses on key areas such as Process Development and Scale-up, Process Intensification, and Photocatalysis for Energy and Environmental Applications. He is also involved in the defluoridation of water and the development of materials for the remediation of pollutants.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://gtl.csa.iisc.ac.in/gamearts/wp-content/uploads/2024/06/SiddharthaGadgil-300x300.jpg"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">DR. Siddhartha Gadgil</h2>
+            <p class="card__description">
+              Dr. Siddhartha Gadgil is a Professor of Mathematics at the Indian Institute of Science, Bangalore. After completing his Ph.D. at the California Institute of Technology, he joined IISc in 2006. His research spans Low-dimensional Topology, Geometric Group Theory, and automated theorem proving. Currently, he is focused on projects involving Lean Prover 4, including AI tools for proof discovery and theorem proving.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://www.cmi.ac.in/~sourish/images/sourish.jpg"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">DR. SOURISH DAS</h2>
+            <p class="card__description fosm" style="font-size: 11px;">
+              In this talk, I will demonstrate how we can leverage generative AI tools, such as ChatGPT, to enhance our approach to mathematics. We will explore how to automate some of the mundane tasks in academic life using ChatGPT, thereby significantly boosting productivity for academicians. These techniques are also valuable for professionals in the corporate sector, particularly for those involved in coding, data analysis, and report writing. Finally, I will discuss the implications of Generative AI on our roles in society and what our place might be in this rapidly evolving landscape.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Eqf8NrEAAAAJ&citpid=11"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Dr. BROJESHWAR BHOWMICK</h2>
+            <p class="card__description">
+              This talk explores the intricate interplay between clothing dynamics and the movement of 3D human models. It delves into the fundamental principles of simulating realistic garment behavior, focusing on how fabric properties, body movements, and environmental factors influence the appearance and performance of clothing on virtual characters.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://maritimeresearchcenter.com/wp-content/uploads/2023/04/Dr-Ashish-Kuvelkar-1024x683.jpg"
+          alt="sd"
+          width="1720"
+          height="2000"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Mr ASHISH KUVELKAR</h2>
+            <p class="card__description">
+              The talk will introduce the basics of High Performance Computing, how it serves the purpose of addressing the computational needs of scientific community, what are the methodologies used for making effective utilization of HPC, the HPC landscape in India and options available for the researchers for availing HPC services of National Supercomputing Mission.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715444720858?e=1731542400&v=beta&t=eNmuymXkvWpG-tQCmLkTxVNp6Y5j9DVcaRUMJI5rer8"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Dr. KAUSHIK CHOUDHURY</h2>
+            <p class="card__description fosm" style="font-size: 10px;">
+              We are living in an era of innovation. We are the generation that has transitioned from audio cassettes to CDs to DVDs to SD cards and then cloud music.Interestingly students pursuing research-oriented or research-driven courses are the best suited individuals for developing products, yet we do not see many of them doing that. This talk will be focusing on how research could be looked upon as a precursor to product development and entrepreneurship. It will also have some aspects about successful products to give an insight as to how creative thinking makes a product last longer than its expected lifetime.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQG3pORQBdoryA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708876648557?e=1731542400&v=beta&t=EkCLIPuBwyIhaMc7tO4zQdmJRDNHfp5368X0mwwQwfw"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Dr. KAVITA KADU</h2>
+            <p class="card__description" style="font-size: 14px;">
+              Innovation specialist, APchemi
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/C4D03AQHLLtS0e3oAGg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1656151032120?e=1731542400&v=beta&t=iPg0p7wCy9Uo8Eve048SBQ-FeA6OAnJe8e-jnJ-qWMQ"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">Dr. RAMASWAMY VISHNUDAS</h2>
+            <p class="card__description fosm" style="font-size: 10.5px;">
+              This talk delves into the latest R&D trends in External Gear Pumps, which are vital for mobile and industrial fluid power systems. We will explore innovations such as noise reduction, low-speed & efficiency optimization, advancements in testing and development. Additionally, the presentation will highlight our collaborative efforts with universities, particularly our Advanced Engineering department in Bangalore, which fosters industry-academic partnerships and student engagement through internships and joint research projects. We aim to share successful collaboration stories, discuss our approach to nurturing future talent, and gather feedback on enhancing these collaboration with universities.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/D5603AQEMaIGt2t9Rbw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1698767338137?e=1731542400&v=beta&t=e0hElZzNueBirkkTMsDR8CbFkWIC5juIQTa6-iE2oYI"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">MR. VISH RAJALINGAM</h2>
+            <p class="card__description">
+              VP and GM Mobility and transport business unit, Multicoreware
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQElLwL8kkcDGg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1666146181586?e=1731542400&v=beta&t=21MK8J5Y5ZDPgjYQ8pSYQdY8_2qF0Xpmp_lbF5TF3QE"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">MR. AVINASH GADEKAR</h2>
+            <p class="card__description">
+              Associate director, AECOM India Global Services Pvt. Ltd.
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/C5103AQGF2SfCRrMWtA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516699331878?e=1731542400&v=beta&t=0hEd7pjb_oo7D6B6dJStzBYOcWRjgQHC6x87M7Z27OE"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">DR. MILINDA MAHAJAN</h2>
+            <p class="card__description">
+              Director design and research and CEO, Ashoka Structural consultants
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/C5603AQGLcvCvgTkxIA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1607450044920?e=1731542400&v=beta&t=4barbgdmM9Ohfc2uVSH6YRfYyGb_wAOH1aa_fzTqeU0"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">MR. ARJUN MENON</h2>
+            <p class="card__description">
+              Co Founder and chief engineer, Incore semiconductors Pvt. Ltd. 
+            </p>
+          </div>
+        </div>
+      </article>
+      <article class="cardtalk">
+        <img
+          class="card__background"
+          src="https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1684311550858?e=1731542400&v=beta&t=U3jRKcQjFmSGpQGKomvqDtA5cMiw29cEaWNInzISdKE"
+          alt="sd"
+          width="1920"
+          height="2200"
+        />
+        <div class="card__content | flow">
+          <div class="card__content--container | flow">
+            <h2 class="card__title">ADITHYA KUMAR O V</h2>
+            <p class="card__description">
+              Senior software engineer, Composewell Technologies 
+            </p>
+          </div>
+        </div>
+      </article>
+  </div>
+  
 </section>
 <section id="events">
   <div class="section-header" data-aos="fade-up">

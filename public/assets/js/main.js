@@ -145,14 +145,10 @@ const departmentCoordinators = [
 const speakers = [
     {
         name: "Dr. Sanjay Kamble",
-        title:"",
+        title:"Process intensification for chemical and allied industries: Case studies on process transformation from laboratory scale to commercial scale",
         post: "CSIR- National Chemical Laboratory, Pune",
         imgSrc: "https://i1.rgstatic.net/ii/profile.image/272799713460258-1442051929002_Q512/Sanjay-Kamble-5.jpg",
-        details: `Dr. Sanjay P. Kamble is a researcher in the field of Chemical Engineering Science, 
-                    working within the Chemical Engineering and Process Development Division. His research focuses on 
-                    key areas such as Process Development and Scale-up, Process Intensification, and Photocatalysis for Energy 
-                    and Environmental Applications. He is also involved in the defluoridation of water and the development of materials 
-                    for the remediation of pollutants.`
+        details: `CSIR-National Chemical Laboratory has strong capabilities in developing innovative processes and products for import substitution across various segments of the chemical industry. The CSIR-NCL team has a track record of several successes in design of novel flow reactors, development of continuous processes for various fine and specialty chemicals and process intensification using integrated reactive distillation systems. This has helped significant improvement in performance parameters, safety, environment and energy efficiency of specific processes, making them sustainable. In this talk, I will present some case studies on process intensification for the production of paracetamol, isobutyl benzene (IBB), bisphenol-A (BPA) and depolymerization of plastic waste.`
     },
     {
         name: "Dr. Siddhartha Gadgil",
@@ -242,17 +238,38 @@ aspects about successful products to give an insight as to how creative thinking
 {
     name: "Mr. Arjun Menon",
     post: "InCore Semiconductors Pvt. Ltd.",
-    title:"Co-Founder & Chief Engineer ",
+    title:"Building Core Generators for RISC-V ",
 
     imgSrc: "https://media.licdn.com/dms/image/v2/C5603AQGLcvCvgTkxIA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1607450044920?e=1731542400&v=beta&t=5Itw_G48m59HoYWhhGoV4NecI9xZ7lgqPpuccpS7QuU",
-    details: ``
+    details: `This talk will take you through a journey, which began with the fundamental motivation of constructing an open-source academic processor and evolved into developing highly configurable core generator architectures. Throughout the talk, we will explore technical and non-technical decisions that impact this ecosystem and the micro-architectural and scalability challenges that arise. Additionally, we will discuss some of the choices that were made to create a state-of-the-art embedded microprocessor portfolio with limited resources and a small team. Speaker Bio: Arjun Menon is the Co-founder and Chief Engineer of InCore Semiconductors. He was one of the key architects of the SHAKTI processor program at IIT Madras. He was also the lead architect of India’s first indigenous microprocessor, which was designed and fabricated in India. While at IIT Madras, he spearheaded the development of a 64-bit Out-of-Order processor based on a custom instruction set for DRDO, and, a custom SoC for ISRO Inertial Systems Unit. His primary areas of interest include computer architecture and secure microprocessor design.`
 },{
-    name: "Adithya Kumar O V",
+    name: "Mr. Adithya Kumar O V",
     title:"Senior Software Engineer",
     post: "Composewell Technologies",
     imgSrc: "https://media.licdn.com/dms/image/v2/D5603AQHqoMcGnA8c1w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684311550858?e=1730332800&v=beta&t=J1mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
     details: ``
-}]
+},
+{
+    name: "Mr. Sudeep Chandrasekaran",
+    title:"Senior Software Engineer",
+    post: "Composewell Technologies",
+    imgSrc: "https://media.licdn.com/dms/image/v2/C5103AQHKAFbwwWPzgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516498170187?e=1731542400&v=beta&t=NwIvolxPpxeHfdRbLUW4q7oT1UYy9f6xEJ44WgwLaQY",
+    details: ``
+},
+    {
+    name: "Mr. N. Raghunath",
+    title:"Senior Software Engineer",
+    post: "Composewell Technologies",
+imgSrc:"",    details: ``
+},
+    {
+    name: "Dr. Subho",
+    title:"Senior Software Engineer",
+    post: "Composewell Technologies",
+    imgSrc: "https://assets.foleon.com/eu-central-1/de-uploads-7e3kk3/6245/4.2a6b70561169.jpg?mhodLoNBa6Ddnf6A0jIyicbk3JIQZuyg2g3n3fIsE",
+    details: ``
+}
+]
 
 
 

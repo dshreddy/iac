@@ -484,6 +484,76 @@ p {
 .fosm{
   font-size: 8px;
 }
+
+.viscontainer {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.viscontainer .viscard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  /* background: #000; */
+  background-image: linear-gradient(to bottom, #f8a1e2, #FFFFE0);
+  
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.viscontainer .viscard .visface {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viscontainer .viscard .visface.visface1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.viscontainer .viscard .visface.visface1 span {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.viscontainer .viscard .visface.visface1 .txt {
+  background-color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.viscontainer .viscard .visface.visface2 {
+  transition: 0.5s;
+}
+.viscontainer .viscard .visface.visface2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(71, 10, 58);
+  z-index: 10;
+}
+.viscontainer .viscard:hover .visface.visface2 {
+  height: 60px;
+}
+
+
+.viscontainer .viscard .visface.visface2 {
+  background: #fdd2f2;
+  border-radius: 15px;
+}
+.ab{
+  padding-left: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -950,7 +1020,69 @@ p {
   <div class="section-header" data-aos="fade-up">
       <h2>Events</h2>
   </div>
-  <div class="events-container">
+  <div class="viscontainer">
+      
+    <div class="viscard">
+      <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Lecture Series</h2>
+        <p class="txt" style="font-size: 15px;">
+          Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, where renowned professors from diverse disciplines share their expertise and insights on cutting-edge topics. This is more than just a lecture—it's an engaging experience that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Lecture Series</h2>
+    </div>
+  </div>
+
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="color: black; font-size: 20px;">Start-up booths</h2>
+        <p class="txt" style="font-size: 14px;">
+          Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs to share their journey from idea to execution. Engage with the founders, learn about their challenges, and discover how their startups are shaping the future. These booths provide a firsthand look at the cutting-edge innovations emerging from our alumni network.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2 class="ab" style="font-size: 35px;">Start-up booths</h2>
+    </div>
+  </div>
+
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Exhibition</h2>
+        <p class="txt" style="font-size: 15px;">
+          Unleash your creativity and showcase your innovative projects, products, and posters at the IAC Exhibition! This is a fantastic chance for students to present their work to professionals from various industries, receive valuable feedback, and potentially spark collaborations.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Exhibition</h2>
+      
+    </div>
+  </div>
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Panel Discussion</h2>
+        <p class="txt" style="font-size: 15px;">
+          Join a group of industry experts as they delve into key topics relevant to the industrial world. This session offers valuable insights into current trends and practical applications. This panel discussion is the perfect platform to ask questions and engage directly with the panelists, making this an invaluable chance to gain knowledge and advice from experienced professionals.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Panel Discussion</h2>
+    </div>
+  </div>
+</div>
+  <!-- <div class="events-container">
       <div class="vertical-line"></div>
 
       <div class="grid-container">
@@ -1025,7 +1157,7 @@ p {
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
 </section>
 
  <section id="gallery">

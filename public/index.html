@@ -484,6 +484,76 @@ p {
 .fosm{
   font-size: 8px;
 }
+
+.viscontainer {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.viscontainer .viscard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  /* background: #000; */
+  background-image: linear-gradient(to bottom, #f8a1e2, #FFFFE0);
+  
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.viscontainer .viscard .visface {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viscontainer .viscard .visface.visface1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.viscontainer .viscard .visface.visface1 span {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.viscontainer .viscard .visface.visface1 .txt {
+  background-color: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.viscontainer .viscard .visface.visface2 {
+  transition: 0.5s;
+}
+.viscontainer .viscard .visface.visface2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: rgb(71, 10, 58);
+  z-index: 10;
+}
+.viscontainer .viscard:hover .visface.visface2 {
+  height: 60px;
+}
+
+
+.viscontainer .viscard .visface.visface2 {
+  background: #fdd2f2;
+  border-radius: 15px;
+}
+.ab{
+  padding-left: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -568,6 +638,39 @@ p {
           20-21 September
       </p>
   </section>
+<section id="speakers" style="background-color: var(--bg-color2);">
+    <div class="section-header" data-aos="fade-up">
+        <h2>Chief Guest</h2>
+    </div>
+
+    <div class="container-fluid my-5" style="width: 93%;">
+        <!-- First Keynote Speaker -->
+        <div class="speaker-card" data-aos="fade-up">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3">
+                    <div class="image-container">
+                        <img src="https://media.licdn.com/dms/image/v2/C5103AQEixH_jIodGkw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1576300710099?e=1731542400&v=beta&t=DI7YgXiwK6XblOxrUgsg5mq6hxJwl2E9duCxPWAGpxg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2 style="font-size: 1.85rem;">Dr. Sreenivas Naidu</h2>
+                    <p style="font-size: 1rem;">
+                        Dr. Sreenivas Naidu is an accomplished Research and Development professional with over 20 years of experience in mechanical engineering, specializing in industries such as wind energy, rail, off-highway, steel, and bearings. His expertise spans mechanical design, product development, finite element analysis, and application engineering, where he has successfully led global teams in delivering innovative solutions. 
+
+Sreenivas has played a key role in managing the Rail Application Engineering team at Timken Engineering and Research India, Bangalore, ensuring the highest standards of support for railway customers worldwide. He has also overseen the Advanced Analysis team, catering to global clients in sectors like wind energy, automotive, aerospace, and primary metals. His strong background includes developing in-house engineering tools to meet global requirements and extensive hands-on experience with off-highway equipment and V-Type 12-cylinder engines for dump trucks.
+
+In addition to his technical acumen, Sreenivas excels in customer training, bearing condition monitoring systems, and organizing trade shows and seminars. His profound knowledge and leadership in mechanical engineering make him a distinguished figure in the field, consistently driving innovation and excellence across various industries.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      
+       
+    </div>
+</section>
+
+<section>
   
   <section id="speakers" style="background-color: var(--bg-color2);">
     <div class="section-header" data-aos="fade-up">
@@ -641,6 +744,21 @@ p {
                   <p style="font-size: 1rem;">
                     Shaik Aleem Ur Rehaman is a seasoned ASIC Design and Verification Engineer with over 8 years of experience in IP/Sub-System and SoC level design, currently working at Microsoft. His expertise spans a wide range of cutting-edge technologies, including ultra-low-power dual-band radio chips, WiFi protocol verification, and full-chip hardware-software co-verification. Aleem has significant experience working with ARM Cortex dual-core M4 and M0+ processors, flash memory, and corresponding controllers. He has conducted OVM-based IP-level verification for eSPI controllers and worked on memory expanders for Xeon platforms using FPGA acceleration. Additionally, he has contributed to the Boeing Spacecraft Project, focusing on RS422 and RS485 feature verification.
                   </p>
+              </div>
+          </div>
+	<div class="speaker-card" data-aos="fade-up">
+          <div class="row align-items-center mb-4">
+              <div class="col-md-3">
+                  <div class="image-container">
+                      <img src="https://media.licdn.com/dms/image/v2/D5603AQFBAZqVuRm-3w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694534878239?e=1731542400&v=beta&t=fOfqyk9j3bgY7Er-eMU8EFjmGcolHEDSODS40ay1tM0" class="img-fluid" alt="">
+                  </div>
+              </div>
+              <div class="col-md-9">
+                  <h2 style="font-size: 1.85rem;">Mr. Nahar Singh</h2>
+                  <p style="font-size: 1rem;">
+Nahar Singh is an accomplished professional and an alumnus of IIT Guwahati, currently working at Continental. He has extensive expertise in areas such as autonomous driving, security, safety, Industry 4.0, video analytics, and cognitive data. Nahar has contributed to developing and deploying AI solutions both on edge devices and cloud platforms, providing technical guidance to his team while practicing leadership.
+
+His technical skills span machine learning, image processing, and computer vision, having successfully led projects in these domains. His work ethic, creative problem-solving abilities, and collaborative nature make him a valuable asset to any team. Additionally, Nahar's knowledge of AWS services for managing large data transactions, combined with his humor and positivity, contribute to his effectiveness in meeting tight deadlines. His rapid learning capability and dedication to research and development further enhance his role in transforming organizational visions into reality.                  </p>
               </div>
           </div>
       </div>
@@ -738,7 +856,7 @@ p {
           <div class="card__content--container | flow">
             <h2 class="card__title">DR. Subho</h2>
             <p class="card__description">
-                CHEMISTRY
+                Starting with a brief history of medicine the talk will walk you through various avenues of drug discovery and development, the Indian perspectives, requirements for knowledge sharing between industry and academia, bottlenecks and opportunities, role of a service provider in accelerating the process of discovery and development
             </p>
           </div>
         </div>
@@ -750,7 +868,7 @@ p {
       <article class="cardtalk">
         <img
           class="card__background"
-          src="https://media.licdn.com/dms/image/v2/C5103AQHKAFbwwWPzgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516498170187?e=1731542400&v=beta&t=NwIvolxPpxeHfdRbLUW4q7oT1UYy9f6xEJ44WgwLaQY%22,"
+          src="https://media.licdn.com/dms/image/v2/C5103AQHKAFbwwWPzgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516498170187?e=1731542400&v=beta&t=NwIvolxPpxeHfdRbLUW4q7oT1UYy9f6xEJ44WgwLaQY"
           alt="sd"
           width="1920"
           height="2200"
@@ -771,7 +889,7 @@ p {
       <article class="cardtalk">
         <img
           class="card__background"
-          src=""
+          src="data:image/jpeg;base64,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"
           alt="sd"
           width="1920"
           height="2200"
@@ -809,7 +927,7 @@ p {
       <article class="cardtalk">
         <img
           class="card__background"
-          src="https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715444720858?e=1731542400&v=beta&t=eNmuymXkvWpG-tQCmLkTxVNp6Y5j9DVcaRUMJI5rer8"
+          src="https://media.licdn.com/dms/image/v2/D5603AQF_-f3psbvzpg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715444720858?e=1731542400&v=beta&t=w8IocvJVp-keqlu0BVYSTl-V58EzjxR8IptuG_MHZXA"
           alt="sd"
           width="1920"
           height="2200"
@@ -870,6 +988,7 @@ p {
             <h2 class="card__title">MR. VISH RAJALINGAM</h2>
             <p class="card__description">
               VP and GM Mobility and transport business unit, Multicoreware
+		    The automotive industry is undergoing a transformation driven by AI and ADAS. These innovations, coupled with the demand for advanced user experiences in infotainment, require significant computational power. GPUs, DSPs, and specialized AI Accelerators are ideal for handling the compute-intensive nature of modern mobility applications. This presentation will explore the AI workloads for ADAS and infotainment, discuss the advantages of GPU and DSP architectures, and demonstrate real-world use cases. The presentation will showcase MulticoreWare's expertise in addressing the demanding challenges of modern mobility.
             </p>
           </div>
         </div>
@@ -903,7 +1022,7 @@ p {
           <div class="card__content--container | flow">
             <h2 class="card__title">DR. MILINDA MAHAJAN</h2>
             <p class="card__description">
-              Director design and research and CEO, Ashoka Structural consultants
+              Seismically irregular buildings have significant challenges in structural analysis and design due to their complex geometry and non-uniform distribution of mass, stiffness, and strength. These irregularities can cause unpredictable seismic responses during an earthquake, and may risk the safety and stability. The talk will focus on the aspects of the earthquake analysis of building structures and a case study to deal with seismically irregular building, its retrofitting strategies to make it simple regular building.
             </p>
           </div>
         </div>
@@ -921,6 +1040,7 @@ p {
             <h2 class="card__title">MR. ARJUN MENON</h2>
             <p class="card__description">
               Co Founder and chief engineer, Incore semiconductors Pvt. Ltd. 
+	This talk will take you through a journey, which began with the fundamental motivation of constructing an open-source academic processor and evolved into developing highly configurable core generator architectures. Throughout the talk, we will explore technical and non-technical decisions that impact this ecosystem and the micro-architectural and scalability challenges that arise. Additionally, we will discuss some of the choices that were made to create a state-of-the-art embedded microprocessor portfolio with limited resources and a small team. Speaker Bio: Arjun Menon is the Co-founder and Chief Engineer of InCore Semiconductors. He was one of the key architects of the SHAKTI processor program at IIT Madras. He was also the lead architect of India’s first indigenous microprocessor, which was designed and fabricated in India. While at IIT Madras, he spearheaded the development of a 64-bit Out-of-Order processor based on a custom instruction set for DRDO, and, a custom SoC for ISRO Inertial Systems Unit. His primary areas of interest include computer architecture and secure microprocessor design.
             </p>
           </div>
         </div>
@@ -950,7 +1070,69 @@ p {
   <div class="section-header" data-aos="fade-up">
       <h2>Events</h2>
   </div>
-  <div class="events-container">
+  <div class="viscontainer">
+      
+    <div class="viscard">
+      <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Lecture Series</h2>
+        <p class="txt" style="font-size: 15px;">
+          Ready to broaden your intellectual horizons? Become a part of IAC Lecture Series, where renowned professors from diverse disciplines share their expertise and insights on cutting-edge topics. This is more than just a lecture—it's an engaging experience that will inspire you, broaden your perspective, and connect you with the latest in knowledge.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Lecture Series</h2>
+    </div>
+  </div>
+
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="color: black; font-size: 20px;">Start-up booths</h2>
+        <p class="txt" style="font-size: 14px;">
+          Explore innovative startups founded by recent graduates, supported by TECHIN and IPTIF. These dynamic booths offer a platform for young entrepreneurs to share their journey from idea to execution. Engage with the founders, learn about their challenges, and discover how their startups are shaping the future. These booths provide a firsthand look at the cutting-edge innovations emerging from our alumni network.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2 class="ab" style="font-size: 35px;">Start-up booths</h2>
+    </div>
+  </div>
+
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Exhibition</h2>
+        <p class="txt" style="font-size: 15px;">
+          Unleash your creativity and showcase your innovative projects, products, and posters at the IAC Exhibition! This is a fantastic chance for students to present their work to professionals from various industries, receive valuable feedback, and potentially spark collaborations.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Exhibition</h2>
+      
+    </div>
+  </div>
+  <div class="viscard">
+    <div class="visface visface1">
+      <div class="content">
+        <span class="stars"></span>
+        <h2 class="txt" style="font-size: 20px;">Panel Discussion</h2>
+        <p class="txt" style="font-size: 15px;">
+          Join a group of industry experts as they delve into key topics relevant to the industrial world. This session offers valuable insights into current trends and practical applications. This panel discussion is the perfect platform to ask questions and engage directly with the panelists, making this an invaluable chance to gain knowledge and advice from experienced professionals.
+        </p>
+      </div>
+    </div>
+    <div class="visface visface2">
+      <h2>Panel Discussion</h2>
+    </div>
+  </div>
+</div>
+  <!-- <div class="events-container">
       <div class="vertical-line"></div>
 
       <div class="grid-container">
@@ -1025,7 +1207,7 @@ p {
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
 </section>
 
  <section id="gallery">

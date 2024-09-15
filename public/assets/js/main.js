@@ -42,6 +42,12 @@ const organisingTeam = [
         linkedin: "https://www.linkedin.com/in/"
     },
     {
+        name: "Zeeshan Rangrej",
+        post: "Backend Developer",
+        imgSrc: "assets/img/team/zeeshan.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },
+    {
         name: "Vishesh Srivastava",
         post: "Frontend Developer",
         imgSrc: "assets/img/team/vishesh.png",
@@ -87,11 +93,6 @@ const organisingTeam = [
         name: "Geetheswar",
         post: "Frontend Developer",
         imgSrc: "assets/img/team/g.png",
-        linkedin: "https://www.linkedin.com/in/"
-    },{
-        name: "Zeeshan Rangrej",
-        post: "Backend Developer",
-        imgSrc: "assets/img/team/zeeshan.png",
         linkedin: "https://www.linkedin.com/in/"
     }
 ]

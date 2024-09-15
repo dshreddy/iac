@@ -88,6 +88,12 @@ const organisingTeam = [
         post: "Academic Affairs Secretary",
         imgSrc: "assets/img/team/hemath_reddy.png",
         linkedin: "https://www.linkedin.com/in/"
+    },
+    { name: "Garima Ranjan",
+        post: "Design Lead",
+        imgSrc: "assets/img/team/garima.png",
+        linkedin: "https://www.linkedin.com/in/"
+        
     }
 ]
 

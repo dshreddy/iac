@@ -42,23 +42,12 @@ const organisingTeam = [
         linkedin: "https://www.linkedin.com/in/"
     },
     {
-        name: "Zeeshan Rangrej",
-        post: "Backend Developer",
-        imgSrc: "assets/img/team/zeeshan.png",
-        linkedin: "https://www.linkedin.com/in/"
-    },
-    {
         name: "Vishesh Srivastava",
         post: "Frontend Developer",
         imgSrc: "assets/img/team/vishesh.png",
         linkedin: "https://www.linkedin.com/in/"
     },
-    {
-        name: "Geetheswar",
-        post: "Frontend Developer",
-        imgSrc: "assets/img/team/g.png",
-        linkedin: "https://www.linkedin.com/in/"
-    },
+    
     {
         name: "Karthikeya B",
         post: "Logistics & Marketing Coordinator",
@@ -94,6 +83,16 @@ const organisingTeam = [
         imgSrc: "assets/img/team/Garima.jpg",
         linkedin: "https://www.linkedin.com/in/"
         
+    },{
+        name: "Geetheswar",
+        post: "Frontend Developer",
+        imgSrc: "assets/img/team/g.png",
+        linkedin: "https://www.linkedin.com/in/"
+    },{
+        name: "Zeeshan Rangrej",
+        post: "Backend Developer",
+        imgSrc: "assets/img/team/zeeshan.png",
+        linkedin: "https://www.linkedin.com/in/"
     }
 ]
 

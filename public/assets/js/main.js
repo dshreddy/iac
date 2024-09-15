@@ -91,7 +91,7 @@ const organisingTeam = [
     },
     { name: "Garima Ranjan",
         post: "Design Lead",
-        imgSrc: "assets/img/team/garima.png",
+        imgSrc: "assets/img/team/Garima.jpg",
         linkedin: "https://www.linkedin.com/in/"
         
     }

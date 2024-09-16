@@ -46,37 +46,36 @@
         }
 
         .sponsors-container {
-            display: flex;
-            justify-content: center;
-         
-            gap: 40px;
-           
-            padding: 20px;
-            padding-right: 30px;
-            flex-wrap: wrap;
-            
-        }
-
-        .sponsor {
-            text-align: center;
-        }
-
-        .sponsor img {
-            max-width: 300px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            
-        }
-
-        .sponsor-name {
-            margin-top: 5px; 
-            font-size: 30px;
-            font-weight: bold;
-            color: #333;
-            
-        }
-    
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          gap: 40px; /* Space between sponsor items */
+          padding: 20px;
+          padding-right: 30px;
+          flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+          align-items: center; /* Vertically center items if they have different heights */
+      }
+      
+      .sponsor {
+          text-align: center;
+          display: flex;
+          flex-direction: column; /* Stack the image and name vertically */
+          align-items: center; /* Center the content horizontally */
+      }
+      
+      .sponsor img {
+          max-width: 300px;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+      }
+      
+      .sponsor-name {
+          margin-top: 5px; 
+          font-size: 30px;
+          font-weight: bold;
+          color: #333;
+      }
+      
     
     .paragraph {
         color: white; /* Keep the text color white */
@@ -138,7 +137,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out, background-color 0.1s ease-in-out; /* Smooth transition for all */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition for all */
 }
 
 .card.visible {
@@ -147,30 +146,32 @@
   transform: translateY(0);
 }
 
-
-
+.card.active {
+  background: #e0f7fa; /* Highlight color for active card */
+}
 
 .card-content {
-    width: 100%; /* Full width for content */
-    padding: 20px; /* Padding inside each card content */
+  width: 100%; /* Full width for content */
+  padding: 20px; /* Padding inside each card content */
 }
 
 .card-content.left {
-    text-align: left;
+  text-align: left;
 }
 
 .card-content.right {
-    text-align: right;
+  text-align: right;
+}
+
+.card-description {
+  padding-bottom: 20px; /* Add padding to the bottom of the description */
 }
 
 .empty-cell {
-    background: transparent; /* Empty cells are transparent */
-    border: none; /* No border for empty cells */
+  background: transparent; /* Empty cells are transparent */
+  border: none; /* No border for empty cells */
 }
 
-.card.active {
-    background: #e0f7fa; /* Highlight color for active card */
-}
 
 .pointer {
     position: absolute;
@@ -182,10 +183,29 @@
     transform: translate(-50%, -50%);
     transition: top 0.1s;
 }
+.cgspeaker-card {
+  padding: 20px;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  opacity: 0.9;
+  position: relative;
+  background-color: #ffffff; /* Light background for contrast */
+  margin: 20px 0; /* Space between cards */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.cgspeaker-card:hover {
+  opacity: 1;
+  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.6); /* Glowing effect */
+  transform: scale(1.05);
+}
+
+.image-container2 img {
+  border-radius: 50%; /* Circular image */
+  border: 4px solid #ffad00; /* Border around the image */
+}
 
 
-  
-  
   
     
     .speaker-card {
@@ -211,7 +231,7 @@
     .image-container {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: top;
     }
     
     .image-container img {
@@ -609,28 +629,28 @@ p {
       <div class="left" style="z-index: 2; color: var(--bg-color);" data-aos="fade-up">
           <h1>About IAC</h1>
       </div>
-      <p class="right wi-50 paragraph" data-aos="fade-up">
+      <p class="right wi-50 paragraph" data-aos="fade-up" style="font-size: 1.275rem" >
           The Industrial Academia Conclave (IAC) at IIT Palakkad is a flagship event that bridges 
           the gap between academic research and industrial application. As a vibrant platform where 
           innovation meets expertise, our mission is to bridge the gap between industry and academia, 
           fostering meaningful connections and progress.
       </p>
   
-      <p class="left wi-50 paragraph" data-aos="fade-up">
+      <p class="left wi-50 paragraph" data-aos="fade-up" style="font-size: 1.275rem">
           At IAC, we believe in the power of collaboration to shape the future. Our events, including 
           panel discussions, lecture series and talks by Industry leaders, and exhibitions, are designed 
           to inspire, educate, and connect. From exploring cutting-edge technologies to addressing real-world 
           challenges, our programs facilitate a rich exchange of ideas and perspectives.
       </p>
   
-      <p class="right wi-50 paragraph" data-aos="fade-up">
+      <p class="right wi-50 paragraph" data-aos="fade-up" style="font-size: 1.275rem">
           IAC is where potential is realized, innovation knows no limits, and connections ignite fresh ideas. 
           This is more than just a platform—it's a catalyst for change, where collective expertise drives impactful 
           outcomes. Whether you're an industry professional, academic, or innovator, IAC offers the ideal environment 
           to connect, learn, and grow.
       </p>
   
-      <p class="left wi-50 paragraph" data-aos="fade-up">
+      <p class="left wi-50 paragraph" data-aos="fade-up" style="font-size: 1.275rem">
           <strong style="color: var(--bg-color);">Where:</strong><br>
           Sahyadri-Nila Campus, IIT Palakkad<br><br>
           <strong style="color: var(--bg-color);">When:</strong><br>
@@ -638,35 +658,34 @@ p {
           20-21 September
       </p>
   </section>
-<section id="speakers" style="background-color: var(--bg-color2);">
-    <div class="section-header" data-aos="fade-up">
-        <h2>Chief Guest</h2>
+  <section id="chief-guest" style="background-color: var(--bg-color2); padding: 50px 0;">
+    <div class="section-header text-center" data-aos="fade-up">
+        <h2>Meet Our Chief Guest</h2>
     </div>
 
     <div class="container-fluid my-5" style="width: 93%;">
-        <!-- First Keynote Speaker -->
-        <div class="speaker-card" data-aos="fade-up">
-            <div class="row align-items-center mb-4">
-                <div class="col-md-3">
-                    <div class="image-container">
-                        <img src="https://media.licdn.com/dms/image/v2/C5103AQEixH_jIodGkw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1576300710099?e=1731542400&v=beta&t=DI7YgXiwK6XblOxrUgsg5mq6hxJwl2E9duCxPWAGpxg" class="img-fluid" alt="">
+        <!-- Chief Guest Card -->
+        <div class="cgspeaker-card" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="image-container2">
+                        <img src="assets/img/cg.png" alt="Dr. Sreenivas Naidu">
                     </div>
                 </div>
-                <div class="col-md-9">
-                    <h2 style="font-size: 1.85rem;">Dr. Sreenivas Naidu</h2>
-                    <p style="font-size: 1rem;">
-                        Dr. Sreenivas Naidu is an accomplished Research and Development professional with over 20 years of experience in mechanical engineering, specializing in industries such as wind energy, rail, off-highway, steel, and bearings. His expertise spans mechanical design, product development, finite element analysis, and application engineering, where he has successfully led global teams in delivering innovative solutions. 
+                <div class="col-md-8">
+                    <h2 style="font-size: 2.5rem; color:#ffad00;">Dr. Sreenivas Naidu</h2>
+                    <p style="font-size: 1.2rem; color:#333333;">
+                        Dr. Sreenivas Naidu is a visionary leader in Research and Development, with a remarkable career spanning over two decades in mechanical engineering. His extensive experience includes pivotal roles in wind energy, rail, off-highway machinery, steel, and bearings industries. 
 
-Sreenivas has played a key role in managing the Rail Application Engineering team at Timken Engineering and Research India, Bangalore, ensuring the highest standards of support for railway customers worldwide. He has also overseen the Advanced Analysis team, catering to global clients in sectors like wind energy, automotive, aerospace, and primary metals. His strong background includes developing in-house engineering tools to meet global requirements and extensive hands-on experience with off-highway equipment and V-Type 12-cylinder engines for dump trucks.
+                        Renowned for his mechanical design and product development expertise, Dr. Naidu has driven innovation through finite element analysis and application engineering. His leadership in the Rail Application Engineering team at Timken Engineering and Research India has set a benchmark for excellence in supporting railway systems globally. 
 
-In addition to his technical acumen, Sreenivas excels in customer training, bearing condition monitoring systems, and organizing trade shows and seminars. His profound knowledge and leadership in mechanical engineering make him a distinguished figure in the field, consistently driving innovation and excellence across various industries.
+                        Under his guidance, the Advanced Analysis team has excelled in delivering solutions for sectors such as wind energy, automotive, aerospace, and primary metals. Dr. Naidu's contributions include developing cutting-edge engineering tools and managing complex projects involving off-highway equipment and high-performance engines.
+
+                        Beyond his technical prowess, Dr. Naidu is known for his dedication to customer training, condition monitoring systems, and organizing impactful trade shows and seminars. His profound expertise and leadership continue to inspire innovation and set new standards across various engineering disciplines.
                     </p>
                 </div>
             </div>
         </div>
-
-      
-       
     </div>
 </section>
 
@@ -688,27 +707,22 @@ In addition to his technical acumen, Sreenivas excels in customer training, bear
                 </div>
                 <div class="col-md-9">
                     <h2 style="font-size: 1.85rem;">Dr. Sreedevi Upadhyayula</h2>
-                    <p style="font-size: 1rem;">
-                        Dr. Sreedevi Upadhyayula is a seasoned chemical engineer with a rich blend of industry and academic 
-                        experience. After earning her M.Tech in Chemical Engineering from IIT Kharagpur in 1993, she worked 
-                        as a Senior Design Engineer in both the public and private sectors. In 1998, she returned to academia 
-                        as a CSIR Senior Research Fellow at the National Chemical Laboratory (NCL), Pune, and completed her 
-                        PhD in 2001.<br><br>
+                    <p style="font-size: 1rem; color:#ffad00;">
+                      <b>THERMOCHEMICAL WATER SPLITTING PROCESS DEVELOPMENT – A Case of Industry-Academia Nexus</b></p>
+                     <p style="font-size: 1rem;">
+                      In her talk, Dr. Upadhyayula will explore the promising potential of thermochemical cycles for water splitting as a sustainable method for large-scale hydrogen production. She will review various hydrogen production routes through thermochemical and hybrid cycles, discussing recent advances, major challenges, and future directions related to their design and scale-up. The focus will be on an efficient thermochemical process developed and demonstrated at IIT Delhi, supported by a long-term collaboration with the ONGC Energy Centre, showcasing a 15-year journey from ideation to technology demonstration.<br>
+                      Dr. Sreedevi Upadhyayula is a distinguished chemical engineer with extensive experience spanning both industry and academia. She earned her M.Tech in Chemical Engineering from IIT Kharagpur and began her career as a Senior Design Engineer in the public and private sectors. Following a PhD from the National Chemical Laboratory (NCL), Pune, and postdoctoral research at the University of Notre Dame, she joined IIT Kharagpur as an Assistant Professor. Currently, she holds the CLASS of 66 Chair Professor position at IIT Delhi.
 
-                        She then pursued postdoctoral research at the University of Notre Dame, USA, before starting her academic 
-                        career as an Assistant Professor at IIT Kharagpur in 2004. Currently, she is the CLASS of 66 Chair Professor 
-                        at IIT Delhi. Her research focuses on sustainable heterogeneous catalysis, zeotype materials in petrochemical 
-                        and refinery catalytic processes, biomass conversion to biofuels, catalyst design, parametric study, kinetics 
-                        and modeling of heterogeneous reactions.
+                      
                     </p>
                 </div>
             </div>
         </div>
-
+<br>
         <!-- Second Keynote Speaker -->
         <div class="speaker-card" data-aos="fade-up">
             <div class="row align-items-center">
-                <div class="col-md-3 order-md-2">
+                <div class="col-md-3 ">
                     <div class="image-container">
                         <img src="assets/img/satya.jpg" class="img-fluid" alt="">
                     </div>
@@ -732,6 +746,7 @@ In addition to his technical acumen, Sreenivas excels in customer training, bear
                 </div>
             </div>
         </div>
+        <br>
         <div class="speaker-card" data-aos="fade-up">
           <div class="row align-items-center mb-4">
               <div class="col-md-3">
@@ -741,13 +756,15 @@ In addition to his technical acumen, Sreenivas excels in customer training, bear
               </div>
               <div class="col-md-9">
                   <h2 style="font-size: 1.85rem;">Mr. Shaik Aleem Ur Rehaman</h2>
+                  <p style="font-size: 1rem; color:#ffad00;">
+                    <b>Evolution of Modern SoC Architectures for AI/ML Workload and High Bandwidth Computations</b></p>
                   <p style="font-size: 1rem;">
-                    Shaik Aleem Ur Rehaman is a seasoned ASIC Design and Verification Engineer with over 8 years of experience in IP/Sub-System and SoC level design, currently working at Microsoft. His expertise spans a wide range of cutting-edge technologies, including ultra-low-power dual-band radio chips, WiFi protocol verification, and full-chip hardware-software co-verification. Aleem has significant experience working with ARM Cortex dual-core M4 and M0+ processors, flash memory, and corresponding controllers. He has conducted OVM-based IP-level verification for eSPI controllers and worked on memory expanders for Xeon platforms using FPGA acceleration. Additionally, he has contributed to the Boeing Spacecraft Project, focusing on RS422 and RS485 feature verification.
-                  </p>
+                    In his upcoming talk, Mr. Aleem will delve into the latest trends in processors, memory, and fabrics, highlighting the essential skills needed for students and researchers aiming to excel in this domain. He will shed light on open-source tools and AI-based infrastructure for chip design and verification, as well as discuss government and industry initiatives in India that are driving semiconductor growth. The session will feature a fireside chat and Q&A, offering valuable insights and practical guidance for those interested in the semiconductor industry.</p>
+                    He is a distinguished ASIC Design and Verification Engineer with over 8 years of experience at the forefront of semiconductor technology. Currently at Microsoft, Aleem specializes in IP/Sub-System and SoC level design, with a focus on ultra-low-power dual-band radio chips and WiFi protocol verification. His expertise includes working with ARM Cortex processors, flash memory, and advanced verification methodologies.
               </div>
           </div>
-	
     </div>
+    <br>
 	    <div class="speaker-card" data-aos="fade-up">
           <div class="row align-items-center mb-4">
               <div class="col-md-3">
@@ -757,11 +774,12 @@ In addition to his technical acumen, Sreenivas excels in customer training, bear
               </div>
               <div class="col-md-9">
                   <h2 style="font-size: 1.85rem;">Mr. Nahar Singh</h2>
-                  <p style="font-size: 1rem;">
-Nahar Singh is an accomplished professional and an alumnus of IIT Guwahati, currently working at Continental. He has extensive expertise in areas such as autonomous driving, security, safety, Industry 4.0, video analytics, and cognitive data. Nahar has contributed to developing and deploying AI solutions both on edge devices and cloud platforms, providing technical guidance to his team while practicing leadership.
-
-His technical skills span machine learning, image processing, and computer vision, having successfully led projects in these domains. His work ethic, creative problem-solving abilities, and collaborative nature make him a valuable asset to any team. Additionally, Nahar's knowledge of AWS services for managing large data transactions, combined with his humor and positivity, contribute to his effectiveness in meeting tight deadlines. His rapid learning capability and dedication to research and development further enhance his role in transforming organizational visions into reality.                  </p>
-              </div>
+                  
+                    <p style="font-size: 1rem; color:#ffad00;">
+                      <b>AI Trends in Automotive Field</b></p>
+                    <p style="font-size: 1rem;">
+                      In his talk, Mr. Nahar will explore how AI is revolutionizing the automotive industry, making vehicles smarter, safer, and more efficient. He will discuss the latest trends in Generative AI (GenAI), highlighting advancements in vehicle design, prototyping, personalization, testing, simulation, and production optimization. Attendees can expect insights into current AI trends in the automotive field, as well as practical examples of how AI is reshaping the driving and ownership experience.<br>
+                      He is a seasoned professional and an alumnus of IIT Guwahati, currently advancing innovations at Continental. With extensive experience in autonomous driving, security, safety, and Industry 4.0, Nahar excels in integrating AI solutions across edge devices and cloud platforms. His expertise includes machine learning, image processing, and computer vision, driving successful projects with a focus on cutting-edge technology.</p>              </div>
           </div>
       </div>
 </section>
@@ -779,16 +797,17 @@ His technical skills span machine learning, image processing, and computer visio
           src="https://i1.rgstatic.net/ii/profile.image/272799713460258-1442051929002_Q512/Sanjay-Kamble-5.jpg"
           alt="Dr Sanjay Kamble"
           width="1920"
-          height="2200"
-        />
+          height="2200"/>
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">DR. SANJAY KAMBLE</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;"> Case studies on process transformation from laboratory scale to commercial scale</h6>
               <p class="card__description">
                 CSIR-National Chemical Laboratory has strong capabilities in developing innovative processes and products for import substitution across various segments of the chemical industry. CSIR-NCL has developed innovative processes for import substitution in the chemical industry. Their work on flow reactors, continuous processes, and reactive distillation has improved performance, safety, and sustainability. This talk will present case studies for paracetamol, IBB, BPA, and plastic waste depolymerization.
             </p>
           </div>
+
         </div>
       </article>
       <article class="cardtalk">
@@ -802,10 +821,12 @@ His technical skills span machine learning, image processing, and computer visio
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">DR. Siddhartha Gadgil</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;"> The future of Automated and Interactive Theorem Proving</h6>
             <p class="card__description">
               Automated and Interactive Theorem proving is the discovery and verification of mathematical proofs with the help of computers. This has grown rapidly in the last few years and has been increasingly adopted in industry. Automated Theorem Proving very naturally complements Generative AI, which as we all know is powerful but unreliable. I will discuss the prospects of Automated Theorem Proving aiding and aided by generative AI, especially in Industry.
             </p>
+
           </div>
         </div>
       </article>
@@ -820,7 +841,9 @@ His technical skills span machine learning, image processing, and computer visio
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">DR. SOURISH DAS</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;">Doing Mathematics in the Era of Generative AI</h6>
+
             <p class="card__description fosm" style="font-size: 11px;">
               In this talk, I will demonstrate how we can leverage generative AI tools, such as ChatGPT, to enhance our approach to mathematics. We will explore how to automate some of the mundane tasks in academic life using ChatGPT, thereby significantly boosting productivity for academicians. These techniques are also valuable for professionals in the corporate sector, particularly for those involved in coding, data analysis, and report writing. Finally, I will discuss the implications of Generative AI on our roles in society and what our place might be in this rapidly evolving landscape.
             </p>
@@ -859,8 +882,10 @@ His technical skills span machine learning, image processing, and computer visio
         />
         <div class="card__content | flow">
           <div class="card__content--container | flow">
+
             <h2 class="card__title">DR. Subho</h2>
             <h6 style="color: orange; opacity: 1; font-weight: bold;">Fostering Industry - Academia collaboration - A Pharmaceutical Perspective</h6>
+
             <p class="card__description">
               Starting with a brief history of medicine the talk will walk you through various avenues of drug discovery and development, the Indian perspectives, requirements for knowledge sharing between industry and academia, bottlenecks and opportunities, role of a service provider in accelerating the process of discovery and development
             </p>
@@ -906,8 +931,10 @@ His technical skills span machine learning, image processing, and computer visio
             <h2 class="card__title">Mr. N. Raghunath</h2>
             <h6 style="color: orange; opacity: 1; font-weight: bold;">Evolution of Mobile Networks towards Cloud RAN and ORAN - Opportunities and Challenges</h6>
             <p class="card__description">
+
               The evolution of mobile networks from LTE to 5G has been driven by data consumption and technological advancements. While 3GPP standards focus on radio protocols, Cloud RAN and O-RAN aim to improve network efficiency and flexibility. Cloud RAN centralizes and virtualizes base station functions, while O-RAN promotes open interfaces and multi-vendor options. This evolution presents opportunities for innovation and new applications but also poses challenges for the technical community.
             </p>
+
           </div>
         </div>
       </article>
@@ -926,7 +953,9 @@ His technical skills span machine learning, image processing, and computer visio
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">Mr ASHISH KUVELKAR</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;">High Performance Computing - A Tool for Scientific Advancement</h6>
+
             <p class="card__description">
               The talk will introduce the basics of High Performance Computing, how it serves the purpose of addressing the computational needs of scientific community, what are the methodologies used for making effective utilization of HPC, the HPC landscape in India and options available for the researchers for availing HPC services of National Supercomputing Mission.
             </p>
@@ -944,7 +973,9 @@ His technical skills span machine learning, image processing, and computer visio
           <div class="card__content | flow">
             <div class="card__content--container | flow">
               <h2 class="card__title">Dr. KAUSHIK CHOUDHURY</h2>
+
               <h6 style="color: orange; opacity: 1; font-weight: bold;">From Concept to Creation: The Journey of a Product</h6>
+
               <p class="card__description fosm" style="font-size: 11px;">
                 We are living in an era of innovation. We are the generation that has transitioned from audio cassettes to CDs to DVDs to SD cards and then cloud music.Interestingly students pursuing research-oriented or research-driven courses are the best suited individuals for developing products, yet we do not see many of them doing that. This talk will be focusing on how research could be looked upon as a precursor to product development and entrepreneurship. It will also have some aspects about successful products to give an insight as to how creative thinking makes a product last longer than its expected lifetime.
             </p>
@@ -962,7 +993,9 @@ His technical skills span machine learning, image processing, and computer visio
           <div class="card__content | flow">
             <div class="card__content--container | flow">
               <h2 class="card__title">Dr. KAVITA KADU</h2>
+
               <h6 style="color: orange; opacity: 1; font-weight: bold;">Revolutionizing Sustainability: Shaping the Future of Circular Economy and Climate Tech</h6>
+
               <p class="card__description" style="font-size: 14px;">
                 APChemi stands at the forefront of combating two of the world's most pressing environmental challenges: plastic pollution and carbon emissions. As a leader in advanced recycling and carbon sequestration technologies, we offer innovative solutions that are transforming waste into valuable resources.
               </p>
@@ -980,7 +1013,9 @@ His technical skills span machine learning, image processing, and computer visio
           <div class="card__content | flow">
             <div class="card__content--container | flow">
               <h2 class="card__title">Dr. RAMASWAMY VISHNUDAS</h2>
+
               <h6 style="color: orange; opacity: 1; font-weight: bold;">External Gear Pump Technology</h6>
+
               <p class="card__description fosm" style="font-size: 10.5px;">
                 This talk delves into the latest R&D trends in External Gear Pumps, which are vital for mobile and industrial fluid power systems. We will explore innovations such as noise reduction, low-speed & efficiency optimization, advancements in testing and development. Additionally, the presentation will highlight our collaborative efforts with universities, particularly our Advanced Engineering department, which fosters industry-academic partnerships and student engagement through internships and joint research projects. It also discusses collaborations with universities and our approach to nurturing future talent.
                </p>
@@ -1016,7 +1051,9 @@ His technical skills span machine learning, image processing, and computer visio
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">MR. AVINASH GADEKAR</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;">Water Sector and opportunities</h6>
+
             <p class="card__description">
               Associate director, AECOM India Global Services Pvt. Ltd.
             </p>
@@ -1034,10 +1071,12 @@ His technical skills span machine learning, image processing, and computer visio
           <div class="card__content | flow">
             <div class="card__content--container | flow">
               <h2 class="card__title">DR. MILINDA MAHAJAN</h2>
+
               <h6 style="color: orange; opacity: 1; font-weight: bold;">Simplifying Complex Seismic Irregularities in Building Design</h6>
               <p class="card__description">
                 Seismically irregular buildings have significant challenges in structural analysis and design due to their complex geometry and non-uniform distribution of mass, stiffness, and strength. These irregularities can cause unpredictable seismic responses during an earthquake, and may risk safety and stability. The talk will focus on the aspects of the earthquake analysis of building structures and a case study to deal with seismically irregular building, its retrofitting strategies to make it simple regular building.
               </p>
+
             </div>
           </div>
         </article>
@@ -1070,7 +1109,9 @@ His technical skills span machine learning, image processing, and computer visio
         <div class="card__content | flow">
           <div class="card__content--container | flow">
             <h2 class="card__title">ADITHYA KUMAR O V</h2>
+
             <h6 style="color: orange; opacity: 1; font-weight: bold;">The Curious Case of Good Engineering</h6>
+
             <p class="card__description">
               Senior software engineer, Composewell Technologies 
             </p>
@@ -1246,6 +1287,10 @@ His technical skills span machine learning, image processing, and computer visio
             <img src="../public/assets/sponsorsimg/technilab.jpeg" alt="Technilab Instruments">
             <p class="sponsor-name">Technilab Instruments</p>
         </div>
+        <div class="sponsor">
+          <img src="https://innovativeinc.in/images/logo.jpg" alt="Innovative Instruments">
+          <p class="sponsor-name">Innovative Instruments</p>
+      </div>
 
 <!-- 
         <div class="sponsor">

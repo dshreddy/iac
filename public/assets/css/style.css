@@ -693,6 +693,9 @@ h5 {
   margin: 0;
 }
 
+.schedule-details span {
+  font-weight: 600;
+}
 
 @media (min-width: 992px) {
   .schedule-item {

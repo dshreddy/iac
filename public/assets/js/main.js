@@ -409,7 +409,7 @@ scheduleDepartments = {
                 'className': 'lecture-t3',
                 'infoText': '3:00 - 3:45 p.m',
                 'profName': 'Dr. Ramaswamy Vishnudas (Bosch)',
-                'venue': 'Sarswati A102-103(livestream)'
+                'venue': 'Sarswati A01-102, 103'
             }
         ],
         'scheduleHide': ['lecture-t1', 'lecture-t2', 'lecture-t4', 'lecture-t5', 'lecture-t6']
@@ -421,13 +421,13 @@ scheduleDepartments = {
                 'className': 'lecture-t1',
                 'infoText': '11:30 a.m - 12:15 p.m',
                 'profName': 'Mr. Avinash Gadekar (AECOM)',
-                'venue': 'Sarswati A102-103(livestream)'
+                'venue': 'Sarswati A01-102, 103'
             },
             {
                 'className': 'lecture-t2',
                 'infoText': '12:15 - 1:00 p.m',
                 'profName': 'Dr. Milinda Mahajan (ASC)',
-                'venue': 'Sarswati A102-103(livestream)'
+                'venue': 'Sarswati A01-102, 103'
             }
         ],
         'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5', 'lecture-t6' ]
@@ -487,7 +487,7 @@ scheduleDepartments = {
                 'className': 'lecture-t5',
                 'infoText': '12:15 - 1:00 p.m',
                 'profName': 'Dr. Kaushik Choudhury (C-CAMP)',
-                'venue': 'Sarswati A102-103(livestream)'
+                'venue': 'Sarswati A01-102, 103'
             }
         ],
         'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]
@@ -505,7 +505,7 @@ scheduleDepartments = {
                 'className': 'lecture-t5',
                 'infoText': '4:00 - 4:45 p.m',
                 'profName': 'Dr. Sourish Das (CMI)',
-                'venue': 'Sarswati A102-103(livestream)'
+                'venue': 'Sarswati A01-102, 103'
             }
         ],
         'scheduleHide': [ 'lecture-t2', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]

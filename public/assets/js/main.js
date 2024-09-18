@@ -317,116 +317,7 @@ function loadImages() {
         `;
         departmentCoordinatorsContainer.appendChild(colDiv);
     });
-
-    const eventSpeakersContainer = document.getElementById('event-speakers');
-    speakers.forEach(data => {
-        const speaker = `
-            <div class="speaker__card">
-        <div class="front">
-            <div class="main__card">
-            <img src="${data.imgSrc}" alt="" />
-            <div class="overlay__container">
-                <div class="text__container">
-                <h1>${data.name}</h1>
-                <h3>${data.title}</h3>
-                <p>${data.post}</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="back main__card">
-            <img src="${data.imgSrc}" alt="" />
-            <div class="overlay__container details">
-            <div class="text__container">
-                <p>${data.details}</p>
-            </div>
-            </div>
-        </div>
-        </div>
-    `;
-        eventSpeakersContainer.innerHTML += speaker;
-    });
-    const eventTalksContainer = document.getElementById('event-talks');
-    Talks.forEach(data => {
-        const talk = `
-            <div class="speaker__card">
-        <div class="front">
-            <div class="main__card">
-            <img src="${data.imgSrc}" alt="" />
-            <div class="overlay__container">
-                <div class="text__container">
-                <h1>${data.name}</h1>
-                <h3>${data.title}</h3>
-                <p>${data.post}</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="back main__card">
-            <img src="${data.imgSrc}" alt="" />
-            <div class="overlay__container details">
-            <div class="text__container">
-                <p>${data.details}</p>
-            </div>
-            </div>
-        </div>
-        </div>
-    `;
-        eventTalksContainer.innerHTML += talk;
-    });
 }
-
-
-// Load images when the webpage loads
-window.onload = loadImages;
-
-const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Gallery Slider
-   */
-  new Swiper('.gallery-slider', {
-    speed: 400,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      575: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      992: {
-        slidesPerView: 5,
-        spaceBetween: 35
-      }
-    }
-  });
-
-  /**
-   * Initiate gallery lightbox
-   */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
-  });
 
 window.addEventListener('load', () => {
     AOS.init({
@@ -436,3 +327,240 @@ window.addEventListener('load', () => {
       mirror: false
     })
   });
+
+
+// Schedule
+function updateScheduleDisplay(scheduleShow, scheduleHide) {
+    // Hide elements
+    scheduleHide.forEach(className => {
+        const elements = document.querySelectorAll(`.${className}`);
+        elements.forEach(element => {
+            element.style.display = 'none';
+        });
+    });
+
+    // Show elements and update content
+    scheduleShow.forEach(item => {
+        const elements = document.querySelectorAll(`.${item.className}`);
+        elements.forEach(element => {
+            element.style.display = 'block';
+
+            // Update info text if provided
+            if (item.infoText) {
+                const infoElement = element.querySelector('.schedule-info span');
+                if (infoElement) {
+                    infoElement.textContent = item.infoText;
+                }
+            }
+
+            // Update title text if provided
+            if (item.profName) {
+                const titleElement = element.querySelector('.schedule-title');
+                if (titleElement) {
+                    titleElement.innerHTML = `<span>Talk By</span><br>${item.profName}`;
+                }
+            }
+
+            // Update venue text if provided
+            if (item.venue) {
+                const venueElement = element.querySelector('.schedule-details');
+                if (venueElement) {
+                    venueElement.textContent = `Venue: ${item.venue}`;
+                }
+            }
+        });
+    });
+}
+
+scheduleDepartments = {
+    'CS and DS': {
+        'scheduleShow': [
+            {
+                'className': 'lecture-t3',
+                'infoText': '3:00 - 3:45 p.m',
+                'profName': 'Dr. Brojeshwar Bhowmick (TCS)',
+                'venue': 'Sarswati A002'
+            },
+            {
+                'className': 'lecture-t4',
+                'infoText': '4:00 - 4:45 p.m',
+                'profName': 'Adithya Kumar O V (CT)',
+                'venue': 'Sarswati A002'
+            },
+            {
+                'className': 'lecture-t4',
+                'infoText': '4:45 - 5:30 p.m',
+                'profName': 'Mr. Sudeep Chandrasekaran (TI)',
+                'venue': 'Sarswati A002'
+            },
+            {
+                'className': 'lecture-t5',
+                'infoText': '5:30 - 6:15 p.m',
+                'profName': 'Mr. Vish Rajalingam (Multicoreware)',
+                'venue': 'Sarswati A002'
+            }
+        ],
+        'scheduleHide': ['lecture-t1', 'lecture-t2']
+    },
+
+    'Mechanical': {
+        'scheduleShow': [
+            {
+                'className': 'lecture-t3',
+                'infoText': '3:00 - 3:45 p.m',
+                'profName': 'Dr. Ramaswamy Vishnudas (Bosch)',
+                'venue': 'Sarswati A102-103(livestream)'
+            }
+        ],
+        'scheduleHide': ['lecture-t1', 'lecture-t2', 'lecture-t4', 'lecture-t5']
+    },
+
+    'Civil': {
+        'scheduleShow': [  
+            {
+                'className': 'lecture-t1',
+                'infoText': '11:30 a.m - 12:15 p.m',
+                'profName': 'Mr. Avinash Gadekar (AECOM)',
+                'venue': 'Sarswati A102-103(livestream)'
+            },
+            {
+                'className': 'lecture-t2',
+                'infoText': '12:15 - 1:00 p.m',
+                'profName': 'Dr. Milinda Mahajan (ASC)',
+                'venue': 'Sarswati A102-103(livestream)'
+            }
+        ],
+        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5' ]
+    },
+
+    'Electrical': {
+        'scheduleShow': [  
+            {
+                'className': 'lecture-t1',
+                'infoText': '11:30 a.m - 12:15 p.m',
+                'profName': 'Mr. N. Raghunath (Nokia)',
+                'venue': 'Sarswati A002'
+            },
+            {
+                'className': 'lecture-t2',
+                'infoText': '12:15 - 1:00 p.m',
+                'profName': 'Mr. Arjun Menon (InCore Semi)',
+                'venue': 'Sarswati A002'
+            }
+        ],
+        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5' ]
+    },
+
+    'Chemistry': {
+        'scheduleShow': [  
+            {
+                'className': 'lecture-t3',
+                'infoText': '3:00 - 3:45 p.m',
+                'profName': 'Dr. Kavita Kadu (APchemi)',
+                'venue': 'Sarswati A007'
+            },
+            {
+                'className': 'lecture-t4',
+                'infoText': '4:00 - 4:45 p.m',
+                'profName': 'Dr. Sanjay Kamble (CSIR)',
+                'venue': 'Sarswati A007'
+            },
+            {
+                'className': 'lecture-t5',
+                'infoText': '4:45 - 5:30 p.m',
+                'profName': 'Dr. Subho (TCG Lifesciences)',
+                'venue': 'Sarswati A007'
+            },
+        ],
+        'scheduleHide': [ 'lecture-t1', 'lecture-t2' ]
+    },
+
+    'Physics': {
+        'scheduleShow': [  
+            {
+                'className': 'lecture-t2',
+                'infoText': '11:30 a.m - 12:15 p.m',
+                'profName': 'Mr Ashish Kuvelkar (C-DAC)',
+                'venue': 'Sarswati A007'
+            },
+            {
+                'className': 'lecture-t5',
+                'infoText': '12:15 - 1:00 p.m',
+                'profName': 'Dr. Kaushik Choudhury (C-CAMP)',
+                'venue': 'Sarswati A102-103(livestream)'
+            }
+        ],
+        'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4' ]
+    },
+
+    'Maths': {
+        'scheduleShow': [  
+            {
+                'className': 'lecture-t1',
+                'infoText': '11:30 a.m - 12:15 p.m',
+                'profName': 'Dr. Siddhartha Gadgil (IISc)',
+                'venue': 'Sarswati A007'
+            },
+            {
+                'className': 'lecture-t5',
+                'infoText': '4:00 - 4:45 p.m',
+                'profName': 'Dr. Sourish Das (CMI)',
+                'venue': 'Sarswati A102-103(livestream)'
+            }
+        ],
+        'scheduleHide': [ 'lecture-t2', 'lecture-t3', 'lecture-t4' ]
+    }
+};
+
+
+function handleScheduleType(button) {
+    if (button.classList.contains('checked')) {
+        return;
+    }
+
+    const buttons = document.querySelectorAll('.schedule-type-button');
+    buttons.forEach(btn => btn.classList.remove('checked'));
+
+    button.classList.add('checked');
+
+    const department = button.textContent;
+
+    updateScheduleDisplay(scheduleDepartments[department].scheduleShow, scheduleDepartments[department].scheduleHide);
+}
+
+function handleScheduleDay(button) {
+    if (button.classList.contains('checked')) {
+        return;
+    }
+
+    const buttons = document.querySelectorAll('.schedule-day-button');
+    buttons.forEach(btn => btn.classList.remove('checked'));
+
+    button.classList.add('checked');
+    const day = button.textContent;
+
+    const scheduleDay1 = document.getElementById('schedule-day1');
+    const scheduleDay2 = document.getElementById('schedule-day2');
+
+    if (day === 'Day 1') {
+        setTimeout(() => scheduleDay2.style.opacity = 0, 300);
+        scheduleDay2.classList.add('inactive');
+        setTimeout(() => scheduleDay1.style.opacity = 1, 300);
+        scheduleDay1.classList.remove('inactive');
+    } else {
+        setTimeout(() => scheduleDay1.style.opacity = 0, 300);
+        scheduleDay1.classList.add('inactive');
+        setTimeout(() => scheduleDay2.style.opacity = 1, 300);
+        scheduleDay2.classList.remove('inactive');
+    }
+}
+
+window.onload = function() {
+    const defaultScheduleTypeButton = document.querySelector('.schedule-type-button');
+    handleScheduleType(defaultScheduleTypeButton);
+
+    const defaultScheduleDayButton = document.querySelector('.schedule-day-button');
+    handleScheduleDay(defaultScheduleDayButton);
+
+    loadImages();
+};

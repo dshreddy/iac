@@ -388,13 +388,13 @@ scheduleDepartments = {
                 'venue': 'Sarswati A002'
             },
             {
-                'className': 'lecture-t4',
+                'className': 'lecture-t5',
                 'infoText': '4:45 - 5:30 p.m',
                 'profName': 'Mr. Sudeep Chandrasekaran (TI)',
                 'venue': 'Sarswati A002'
             },
             {
-                'className': 'lecture-t5',
+                'className': 'lecture-t6',
                 'infoText': '5:30 - 6:15 p.m',
                 'profName': 'Mr. Vish Rajalingam (Multicoreware)',
                 'venue': 'Sarswati A002'
@@ -412,7 +412,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A102-103(livestream)'
             }
         ],
-        'scheduleHide': ['lecture-t1', 'lecture-t2', 'lecture-t4', 'lecture-t5']
+        'scheduleHide': ['lecture-t1', 'lecture-t2', 'lecture-t4', 'lecture-t5', 'lecture-t6']
     },
 
     'Civil': {
@@ -430,7 +430,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A102-103(livestream)'
             }
         ],
-        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5' ]
+        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5', 'lecture-t6' ]
     },
 
     'Electrical': {
@@ -448,7 +448,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A002'
             }
         ],
-        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5' ]
+        'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5', 'lecture-t6' ]
     },
 
     'Chemistry': {
@@ -472,7 +472,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A007'
             },
         ],
-        'scheduleHide': [ 'lecture-t1', 'lecture-t2' ]
+        'scheduleHide': [ 'lecture-t1', 'lecture-t2', 'lecture-t6' ]
     },
 
     'Physics': {
@@ -490,7 +490,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A102-103(livestream)'
             }
         ],
-        'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4' ]
+        'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]
     },
 
     'Maths': {
@@ -508,7 +508,7 @@ scheduleDepartments = {
                 'venue': 'Sarswati A102-103(livestream)'
             }
         ],
-        'scheduleHide': [ 'lecture-t2', 'lecture-t3', 'lecture-t4' ]
+        'scheduleHide': [ 'lecture-t2', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]
     }
 };
 

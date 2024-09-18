@@ -1213,6 +1213,292 @@ p {
  
 </section>
 
+<section id="schedule">
+  <div class="section-header" data-aos="fade-up">
+      <h2>Schedule</h2>
+  </div>
+
+  <div class="schedule-buttons">
+    <button class="schedule-button schedule-day-button" onclick="handleScheduleDay(this)">Day 1</button>
+    <button class="schedule-button schedule-day-button" onclick="handleScheduleDay(this)">Day 2</button>
+  </div>
+
+  <div class="schedule-buttons">
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">CS and DS</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Electrical</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Mechanical</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Civil</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Chemistry</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Physics</button>
+    <button class="schedule-button schedule-type-button" onclick="handleScheduleType(this)">Maths</button>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <ul id="schedule-day1" class="schedule schedule-centered">
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9 - 9:15 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title">Inaugural Ceremony &<br> Director's address</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9:15 - 9:25 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk by: </span><br> Dean ICSR, IIT Palakkad</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9:25 - 9:35 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk by: </span><br> Dean Academics, IIT Palakkad</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9:35 - 10:20 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Invited Talk by: </span><br>Chief Guest - Dr. Sreenivas Naidu</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Keynote Speaker 1 -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>10:20 - 11:00 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk By Keynote Speaker:</span><br> Prof. Sreedevi Upadhyayula (IIT Delhi)</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+
+        <!-- Tea Break 1 -->
+        <li class="schedule-item schedule-break">
+          <div class="schedule-info"></div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <p class="schedule-info-inner">11:00 - 11:30 a.m</p>
+              <h2 class="schedule-title">Tea Break</h2>
+              <p class="schedule-details">Saraswati Atrium</p>
+          </div>
+        </li>
+
+        <!-- Lecture Talk1 -->
+        <li class="schedule-item lecture-t1">
+          <div class="schedule-info">
+              <span></span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"></h3>
+              <p class="schedule-details"></p>
+          </div>
+        </li>
+
+        <!-- Lecture Talk 2 -->
+        <li class="schedule-item lecture-t2">
+          <div class="schedule-info">
+              <span></span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"></h3>
+              <p class="schedule-details"></p>
+          </div>
+        </li>
+
+        <!-- Lunch Break -->
+        <li class="schedule-item schedule-break">
+          <div class="schedule-info"></div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <p class="schedule-info-inner">1:00 - 2:00 p.m</p>
+              <h2 class="schedule-title">Lunch Break</h2>
+              <p class="schedule-details">Agora Annexure</p>
+          </div>
+        </li>
+
+        <!-- Keynote Speaker 2 -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>2:15 - 3:00 p.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk By Keynote Speaker:</span><br>Prof. Satya Chakravarthy (IIT Madras)</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Lecture Talk 3 -->
+        <li class="schedule-item lecture-t3">
+          <div class="schedule-info">
+              <span></span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"></h3>
+              <p class="schedule-details"></p>
+          </div>
+        </li>
+
+
+        <!-- Tea Break 2 -->
+        <li class="schedule-item schedule-break">
+          <div class="schedule-info"></div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <p class="schedule-info-inner">3:45 - 4:00 p.m</p>
+              <h2 class="schedule-title">Tea Break</h2>
+              <p class="schedule-details">Saraswati Atrium</p>
+          </div>
+        </li>
+
+        <!-- Lecture Talk 4 -->
+        <li class="schedule-item lecture-t4">
+          <div class="schedule-info">
+              <span></span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"></h3>
+              <p class="schedule-details"></p>
+          </div>
+        </li>
+
+        <!-- Lecture Talk 5 -->
+        <li class="schedule-item lecture-t5">
+          <div class="schedule-info">
+              <span></span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"></h3>
+              <p class="schedule-details"></p>
+          </div>
+        </li>
+
+        <!-- Student Talk -->
+        <li class="schedule-item student-t1">
+          <div class="schedule-info">
+              <span>5:30 - 6:15 p.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title">Student Talks:</h3>
+              <p class="schedule-details">Venues: Sarswati A007, A102-103</p>
+          </div>
+        </li>
+      </ul>
+
+      <ul id ="schedule-day2" class="schedule schedule-centered">
+        <!-- Keynote Speaker 2 -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9:30 - 10:15 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk By Keynote Speaker:</span><br>Mr. Aleem Rehman (Microsoft)</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Keynote Speaker 4 -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>10:15 - 11:00 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title"><span>Talk By Keynote Speaker:</span><br>Mr. Nahar Singh (Continental Corporation)</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Startup Booths - exhibition-->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>9:00 - 11:30 a.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title">Startup booths &<br> exhibitions</h3>
+              <p class="schedule-details">Venue: Saraswati</p>
+          </div>
+        </li>
+
+
+        <!-- Tea Break 1 -->
+        <li class="schedule-item schedule-break">
+          <div class="schedule-info"></div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <p class="schedule-info-inner">11:30 - 11:45 a.m</p>
+              <h2 class="schedule-title">Tea Break</h2>
+              <p class="schedule-details">Saraswati Atrium</p>
+          </div>
+        </li>
+
+        <!-- Panel Discussion -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>11:45 a.m - 12:45 p.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title">Panel Discussion</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Closing Cermony -->
+        <li class="schedule-item">
+          <div class="schedule-info">
+              <span>12:45 - 1:00 p.m</span>
+          </div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <h3 class="schedule-title">Closing ceremony</h3>
+              <p class="schedule-details">Venue: Saraswati A007</p>
+          </div>
+        </li>
+
+        <!-- Lunch Break -->
+        <li class="schedule-item schedule-break">
+          <div class="schedule-info"></div>
+          <div class="schedule-marker"></div>
+          <div class="schedule-content">
+              <p class="schedule-info-inner">1:00 - 2:00 p.m</p>
+              <h2 class="schedule-title">Lunch Break</h2>
+              <p class="schedule-details">Agora Annexure</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  
+</section>
+
  <section id="gallery">
 
         <div class="container" data-aos="fade-up">

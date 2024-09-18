@@ -5,7 +5,7 @@ let centralSlide = 1;
 let slideNumber = 100 / nSlides;
 resetSlides(slideNumber)
 
-console.log(intiailNumberSlides);
+// console.log(intiailNumberSlides);
 
 function resetSlides(number) {
     const slides = document.querySelectorAll(".slide");
@@ -21,7 +21,7 @@ function calculateCentralSlide(numVisibleItems) {
 function addActiveElement(centralItem, totalVisibleItems) {
     // Clear active class
     const sliderItems = document.querySelectorAll(".slide-content");
-    console.log(sliderItems)
+    // console.log(sliderItems)
     sliderItems.forEach((item) =>
       item.classList.remove("active")
     );

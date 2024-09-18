@@ -518,3 +518,235 @@ h5 {
     font-size: 16px;
   }
   
+/* Schedule */
+
+  .schedule-buttons {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    align-self: center; 
+    width: 50%;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 30px;
+  }
+
+  .schedule-button {
+    flex: 0  1 200px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    background-color: #535353;
+    color: var(--bg-color);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .schedule-button:hover {
+    background-color: var(--accent);
+    color: var(--bg-color);
+  }
+
+  .schedule-button.checked {
+    background-color: var(--accent);
+    color: var(--bg-color);
+  }
+
+  .schedule {
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: all .3s ease-in-out;
+  }
+
+  .schedule.inactive {
+    display: none;
+  }
+
+  .schedule p {
+    font-size:large;
+  }
+
+  .schedule-item {
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .schedule-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .schedule-info {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 .5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.schedule-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+
+.schedule-marker:before {
+  background: var(--accent);
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.schedule-marker:after {
+  content: "";
+  width: 3px;
+  background: #CCD5DB;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+
+.schedule-item:last-child .schedule-marker:after {
+  content: none;
+}
+
+.schedule-item:not(.schedule-break):hover .schedule-marker:before {
+  background: transparent;
+  border: 3px solid var(--accent);
+}
+
+.schedule-content {
+  padding-bottom: 60px;
+}
+
+.schedule-content p:last-child {
+  margin-bottom: 0;
+}
+
+.schedule-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.schedule-title span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.schedule-break {
+  padding: 0;
+}
+
+.schedule-break .schedule-info {
+  display: none;
+}
+
+.schedule-break .schedule-info-inner {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.schedule-break .schedule-marker:before {
+  background: transparent;
+  content: "";
+  width: 15px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  top: 0;
+  bottom: 30px;
+  position: absolute;
+  border-top: 3px solid #CCD5DB;
+  border-bottom: 3px solid #CCD5DB;
+}
+
+.schedule-break .schedule-marker:after {
+  content: "";
+  height: 32px;
+  top: auto;
+}
+
+.schedule-break .schedule-content {
+  padding: 40px 0 70px;
+}
+
+.schedule-break .schedule-title {
+  margin: 0;
+}
+
+
+@media (min-width: 992px) {
+  .schedule-item {
+      padding-bottom: 40px;
+      overflow: hidden;
+  }
+
+  .schedule-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .schedule-marker {
+      position: absolute;
+      left: 50%;
+      margin-left: -7.5px;
+  }
+
+  .schedule-item:nth-child(odd) .schedule-info,
+  .schedule-item:nth-child(odd) .schedule-content {
+      text-align: left;
+      padding-left: 50%;
+  }
+
+  /* .schedule-item:nth-child(even) .schedule-info,
+  .timweline-item:nth-child(even) .schedule-content{
+
+  } */
+
+  .schedule-item:nth-child(even) .schedule-info,
+  .schedule-item:nth-child(even) .schedule-content {
+      text-align: right;
+      padding-right: 54%;
+  }
+
+  .schedule-info,
+  .schedule-content {
+      width: 100%;
+  }
+
+  .schedule-item.schedule-break .schedule-content {
+      float: none;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+  }
+  .schedule-item.schedule-break {
+      padding: 50px 0 90px;
+  }
+  .schedule-break .schedule-marker:after {
+      height: 30px;
+      bottom: 0;
+      top: auto;
+  }
+  .schedule-break .schedule-title {
+      left: auto;
+  }
+}

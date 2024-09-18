@@ -319,10 +319,6 @@ function loadImages() {
     });
 }
 
-
-// Load images when the webpage loads
-window.onload = loadImages;
-
 window.addEventListener('load', () => {
     AOS.init({
       duration: 1200,
@@ -565,4 +561,6 @@ window.onload = function() {
 
     const defaultScheduleDayButton = document.querySelector('.schedule-day-button');
     handleScheduleDay(defaultScheduleDayButton);
+
+    loadImages();
 };

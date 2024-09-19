@@ -345,7 +345,7 @@ function updateScheduleDisplay(scheduleShow, scheduleHide) {
         elements.forEach(element => {
             element.style.display = 'block';
 
-            // Update info text if provided
+            // Update info
             if (item.infoText) {
                 const infoElement = element.querySelector('.schedule-info span');
                 if (infoElement) {
@@ -353,7 +353,7 @@ function updateScheduleDisplay(scheduleShow, scheduleHide) {
                 }
             }
 
-            // Update title text if provided
+            // Update title
             if (item.profName) {
                 const titleElement = element.querySelector('.schedule-title');
                 if (titleElement) {
@@ -361,11 +361,24 @@ function updateScheduleDisplay(scheduleShow, scheduleHide) {
                 }
             }
 
-            // Update venue text if provided
+            // Update Details
+            const detailsElement = element.querySelector('.schedule-details');
+            if (item.org) {
+                if (detailsElement) {
+                    detailsElement.innerHTML = `<span>${item.org}</sapn>`;
+                }
+            }
+
+            // Update Topic
+            if (item.topic) {
+                if (detailsElement) {
+                    detailsElement.innerHTML += `<span><br>Topic: ${item.topic}</span>`;
+                }
+            }
+
             if (item.venue) {
-                const venueElement = element.querySelector('.schedule-details');
-                if (venueElement) {
-                    venueElement.textContent = `Venue: ${item.venue}`;
+                if (detailsElement) {
+                    detailsElement.innerHTML += `<br>Venue: ${item.venue}`;
                 }
             }
         });
@@ -378,26 +391,34 @@ scheduleDepartments = {
             {
                 'className': 'lecture-t3',
                 'infoText': '3:00 - 3:45 p.m',
-                'profName': 'Dr. Brojeshwar Bhowmick (TCS)',
-                'venue': 'Sarswati A002'
+                'profName': 'Dr. Brojeshwar Bhowmick',
+                'org': 'Head Visual Computing & Embodied AI Research, TCS Realtime',
+                'topic': 'Clothing Dynamics on 3D People',
+                'venue': 'Sarswati A001-002'
             },
             {
                 'className': 'lecture-t4',
                 'infoText': '4:00 - 4:45 p.m',
-                'profName': 'Adithya Kumar O V (CT)',
-                'venue': 'Sarswati A002'
+                'profName': 'Adithya Kumar O V',
+                'org': 'Senior Software Engineer, Composewell Technologies',
+                'topic': 'The Curious Case of Good Engineering',
+                'venue': 'Sarswati A001-002'
             },
             {
                 'className': 'lecture-t5',
                 'infoText': '4:45 - 5:30 p.m',
-                'profName': 'Mr. Sudeep Chandrasekaran (TI)',
-                'venue': 'Sarswati A002'
+                'profName': 'Mr. Sudeep Chandrasekaran',
+                'org': 'Software Development Manager, Texas Instruments',
+                'topic': 'Introduction to mmWare Radar',
+                'venue': 'Sarswati A001-002'
             },
             {
                 'className': 'lecture-t6',
                 'infoText': '5:30 - 6:15 p.m',
-                'profName': 'Mr. Vish Rajalingam (Multicoreware)',
-                'venue': 'Sarswati A002'
+                'profName': 'Mr. Vish Rajalingam',
+                'org': 'VP & GM - Mobility & Transport Business Unit, MultiCoreware',
+                'topic': 'Water Sector and Opportunities',
+                'venue': 'Sarswati A001-002'
             }
         ],
         'scheduleHide': ['lecture-t1', 'lecture-t2']
@@ -408,8 +429,10 @@ scheduleDepartments = {
             {
                 'className': 'lecture-t3',
                 'infoText': '3:00 - 3:45 p.m',
-                'profName': 'Dr. Ramaswamy Vishnudas (Bosch)',
-                'venue': 'Sarswati A01-102, 103'
+                'profName': 'Dr. Ramaswamy Vishnudas',
+                'org': 'Bosch Rexroth(India) Pvt. Ltd.',
+                'topic': 'Advancements and Collaborative Research in External Gear Pump Technology',
+                'venue': 'Sarswati A01-102'
             }
         ],
         'scheduleHide': ['lecture-t1', 'lecture-t2', 'lecture-t4', 'lecture-t5', 'lecture-t6']
@@ -420,14 +443,18 @@ scheduleDepartments = {
             {
                 'className': 'lecture-t1',
                 'infoText': '11:30 a.m - 12:15 p.m',
-                'profName': 'Mr. Avinash Gadekar (AECOM)',
-                'venue': 'Sarswati A01-102, 103'
+                'profName': 'Mr. Avinash Gadekar',
+                'org': 'AECOM India Global Services Pvt. Ltd.',
+                'topic': 'Water Sector and Opportunities',
+                'venue': 'Sarswati A01-102'
             },
             {
                 'className': 'lecture-t2',
                 'infoText': '12:15 - 1:00 p.m',
-                'profName': 'Dr. Milinda Mahajan (ASC)',
-                'venue': 'Sarswati A01-102, 103'
+                'profName': 'Dr. Milinda Mahajan',
+                'org': 'Director Design & Reasearch and CEO Ashoka Structural Consultants',
+                'topic': 'Analusis And Design for Simplification of the Complex Geometry of Seismically Iregular Building',
+                'venue': 'Sarswati A01-102'
             }
         ],
         'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5', 'lecture-t6' ]
@@ -438,14 +465,17 @@ scheduleDepartments = {
             {
                 'className': 'lecture-t1',
                 'infoText': '11:30 a.m - 12:15 p.m',
-                'profName': 'Mr. N. Raghunath (Nokia)',
-                'venue': 'Sarswati A002'
+                'profName': 'Mr. N. Raghunath',
+                'org': 'Solutions Architect, Nokia',
+                'topic': 'Evolution of Mobile Networks towards Cloud RAN and ORAN - Opportunities and Challenges',
+                'venue': 'Sarswati A001-002'
             },
             {
                 'className': 'lecture-t2',
                 'infoText': '12:15 - 1:00 p.m',
-                'profName': 'Mr. Arjun Menon (InCore Semi)',
-                'venue': 'Sarswati A002'
+                'profName': 'Mr. Arjun Menon',
+                'org': 'Cofounder & Cheif Engineer, InCore Semiconductor Pvt. Ltd.',
+                'venue': 'Sarswati A001-002'
             }
         ],
         'scheduleHide': [ 'lecture-t3', 'lecture-t4', 'lecture-t5', 'lecture-t6' ]
@@ -457,18 +487,24 @@ scheduleDepartments = {
                 'className': 'lecture-t3',
                 'infoText': '3:00 - 3:45 p.m',
                 'profName': 'Dr. Kavita Kadu (APchemi)',
+                'org': 'APchemi',
+                'topic': 'Revolutionizing Sustainability: Join APChemi in Shaping the Future of Circular Economy and Climate Tech',
                 'venue': 'Sarswati A007'
             },
             {
                 'className': 'lecture-t4',
                 'infoText': '4:00 - 4:45 p.m',
                 'profName': 'Dr. Sanjay Kamble (CSIR)',
+                'org': 'CSIR',
+                'topic': 'Process intensification for chemical &amp; allied industries',
                 'venue': 'Sarswati A007'
             },
             {
                 'className': 'lecture-t5',
                 'infoText': '4:45 - 5:30 p.m',
-                'profName': 'Dr. Subho (TCG Lifesciences)',
+                'profName': 'Dr. Subho',
+                'org': 'TCGLifesciences',
+                'topic': 'High Performance Computing - A Toolfor Scientific Advancement',
                 'venue': 'Sarswati A007'
             },
         ],
@@ -476,21 +512,17 @@ scheduleDepartments = {
     },
 
     'Physics': {
-        'scheduleShow': [  
+        'scheduleShow': [ 
             {
                 'className': 'lecture-t2',
-                'infoText': '11:30 a.m - 12:15 p.m',
-                'profName': 'Mr Ashish Kuvelkar (C-DAC)',
-                'venue': 'Sarswati A007'
-            },
-            {
-                'className': 'lecture-t5',
                 'infoText': '12:15 - 1:00 p.m',
-                'profName': 'Dr. Kaushik Choudhury (C-CAMP)',
+                'profName': 'Dr. Kaushik Choudhury',
+                'org': 'C-CAMP',
+                'topic': 'From Concept to Creation: The Journey of a Product',
                 'venue': 'Sarswati A01-102, 103'
             }
         ],
-        'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]
+        'scheduleHide': [ 'lecture-t1', 'lecture-t3', 'lecture-t4', 'lecture-t6', 'lecture-t5' ]
     },
 
     'Maths': {
@@ -498,14 +530,18 @@ scheduleDepartments = {
             {
                 'className': 'lecture-t1',
                 'infoText': '11:30 a.m - 12:15 p.m',
-                'profName': 'Dr. Siddhartha Gadgil (IISc)',
-                'venue': 'Sarswati A007'
+                'profName': 'Dr. Siddhartha Gadgil',
+                'org': 'IISc Bangalore',
+                'topic': 'The future of Automated and Interactive Theorem Proving and its possible impact on industry',
+                'venue': 'Sarswati A01-007'
             },
             {
                 'className': 'lecture-t5',
-                'infoText': '4:00 - 4:45 p.m',
-                'profName': 'Dr. Sourish Das (CMI)',
-                'venue': 'Sarswati A01-102, 103'
+                'infoText': '5:30 - 6:15 p.m',
+                'profName': 'Dr. Sourish Das',
+                'org': 'Chennai Mathematical Institute',
+                'topic': 'Doing Mathematics in the Era ofGenerative AI',
+                'venue': 'Sarswati A01-007'
             }
         ],
         'scheduleHide': [ 'lecture-t2', 'lecture-t3', 'lecture-t4', 'lecture-t6' ]
